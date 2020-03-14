@@ -1,0 +1,8612 @@
+title: Start
+tags: 
+colorID: 0
+position: 3407,2277
+---
+dang my dialogue isn't written yet
+my bad!
+===
+title: HomeSignStart
+tags: 
+colorID: 0
+position: 1113,-793
+---
+<sprite tint=1 name="LeftArrow"> 白岸小径
+管理员小屋 <sprite name="RightArrow" tint=1>
+===
+title: GoatStart
+tags: 
+colorID: 0
+position: 5470,-1342
+---
+<<if $GoatWatchFound is true>>
+    [[GoatDone]]
+<<endif>>
+<<if visited() is false>>
+    打扰下，你知道现在几点吗？
+    <<SetSpeaker Player>>
+	啊，知道，让我看下……
+    <<SetSpeaker Original>>
+	你知道吗……\n平常我是知道时间的。
+	可刚刚我把手表给弄丢了。
+    <<SetSpeaker Player>>
+	哦，呃……
+	真遗憾。
+    <<SetSpeaker Original>>
+	当你把物品的情感价值考虑进去时，
+	它就会变得无比珍贵。
+    <<SetSpeaker Player>>
+    我明白。
+    <<SetSpeaker Original>>
+	你要是找到了的话，\n可否把它带回来给我？
+    <<SetSpeaker Player>>
+    当然可以。
+    <<SetSpeaker Original>>
+	请别把它别拿到网上去卖。
+	它对我来说很重要。
+    <<SetSpeaker Player>>
+	不会的，别担心。
+	我会把它带回来的。
+    <<SetSpeaker Original>>
+	好的。
+	谢谢你。
+<<else>>
+    <<if HasItem("Watch", 1) is true>>
+        [[GoatGive]]
+    <<else>>
+        [[GoatExtra]]
+    <<endif>>
+<<endif>>
+===
+title: ThoughtsStart
+tags: 
+colorID: 0
+position: 3342,3296
+---
+I'm very shy and sad :(
+Sometimes I see cool people I recognize from the internet but i'm too afraid to say anything so I say nothing.
+===
+title: ArtistStart
+tags: 
+colorID: 0
+position: 3135,3317
+---
+Empty Text
+===
+title: OpeningStart
+tags: 
+colorID: 0
+position: 2345,3348
+---
+Aunt -
+  you've been on ur phone for the past while
+player - 
+  ahh im just caught up in this thing, and i cant get my mind off of it
+aunt - 
+  you should for a hike
+  dundas peak is really nice from top
+player
+  maybe I WILL!
+===
+title: Node7
+tags: 
+colorID: 0
+position: 3018,3069
+---
+How did u get here if u cant swim??
+===
+title: BeachHutSign
+tags: 
+colorID: 0
+position: 1541,-795
+---
+<sprite tint=1 name="UpArrow"> 管理员小屋
+<sprite name="DownArrow" tint=1> 白岸小径
+===
+title: WhiteCoastSign
+tags: 
+colorID: 0
+position: 1327,-794
+---
+<sprite tint=1 name="UpArrow"> 鹰峰小径\n白岸小径 <sprite name="RightArrow" tint=1>
+<sprite tint=1 name="DownArrow"> 希德海滩\n<sprite tint=1 name="DownArrow"> 游客中心\n
+===
+title: Node10
+tags: 
+colorID: 0
+position: 2775,3057
+---
+my house burnt down!!
+my brother did it.
+He's a jerk!
+===
+title: 
+tags: 
+colorID: 0
+position: 3255,3020
+---
+ughhhh...
+oh hayy 
+===
+title: WriterStart
+tags: 
+colorID: 0
+position: 3496,3067
+---
+
+===
+title: Node13
+tags: 
+colorID: 0
+position: 2929,3325
+---
+it all turned out OK - the sentence wasn't so bad
+
+oh.. thats pretty good i guess
+
+i told you it would be fine!
+
+yeah, im still mad tho.
+
+sigh, i know
+
+love you tho
+thanks for never giving up on me
+
+i never would!
+love you too
+
+hey guess what
+
+what?
+
+im at the top of hawk peak right now
+OOOOH no wonder the reception is so good!
+Are you going to use the Crystal Feather!?
+
+yeah yeah, i plan to
+that's so exciting! you'll be a natural
+yeah yeah i know
+
+===
+title: Node14
+tags: 
+colorID: 0
+position: 2661,3287
+---
+i dunno, going up the see the crystal feather or whatever
+SAY WHAT!?
+thats so awesome!
+I wish i was a bird - you're so lucky.
+yeah i know...
+i dunno.
+i feel kinda nervous about it
+it's stupid i guess.
+i know ill probably be fine but, ive kinda been avoiding it.
+aw well, im sure you'll do great.
+thanks
+===
+title: AuntRunOffStart
+tags: 
+colorID: 0
+position: 3925,-2642
+---
+<<if $AuntIntro is false and $_ClimbedHawkPeak is false>>
+    嘿！你想去哪？
+    <<SetSpeaker Player>>
+    <<Face Original>>
+    哦，呃……
+    <<SetSpeaker Original>>
+	招呼都不跟你梅婶打声就走吗？
+	我已经一整天没看到你了！
+    <<SetSpeaker Player>>
+	抱歉……
+	我只是。不太想说话。
+    <<SetSpeaker Original>>
+	嗯，怎么了？
+    <<SetSpeaker Player>>
+	没什么！
+	呃……
+	我只是在等电话而已。
+    [[AuntIntroEnd]]
+<<endif>>
+===
+title: AuntIntroStart
+tags: 
+colorID: 0
+position: 4164,-2635
+---
+嘿，过得怎样？
+今天一整天都没看到你。
+很忙吗？
+<<SetSpeaker Player>>
+啊，是有点。
+其实，也不是真的忙。
+我只是在等电话而已。
+[[AuntIntroEnd]]
+
+
+===
+title: AuntStart
+tags: 
+colorID: 0
+position: 4439,-2714
+---
+<<if HasItem("ShellNecklace", 1)>>
+    [[AuntNecklace]]
+<<elseif $_ClimbedHawkPeak is true>>
+    [[AuntFinished]]
+<<elseif $AuntIntro is false>>
+    [[AuntIntroStart]]
+<<else>>
+    [[AuntChat]]
+<<endif>>
+===
+title: AuntIntroEnd
+tags: 
+colorID: 0
+position: 3923,-2377
+---
+<<SetSpeaker Original>>
+那你麻烦大了！
+因为这里没有信号。
+<<SetSpeaker Player>>
+等等……
+你说什么！？
+<<SetSpeaker Original>>
+你没听错，我是说这里一点信号都没。
+或许你能在<color=red>鹰峰</color>上面收到信号。
+<<SetSpeaker Player>>
+哦……我想你说得没错。
+不过那里不是挺远的吗？
+<<SetSpeaker Original>>
+也没那么远！
+我们大家都去过。
+我还以为你也去过了。
+<<SetSpeaker Player>>
+哦……是吗。
+我一直都有去的打算，
+只是，
+我……
+没有空去而已。
+<<SetSpeaker Original>>
+那择日不如撞日！
+<<SetSpeaker Player>>
+……
+<<SetSpeaker Original>>
+只要沿着<color=red>白岸小径</color>走，碰到岔路时往<color=red>北</color>。
+然后跟着<color=red>鹰峰</color>的指示牌走就行了。
+很容易的！
+<<set $AuntIntro to true>>
+===
+title: AuntChat
+tags: 
+colorID: 0
+position: 4683,-2395
+---
+<<if visitCount() == 0>>
+    <color=red>鹰峰</color>这里是真的好。
+	你会爱上它的！
+    <<SetSpeaker Player>>
+	是啊……我听说了不少。
+    <<SetSpeaker Original>>
+	想要登上顶峰的确不容易。
+	不过我们几代人都上去过。
+    <<SetSpeaker Player>>
+	是啊。
+    <<SetSpeaker Original>>
+	鹰峰温泉创造了这些壮观的\n上升气流。
+	从那起飞的感觉简直不要太好。
+    <<SetSpeaker Player>>
+	不过，
+	那不是，
+	挺危险的吗？
+    <<SetSpeaker Original>>
+	其实也算不上危险。
+	对你来说很容易的！
+    <<SetSpeaker Player>>
+	嗯……
+<<elseif visitCount() == 1>>
+	对了，你在等什么电话？
+    <<SetSpeaker Player>>
+	哦……呃……
+	你知道的……
+	……
+	就是那件事……
+    <<SetSpeaker Original>>
+	……
+	哦哦！抱歉。
+	我忘了。
+	别担心，亲爱的，
+	我敢保证一切都会平安。
+	我觉得，
+	爬山能帮你散下心。
+<<elseif visitCount() == 2>>
+	啊，确实是个好日子。
+	我喜欢这里，你知道吗？
+    <<SetSpeaker Player>>
+	知道，这里是很好的地方。
+	不过城市也很好！
+	那里有精彩的故事，
+	有美食，
+	还有，
+	手机信号！
+    <<SetSpeaker Original>>
+	我们很快也会有信号的！
+	他们正在修建新的信号塔。
+    <<SetSpeaker Player>>
+	哦，
+	那太好了。
+<<else>>
+	啊，这里好美啊。
+    <<SetEmotion Happy>>
+	我可以在这坐上一整天。
+    <<ClearEmotion>>
+	而且会来坐上一整天。
+<<endif>>
+===
+title: KidStart
+tags: 
+colorID: 0
+position: 3719,-868
+---
+<<if visited() is false>>
+	克莱尔！
+	你可知道……
+	奔跑时按住{{JumpButton}}能在空中滑翔吗？！？
+    <<SetSpeaker Player>>
+	当然知道！
+	大家都知道。
+	你为什么这么问？
+    <<SetSpeaker Original>>
+	不知道。
+	只是觉得你有可能想知道。
+    <<SetSpeaker Player>>
+	呃……
+	好吧。
+<<elseif visitCount() == 1>>
+    <<SetSpeaker Player>>
+	等下，呃。
+	再请教下要怎么滑翔？
+    <<SetSpeaker Original>>
+    <color=red>奔跑时按住{{JumpButton}}</color>，你个笨蛋！
+    <<SetSpeaker Player>>
+	不错，我只是为了确定你没忘。
+    <<SetSpeaker Original>>
+	我才不会忘！
+	我是天才。
+<<elseif visitCount() == 2>>
+    <<SetSpeaker Player>>
+	好吧，最后一次。
+	那事你怎么说来着？
+    <<SetSpeaker Original>>
+    <color=red>奔跑时按住{{JumpButton}}能滑翔！！！</color>
+    <<SetSpeaker Player>>
+    好的，谢谢。
+<<elseif visitCount() == 3>>
+    <<SetSpeaker Player>>
+	真的是最后一次了。
+    <<SetSpeaker Original>>
+    按住！
+    {{JumpButton}}！
+    能！
+    滑翔！！！！
+    <<SetSpeaker Player>>
+	好的，我保证不会忘。
+<<else>>
+    <<SetSpeaker Player>>
+	最后一……
+    <<SetSpeaker Original>>
+	不！
+	不不！
+	不不不不不不不不不！
+	不要再问了！！！！
+<<endif>>
+===
+title: OtherKidStart2
+tags: 
+colorID: 0
+position: 3066,2802
+---
+BECAUSE im a random KID OK!?
+i want random things
+its ur JOB to get the random things
+
+thats not my job
+
+its your JOB
+bring me my stuff
+===
+title: OtherKidStart
+tags: 
+colorID: 0
+position: 3720,-612
+---
+<<if $KidQuest1 is true>>
+    [[OtherKid2]]
+<<endif>>
+<<if visitCount() is 0>>
+	嘿，你。
+	给我找15个贝壳！
+    <<SetSpeaker Player>>
+	什么！为啥？
+    <<SetSpeaker Original>>
+	因为我想要。
+    <<SetSpeaker Player>>
+	我知道，但为啥？
+    <<SetSpeaker Original>>
+	这是秘密！
+    <<SetSpeaker Player>>
+	呵，好吧。
+	我会留意的。
+    <<SetSpeaker Original>>
+	还要留心！
+<<elseif GetItemCount("Shell") >= 15>>
+    <<SetSpeaker Player>>
+	嗨，我给你找来贝壳了。
+    <<SetSpeaker Original>>
+	哦哦哦！
+	都给我！
+    <<GiveItem Shell -15>>
+    <<Hide>>
+    <<Wait 1>>
+    <<SetSpeaker Player>>
+	那现在是咋样。
+    <<SetSpeaker Original>>
+	什么？
+    <<SetSpeaker Player>>
+	我是说，
+	呃……
+	我有什么奖励吗？
+    <<SetSpeaker Original>>
+	没有！
+    <<SetSpeaker Player>>
+	天啊，连声谢谢都没？
+	这样不太好吧。
+    <<SetSpeaker Original>>
+	我只会为生存行事！
+	我可没答应过你任何事。
+    <<SetSpeaker Player>>
+	……
+    <<SetSpeaker Original>>
+	其实，
+	我的确有样东西给你。
+	一份新工作。
+    <<SetSpeaker Player>>
+	可我已经有工作了。
+    <<SetSpeaker Original>>
+	好吧，那就是你的兼职工作。
+    <<SetSpeaker Player>>
+	我不接受的话会怎样？
+    <<SetSpeaker Original>>
+	那就是你的损失！
+	好工作不好找。
+	……
+	你意下如何？
+    <<set $KidQuest1 to true>>
+    [[ConsiderKidQuest]]
+<<elseif GetItemCount("Shell") < 3 or visitCount() is 1>>
+    <<SetSpeaker Player>>
+	你要那些贝壳来干嘛？
+    <<SetSpeaker Original>>
+	不关你事！
+	跟你有关的只有，
+	给我找15个贝壳这事。
+<<else>>
+    <<SetSpeaker Player>>
+	我已经拿到{{Item_Shell}}个贝壳了！
+    <<SetSpeaker Original>>
+	嘿，我能问你个小问题吗？
+    <<SetSpeaker Player>>
+	当然能。
+    <<SetSpeaker Original>>
+	现在贝壳是多于15个还是少于？
+    <<SetSpeaker Player>>
+	呃，
+	少于？
+    <<SetSpeaker Original>>
+	好吧。
+	那个……
+	你要是不够的话……
+	……就别来浪费我的时间！
+    <<SetSpeaker Player>>
+	好吧，我的天！
+    <<SetSpeaker Original>>
+	没啥好说了。
+	只能说我对待事情可严了。
+<<endif>>
+===
+title: Node23
+tags: 
+colorID: 0
+position: 2845,2850
+---
+i'm a millionaire
+oh that's neat
+yeah i decided to put all my wealth into chests and leave them across the park
+that seems expensive
+it was
+i think a good treasure hunt is ALWAYS worth it
+the joy of discovering a chest full of goodies
+===
+title: FoxStart
+tags: 
+colorID: 0
+position: 4844,471
+---
+<<if visited() is false>>
+	嗯……
+	我打算去爬<color=red>鹰峰</color>的。
+	但进路突然变得很陡峭。
+    <<SetSpeaker Player>>
+	你觉得能爬上去吗？
+    <<SetSpeaker Original>>
+	若有<color=red>金羽毛</color>的话就能爬。
+	听说在<color=red>游客中心</color>有卖。
+    <<set $GoldenFeatherAdvice to true>>
+<<elseif visitCount() is 1>>
+    <<SetSpeaker Player>>
+	那个，<color=red>金羽毛</color>要怎么用？
+    <<SetSpeaker Original>>
+	当你口袋放有羽毛时，
+	你会有自己变轻了的感觉。
+	这样爬峭壁就会变得更容易！
+    <<SetSpeaker Player>>
+	哇噢。
+	那真是太酷了。
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	说的没错！
+    <<ClearEmotion>>
+<<elseif visitCount() is 2>>
+    <<SetSpeaker Player>>
+	你为什么要去鹰峰？
+    <<SetSpeaker Original>>
+	我想在上面拍些大自然的照片。
+	我不会称自己为摄影师，但……
+	这是我的爱好。
+    <<SetSpeaker Player>>
+	我也要去那！
+    <<SetSpeaker Original>>
+	哦，是吗？
+	听说路挺长的。
+    <<SetSpeaker Player>>
+	是吗，呃？
+	我梅婶总说，
+	“只是爬座矮山而已！”
+	不过鉴于她是个户外迷，
+	所以，
+	我觉得她低估了高度。
+    <<SetSpeaker Original>>
+	我也这么认为。
+    <<set $KnowsFoxIsPhotographer to true>>
+<<else>>
+    <<SetSpeaker Player>>
+    <<SetEmotion Happy>>
+	要是我们都在上面的话，
+	你一定要帮我拍张照！
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	好啊，听起来不错！
+    <<SetSpeaker Player>>
+	那上面见！
+    <<ClearEmotion Player>>
+    <<ClearEmotion Original>>
+    <<set $RequestFoxPhoto to true>> 
+<<endif>>
+
+===
+title: VisitorCenterStart
+tags: 
+colorID: 0
+position: 4197,-885
+---
+<<set $TalkedToVisitorCenter to true>>
+<<if $KnowsAboutTheStrawberries and GetHour() is 17 and visited() is true>>
+    [[Strawberries]]
+<<endif>>
+
+<<if $_Artist6Talk is true and $JonEmbarrassed is false>>
+	有点不好意思。
+	我不是很上镜。
+	不过我很高兴能帮上忙。
+	还有，
+    <<set $JonEmbarrassed to true>>
+<<elseif "ParkHat" is $_WornHat>>
+	那帽子看上去好有型！
+<<else>>
+    你好啊！
+<<endif>>
+
+<<if visited() is true>>
+	有什么事？
+    <<SetSpeaker Player>>
+    <<ShowCollection Coin>>
+    -> 我能买<color=red>金羽毛</color>吗？
+        <<HideCollection Coin>>
+        <<SetSpeaker Original>>
+        [[BuyFeatherStart]]
+    -> 你卖什么商品？
+        <<HideCollection Coin>>
+        [[BuyMerchStart]]
+    -> 没事。
+        <<HideCollection Coin>>
+        <<SetSpeaker Original>>
+		好吧。
+		那就这样吧。
+<<else>>
+	需要什么？
+    <<SetSpeaker Player>>
+    <<if $GoldenFeatherAdvice is true>>
+        我听说你这有卖<color=red>金羽毛</color>。
+        <<SetSpeaker Original>>
+		啊，是有卖！
+		需要40枚硬币。
+        <<SetSpeaker Player>>
+        <<ShowCollection Coin>>
+        -> 我要买！
+            <<HideCollection Coin>>
+            [[BuyFeatherStart]]
+        -> 你还有其它东西卖吗？
+            <<HideCollection Coin>>
+            <<SetSpeaker Original>>
+			我们也卖省立公园相关的产品。
+            [[BuyMerchStart]]
+        -> 不用了。
+            <<HideCollection Coin>>
+            <<SetSpeaker Original>>
+			好吧，保重。
+    <<else>>
+		呃，
+		我不知道。
+		我想我没什么需要。
+        <<SetSpeaker Original>>
+		没事！
+		想问路或买东西就来找我吧。
+        <<SetSpeaker Player>>
+		哦，你卖什么？
+        <<SetSpeaker Original>>
+		那个，我们有省立公园相关的产品。
+		以及像<color=red>金羽毛</color>这类的登山用品。
+        <<SetSpeaker Player>>
+		那是什么？
+		听起来好酷。
+        <<SetSpeaker Original>>
+		当然酷啊！
+		它能让攀岩变得更容易。
+		而且于你而言，
+		对飞行还有帮助。
+        <<SetSpeaker Player>>
+        ！！
+        <<SetSpeaker Original>>
+        你可以花40枚硬币来买。
+        <<SetSpeaker Player>>
+        <<ShowCollection Coin>>
+        -> 我要买！！
+            <<HideCollection Coin>>
+            [[BuyFeatherStart]]
+        -> 你还有其它东西卖吗？
+            <<HideCollection Coin>>
+            [[BuyMerchStart]]
+        -> 不用了。
+            <<HideCollection Coin>>
+            <<SetSpeaker Original>>
+            好吧，保重。
+    <<endif>>
+<<endif>>
+===
+title: BuyFeatherStart
+tags: 
+colorID: 0
+position: 4445,-606
+---
+<<if $FeathersSold >= 2>>
+    <<SetSpeaker Original>>
+	其实，我们已经卖完了。
+    之前有个<color=red>男孩</color>买走了大部分货。
+	他一定是想去爬山！
+<<elseif HasItem("Coin", 40) is true>>
+    <<SetSpeaker Original>>
+	当然，给你！
+    <<set $FeathersSold to $FeathersSold + 1>>
+    <<GiveItem Coin -40>>
+    <<PlaySound BuySound>>
+    <<Hide>>
+    <<Wait 1>>
+    <<GiveItem GoldenFeather 1>>
+    <<if $FeathersSold is 2>>
+        <<set $HeardAboutBoy to true>>
+		我们羽毛就只有这些了。
+        之前有个<color=red>男孩</color>买走了大部分货。
+		你只能去别的地方找了。
+		抱歉！
+    <<endif>>
+    <<if $FeathersSold is 1>>
+        [[ExplainGoldenFeather]]
+    <<endif>>
+<<else>>
+    <<SetSpeaker Original>>
+	当然！要40枚硬币。
+    <<SetSpeaker Player>>
+    <<if $NotEnoughYet is false>>
+		哦，等等。
+		我的钱……
+		……
+		还不够！
+        <<set $NotEnoughYet to true>>
+    <<else>>
+		哦。
+		差点忘了。
+		我还得找更多的钱。
+    <<endif>>
+<<endif>>
+===
+title: VistorCenterCrossroadsStart
+tags: 
+colorID: 0
+position: 1756,-801
+---
+<sprite name="UpArrow" tint=1> 游客中心\n<sprite tint=1 name="LeftArrow"> 鹰峰小径
+希德海滩 <sprite tint=1 name="RightArrow">\n<sprite tint=1 name="DownArrow"> 雪利角
+===
+title: Node29
+tags: 
+colorID: 0
+position: 2505,3055
+---
+every single brushstroke
+im applying with precision
+every leaf, branch, flower -
+its all placed by me
+i wonder if people even notice the 2 hours i spent arranging these flowers
+===
+title: KioskSignStart
+tags: 
+colorID: 0
+position: 1114,-571
+---
+<sprite name="UpArrow" tint=1> 黑森林小径\n<sprite name="LeftArrow" tint=1> 鹰峰小径
+<sprite name="DownArrow" tint=1> 游客中心\n白岸小径 <sprite name="RightArrow" tint=1>
+===
+title: HawkPeakRiverSignStart
+tags: 
+colorID: 0
+position: 1341,-571
+---
+<sprite name="UpArrow" tint=1> 鹰峰小径\n<sprite name="UpArrow" tint=1> 好溪路
+<sprite name="LeftArrow" tint=1> 皇室山脉\n黑森林小径 <sprite name="RightArrow" tint=1>
+===
+title: RoyalRidgeSignStart
+tags: 
+colorID: 0
+position: 1556,-561
+---
+<sprite name="UpArrow" tint=1> 鹰峰小径\n<sprite name="UpArrow" tint=1> 好溪路
+<sprite name="DownArrow" tint=1> 黑森林小径\n<sprite name="LeftArrow" tint=1> 皇室山脉
+===
+title: Node33
+tags: 
+colorID: 0
+position: 2625,2782
+---
+i want to make art
+i want to make people happy
+but i also want to make money
+===
+title: FireTowerSnowSignStart
+tags: 
+colorID: 0
+position: 1768,-561
+---
+<sprite name="UpArrow" tint=1> 鹰峰小径\n<sprite name="DownArrow" tint=1> 好溪路\n流星湖 <sprite name="RightArrow" tint=1>
+===
+title: HawkPeakSignStart
+tags: 
+colorID: 0
+position: 1116,-350
+---
+<<set $ReadHawkPeakSign to true>>
+<sprite name="UpArrow" tint=1> 鹰峰小径
+至少需要<color=yellow>7根金羽毛</color>才能爬上这里的山。
+登山新手最好能多备些羽毛。
+<<if $Climbed1 is false and $Climbed2 is false>>
+    <sprite tint=1 name="Warning"> 登山提醒 <sprite tint=1 name="Warning">
+	攀岩消耗的体力比飞行少！
+	要攀岩需要对着墙按住{{JumpButton}}。
+<<endif>>
+===
+title: MeteorLakeSignStart
+tags: 
+colorID: 0
+position: 1336,-360
+---
+<sprite name="LeftArrow" tint=1> 流星湖瞭望台 <sprite name="RightArrow" tint=1>\n<sprite name="LeftArrow" tint=1> 鹰峰小径\n<sprite name="DownArrow" tint=1> 黑森林小径
+===
+title: MeteorLakeLeftSignStart
+tags: 
+colorID: 0
+position: 1556,-351
+---
+<sprite name="LeftArrow" tint=1> 流星湖瞭望台 <sprite name="RightArrow" tint=1>\n<sprite name="DownArrow" tint=1> 鹰峰小径
+===
+title: Node38
+tags: 
+colorID: 0
+position: 2256,3074
+---
+i cant wait to fall asleep at night
+so i can wake up and eat breakfast the next morning
+===
+title: BeachFoxStart
+tags: 
+colorID: 0
+position: 4682,-628
+---
+<<if HasItem("Compass", 1) is false>>
+    <<SetEmotion Happy>>
+	嗨，克莱尔！
+	今天过得怎样？
+    <<ClearEmotion>>
+    <<SetSpeaker Player>>
+	其实，
+	我才刚从房子里出来。
+    <<SetSpeaker Original>>
+	啊。
+	看来你今天过得不太好。
+    <<SetSpeaker Player>>
+	是啊……
+	我这一早上，
+	都是心绪不宁，不知所向。
+    <<SetSpeaker Original>>
+	嗯……
+	你是说你觉得……
+	……自己迷失了方向？
+    <<SetSpeaker Player>>
+	呃……
+	大概是吧。
+    <<SetSpeaker Original>>
+	没事的！
+	我给你样东西！
+	拿着。
+    <<Hide>>
+    <<GiveItem Compass 1>>
+    <<Face Original Player>>
+	想用的话，
+    先<color=red>按{{MenuButton}}</color>打开道具栏，
+	然后从<color=red>道具菜单</color>中选择它。
+    <<SetSpeaker Player>>
+	哦，呃……
+	谢谢。
+	这东西应该用得着。
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	那就祝你登山愉快！
+    <<ClearEmotion>>
+<<else>>
+    <<if $_ShowCompass is false>>
+        <<SetSpeaker Player>>
+		再请教下指南针要怎么用？
+        <<SetSpeaker Original>>
+		只要<color=red>按{{MenuButton}}</color>打开<color=red>道具栏</color>，
+		然后从<color=red>道具菜单</color>中选择它就行了。
+        <<SetSpeaker Player>>
+		啊，没错。
+		谢谢！
+    <<else>>
+        <<SetSpeaker Player>>
+		谢谢你借给我指南针。
+		登完山后我会还给你的。
+        <<SetSpeaker Original>>
+		哦，没关系。
+		你就留着吧。
+		你知道俗话说得好……
+		知北方者有佳运！
+        <<SetSpeaker Player>>
+		呃……
+		有这俗话吗？
+        <<SetSpeaker Original>>
+		其实，我也不确定。
+		但……
+		运气肯定不会差到哪里去！
+    <<endif>>
+<<endif>>
+===
+title: VisitorsCenterSignStart
+tags: 
+colorID: 0
+position: 1597,-123
+---
+欢迎来到鹰峰省立公园！
+你可以沿着前往瞭望台的路线欣赏美景，
+也可以走<color=yellow>鹰峰小径</color>到省里的至高点！
+虽然这里是以山峰闻名，
+但这里也有美丽的沙滩与森林。
+你知道吗？
+这里臭名昭著的食物草莓吐司\n就是出自于鹰峰的！
+请您在下午5点与我们共享这种\n美味的传统食物！
+<<set $KnowsAboutTheStrawberries to true>>
+
+===
+title: BuyMerchStart
+tags: 
+colorID: 0
+position: 3946,-608
+---
+<<SetSpeaker Original>>
+<<if visited() is false>>
+	我们快没货了。
+	但老实说，这是件好事。
+	说明这是个繁忙的季度！
+	省立公园一定是变得受欢迎了。
+    <<SetSpeaker Player>>
+	很有可能！
+    <<SetSpeaker Original>>
+	对了，
+<<endif>>
+<<SetSpeaker Original>>
+<<if $SoldHat is false>>
+    <<set $KnowsAboutMerchHat to true>> 
+	我们只剩一顶帽子了。
+	售价100枚硬币。
+    <<SetSpeaker Player>>
+    <<ShowCollection Coin>>
+    -> 我买了！
+        <<HideCollection Coin>>
+        <<if HasItem("Coin", 100) is true>>
+            <<GiveItem Coin -100>>
+            <<PlaySound BuySound>>
+            <<Hide>>
+            <<Wait 1>>
+            <<GiveItem ParkHat 1>>
+            <<set $SoldHat to true>>
+            <<SetSpeaker Original>>
+			怎么不戴戴看呢？
+            <<Hide>>
+            <<Wait 1>>
+            <<if HasItem("GoldenFeather", 1) is false>>
+				嗯，你现在钱用完了……
+				不如我免费送你根金色羽毛！
+                <<set $FeathersSold to $FeathersSold + 1>>
+                <<Hide>>
+                <<GiveItem GoldenFeather 1>>
+                [[ExplainGoldenFeather]]
+            <<endif>>
+        <<else>>
+            <<SetSpeaker Original>>
+			哦，呃……
+			我不觉得……
+			你买得起。
+            <<SetSpeaker Player>>
+			哦。
+			是啊。
+        <<endif>>
+    -> 不，不买。
+        <<HideCollection Coin>>
+        <<SetSpeaker Original>>
+        好吧！
+<<else>>
+	我们卖完了！
+	最后一顶已经被你买了。
+    <<SetSpeaker Player>>
+	你会去入更多货吗？
+    <<SetSpeaker Original>>
+	那得等下个季度。
+	每个季度都有上限。
+    <<SetSpeaker Player>>
+	那我能买到最后一顶还真是走运！
+    <<SetSpeaker Original>>
+	哈哈，我也是这么认为！
+<<endif>>
+===
+title: ExplainGoldenFeather
+tags: 
+colorID: 0
+position: 4214,-359
+---
+让我来告诉你怎么用！
+<<Face Original Player>>
+你在半空中按<color=red>{{JumpButton}}</color>，\n就能挥动翅膀进行二段跳！
+不仅如此！
+你还可以对着墙按住<color=red>{{JumpButton}}</color>往上爬。
+有越多金羽毛，你就越能飞和爬。
+祝你用得开心！
+===
+title: HikingDalmationStart
+tags: 
+colorID: 0
+position: 5705,-930
+---
+<<set $HikerTalkCount to $HikerTalkCount + 1>>
+<<if GetSpeakerY() > 250.5>>
+    [[AtTopOfHike]]
+<<else>>
+    <<if GetNPCSpeakerNextNode() < 18>>
+        [[HikingUp]]
+    <<else>>
+        [[HikingDown]]
+    <<endif>>
+<<endif>>
+===
+title: HikingUp
+tags: 
+colorID: 0
+position: 5449,-634
+---
+<<if $HikerTalkCount is 1>>
+	嘿哟！
+	爬山爬得怎样？
+    <<SetSpeaker Player>>
+	哦，呃……
+	挺好的。
+	确实是个很美的地方。
+    <<SetSpeaker Original>>
+    我就知道！
+    <<SetEmotion Happy>>
+	上面的景色是真的……
+	超级……
+	好看！！
+    <<SetSpeaker Player>>
+	你要去爬<color=red>鹰峰</color>！？
+    <<SetSpeaker Original>>
+    <<ClearEmotion>>
+	哦，不是的。
+	爬那里对我来说太难了。
+    <<SetSpeaker Player>>
+    ……
+    <<SetSpeaker Original>>
+	我现在要去瞭望台。
+	到那见好吗？
+    <<SetSpeaker Player>>
+    -> 好啊，那我们上面见！
+        <<SetSpeaker Original>>
+        <<SetEmotion Happy>>
+		太好了！
+		待会见！
+    -> 嗯，大概。
+        好吧，那待会见！
+<<else>>
+    <<if $MetHikerAtTop is true>>
+		我正返回灯塔。
+		就当作是锻炼。
+		待会见！
+    <<else>>
+        <<if $DumbLore is false>>
+            好溪路真的好美。
+			在很久以前，它有条岔路\n能通往哈博德山脉。
+			但它被风暴给破坏了，\n所以路牌被取了下来。
+            <<set $DumbLore to true>>
+        <<else>>
+            <<SetEmotion Happy>>
+			多好的日子！
+            <<ClearEmotion>>
+        <<endif>>
+    <<endif>>
+<<endif>>
+===
+title: HikingDown
+tags: 
+colorID: 0
+position: 5701,-639
+---
+<<if $HikerTalkCount is 1>>
+	嘿哟！
+	爬山爬得怎样？
+    <<SetSpeaker Player>>
+	哦，呃……
+	挺好的。
+	确实是个很美的地方。
+    <<SetSpeaker Original>>
+	我就知道！
+    <<SetEmotion Happy>>
+	上面的景色是真的……
+	超级……
+	好看！！
+    <<SetSpeaker Player>>
+	你爬上过<color=red>鹰峰</color>了！？
+    <<SetSpeaker Original>>
+    <<ClearEmotion>>
+	哦，没。
+	爬那里对我来说太剧烈了。
+    <<SetSpeaker Player>>
+	……
+    <<SetSpeaker Original>>
+	我刚从瞭望台下来。
+	打算多走几次锻炼锻炼。
+	不是我吹牛，
+	我动作还挺快的。
+	也许待会就能在上面见到！
+    <<SetSpeaker Player>>
+    -> 好啊，那我们上面见！
+        <<SetSpeaker Original>>
+        <<SetEmotion Happy>>
+		太好了！
+		待会见！
+    -> 嗯，大概。
+		好吧，那待会见！
+<<else>>
+    <<if $MetHikerAtTop is true>>
+        <<if $HikeDownChitChat is false>>
+			哇塞。
+			真希望自己能住在这里。
+			我每天都会来爬山，
+			绝不会感到厌倦。
+            <<SetSpeaker Player>>
+			你可以在公园里找份工作！
+			我梅婶就在这工作，\n她整个夏天都住这里。
+            <<SetSpeaker Original>>
+            *叹气*
+            我也想啊。
+			但我不能就这样离开城市。
+            <<SetSpeaker Player>>
+            -> 你可以的！
+				我的意思是，事情肯定不容易。
+				但这也许是值得的。
+                <<SetSpeaker Original>>
+				哈，是啊……
+				也许会有那天！
+            -> 我能理解。
+				你得抛弃很多东西，比如……
+				你的朋友，
+				你的房子，
+				你的工作……
+                <<SetSpeaker Original>>
+				是啊，没那么容易。
+            <<set $HikeDownChitChat to true>>
+        <<else>>
+			我打算继续爬山！
+			待会见！
+        <<endif>>
+    <<else>>
+		嘿哟~~。
+		我刚在上面的瞭望台。
+		不过没见到你。
+        <<SetSpeaker Player>>
+		哎哟！
+        <<SetSpeaker Original>>
+		你该去看看的。
+		那里有绝美景色。
+		我打算多走几回。
+		就当作是锻炼！
+    <<endif>>
+<<endif>>
+===
+title: AtTopOfHike
+tags: 
+colorID: 0
+position: 5974,-646
+---
+<<if $HikerTalkCount is 1>>
+	哇。
+	在这能真正体会到风吹的感觉。
+	我喜欢。
+	它让我感到很……
+	快乐。
+    <<SetSpeaker Player>>
+	没错。
+	是很不错。
+    [[GetMapFromHiker]]
+<<else>>
+    <<if $MetHikerAtTop is false>>
+		嗨！
+		很高兴在这见到你。
+		你没觉得
+		这景色很壮丽吗。
+        <<SetSpeaker Player>>
+        -> 是啊，很壮丽。
+            <<SetSpeaker Original>>
+			对！
+			风吹过脸的感觉，
+			真的非常舒服。
+        -> 还行。
+            <<SetSpeaker Original>>
+			还行？！
+			看看这景象！
+			多么壮丽。
+			你可以看到……
+			整座岛！
+        [[GetMapFromHiker]]
+    <<else>>
+		我喜欢这上面！
+		……
+		不过我该带些点心上来的。
+		当你来达山顶时……
+		你得吃点东西才行！
+		这才是对的。
+    <<endif>>
+<<endif>>
+===
+title: TreasureMapsStart
+tags: 
+colorID: 0
+position: 2413,-657
+---
+<<if GetItemCount("TreasureMap") == 1>>
+    <<if $_TMap1 is true>>
+        [[TMap1]]
+    <<endif>>
+    <<if $_TMap2 is true>>
+        [[TMap2]]
+    <<endif>>
+    <<if $_TMap3 is true>>
+        [[TMap3]]
+    <<endif>>
+    <<if $_TMap4 is true>>
+        [[TMap4]]
+    <<endif>>
+<<else>>
+	要看哪张地图？
+    <<if $_TMap1 is true>>
+        [[坠落之星|TMap1]]
+    <<endif>>
+    <<if $_TMap2 is true>>
+        [[在她影中|TMap2]]
+    <<endif>>
+    <<if $_TMap3 is true>>
+        [[国王宝座|TMap3]]
+    <<endif>>
+    <<if $_TMap4 is true>>
+        [[希德之宝|TMap4]]
+    <<endif>>
+<<endif>>
+===
+title: TMap1
+tags: 
+colorID: 0
+position: 2405,89
+---
+
+===
+title: TMap2
+tags: 
+colorID: 0
+position: 2786,-313
+---
+上面写着……
+<<SetStyle MapTextBoxProfile>>
+他的船消失在水面上
+但灯塔发现并抓住了她。
+于是他把货物埋起。
+藏于阴影的尽头里，
+为灯塔看守人之女保护好它。
+<<SetSpeaker Player>>
+<<if $_Unearthed_LighthouseShadow>>
+    这东西我已经找到了！
+<<endif>>
+===
+title: GetMapFromHiker
+tags: 
+colorID: 0
+position: 5975,-416
+---
+<<SetSpeaker Original>>
+从这看游客中心好小！
+呵。
+哦，这让我想起件事！
+这东西给你。
+<<Hide>>
+<<GiveItem TreasureMap 1>>
+<<set $_TMap4 to true>>
+很明显有宝藏埋在希德海滩中。
+但我就是找不到，\n也许你的运气会比我好！
+<<set $MetHikerAtTop to true>>
+===
+title: Node54
+tags: 
+colorID: 0
+position: 3340,2765
+---
+i don't know how to end my novel!
+i usually write action stuff, but im trying to write a peaceful book
+its just about life...
+but im worried it's boring!
+===
+title: OtherKid2
+tags: 
+colorID: 0
+position: 3850,-304
+---
+<<if $AcceptedKidQuest2 is false>>
+	所以……
+	你是回来跪求我的吗？
+    [[ConsiderKidQuest]]    
+<<elseif HasItem("ShellNecklace", 1)>>
+	东西送到了吗？
+    <<SetSpeaker Player>>
+	还在送。
+    <<SetSpeaker Original>>
+	看来你工作不怎么勤奋。
+<<elseif $KidDone is false>>
+	根据我的情报，
+	你已经送完东西了。
+    <<SetSpeaker Player>>
+	你情报是对的。
+	……
+	那报酬呢？
+    <<SetSpeaker Original>>
+	别急，别急。
+	给你。
+    <<Hide>>
+    <<GiveItem Shell 10>>
+    <<Wait 1>>
+    <<SetSpeaker Player>>
+	……
+    <<SetSpeaker Original>>
+	这些贝壳拿去乐吧。
+    <<set $KidDone to true>>
+<<else>>
+    <<SetSpeaker Player>>
+	那个，你在干嘛？
+    <<SetSpeaker Original>>
+	我在处理贝壳。
+    <<SetSpeaker Player>>
+	嗯……
+<<endif>>
+===
+title: ToughBirdStart
+tags: 
+colorID: 0
+position: 4450,-1328
+---
+<<if $ToughBirdSellIntro is true>>
+    [[ToughBirdSell]]
+<<endif>>
+
+嗨，孩子。
+想买金羽毛吗？
+<<SetSpeaker Player>>
+-> 好啊。
+    <<SetSpeaker Original>>
+	呵，酷。
+	每根羽毛100枚硬币。
+    <<SetSpeaker Player>>
+	……等下，
+	这比游客中心贵一倍啊！
+    <<SetSpeaker Original>>
+	那就去他们那买呗。
+    <<if $HeardAboutBoy is true>>
+        <<SetSpeaker Player>>
+		可是，
+		他们卖完了！
+        <<SetSpeaker Original>>
+		呵。
+		看来你运气不咋样。
+		……
+    <<else>>
+        <<SetSpeaker Player>>
+		我会去的！
+        <<SetSpeaker Original>>
+        ……
+    <<endif>>
+    <<set $ToughBirdSellIntro to true>>
+    [[ToughBirdSell]]
+-> 不了，这样就行。
+    <<SetSpeaker Original>>
+	随你便。
+    
+===
+title: ToughBirdSell
+tags: 
+colorID: 0
+position: 4760,-1329
+---
+<<if $ToughBirdFriend is true>>
+	嗨。
+	怎么了？
+    <<SetSpeaker Player>>
+    <<ShowCollection Coin>>
+    [[我能买根羽毛吗？|ToughBirdBuyFeatherNice]]
+    [[再见。|ToughBirdExitNeutral]]
+<<else>>
+    <<if $ToughBirdSales >= 4>>
+		天啊，所有羽毛都被你买了……
+        <<SetSpeaker Player>>
+        <<ShowCollection Coin>>
+        <<if $ToughBirdsProblem is false>>
+            [[你在干嘛？|ToughBirdWhatDeal]]
+            [[再见。|ToughBirdExitNeutral]]
+        <<else>>
+            <<if HasItem("Coin", 400) is true>>
+                [[想要学费吗？|ToughBirdTuition]]
+                [[再见。|ToughBirdExitNeutral]]
+            <<else>>
+                [[怎么了？|ToughBirdWhatsUp]]
+                [[再见。|ToughBirdExitNeutral]]
+            <<endif>>
+        <<endif>>
+    <<else>>
+        <<SetSpeaker Original>>
+		……那你想买我的羽毛吗？
+        <<SetSpeaker Player>>
+        <<ShowCollection Coin>>
+        [[好吧。|ToughBirdBuyFeather]]
+        [[不要！|ToughBirdExit]]
+        <<if $ToughBirdSales > 0>>
+            <<if $ToughBirdsProblem is false>>
+                [[你在干嘛？|ToughBirdWhatDeal]]
+            <<else>>
+                <<if HasItem("Coin", 400) is true>>
+                    [[想要学费吗？|ToughBirdTuition]]
+                <<else>>
+                    [[怎么了？|ToughBirdWhatsUp]]
+                <<endif>>
+            <<endif>>
+        <<endif>>
+    <<endif>>
+<<endif>>
+===
+title: ToughBirdBuyFeather
+tags: 
+colorID: 0
+position: 4755,-1714
+---
+<<HideCollection Coin>>
+<<SetSpeaker Original>>
+<<if HasItem("Coin", 100) is true>>
+	嘿。
+	好了，付清。
+    <<set $ToughBirdSales to $ToughBirdSales + 1>>
+    <<GiveItem Coin -100>>
+    <<PlaySound BuySound>>
+    <<Hide>>
+    <<Wait 1>>
+    <<GiveItem GoldenFeather 1>>
+	再见。
+<<else>>
+	呃……
+	你不够100枚硬币。
+    <<SetSpeaker Player>>
+	……
+    <<SetSpeaker Original>>
+	我不会降价的。
+	我有服务成本！
+<<endif>>
+===
+title: CheckWatch
+tags: 
+colorID: 0
+position: 2193,-655
+---
+{{Time}}了。
+===
+title: TMap3
+tags: 
+colorID: 0
+position: 2212,-314
+---
+上面写着……
+<<SetStyle MapTextBoxProfile>>
+石塔之南越河桥，
+皇室山脉孤椅摇。
+<<SetSpeaker Player>>
+<<if $_Unearthed_KingsThrone>>
+	这东西我已经找到了！  
+<<endif>>
+===
+title: TMap4
+tags: 
+colorID: 0
+position: 2543,-317
+---
+上面写着……
+<<SetStyle MapTextBoxProfile>>
+吾宝隐于世，亦非不解谜。
+希德海滩上，苔石间可及。
+<<SetSpeaker Player>>
+<<if $_Unearthed_SidBeachTreasure>>
+	这东西我已经找到了！  
+<<endif>>
+===
+title: RunRabbitStart
+tags: 
+colorID: 0
+position: 3043,431
+---
+跑得慢会有危险！
+这就是……
+我跑得快的原因。
+===
+title: IceHikerStart
+tags: 
+colorID: 0
+position: 4846,700
+---
+<<set $_MetIceHiker to true>>
+    
+<<if $_FoxClimbedToTop is true>> 
+    [[IceHikerPeak]] 
+<<elseif visited() is false>>
+    <<Face Player>>
+    <<if $GoldenFeatherAdvice is true>>
+		嗨，又是你！
+    <<else>> 
+		嗨！
+    <<endif>> 
+	我们就快到山顶了……
+	不过，
+	桥好像塌了。
+	……
+	或许有<color=red>别的路</color>能上去……
+	又或许，
+	我们能收集更多的金羽毛？
+<<elseif $_ClimbedHawkPeak is true>>
+    <<Face Player>>
+    [[IceHikerAfterPeak]]
+<<elseif visitCount() is 1>>
+    <<Face Player>>
+	唉。
+	我很想到山顶拍照。
+	但我不知道现在该怎么办。
+	……
+	我听说，
+	山的暗处是有条路能走。
+	不过，
+	那路很久之前就被他们关了。
+	也不知道还能不能用？
+    <<set $KnowsFoxIsPhotographer to true>> 
+<<else>>
+    <<Face Player>>
+	你要是找到了上去的路。
+	可以告诉我吗？
+    <<SetSpeaker Player>>
+	当然可以！
+	我会回来跟你说的。
+<<endif>>
+===
+title: BeachHikerStart
+tags: 
+colorID: 0
+position: 4570,93
+---
+<<if visited() is false>>
+	流星湖今天有马拉松比赛！
+	今年的竞争异常激烈！
+    <<set $KnowsAboutRace to true>>
+<<elseif visitCount() is 1>>
+	我侄子正在跑马拉松。
+	他练了一早上。
+	你要是看到他的话，
+	要让他多休息！
+    <<set $NephewHi to true>>
+<<else>>
+	也要让他多喝水！
+	永远都别忘记补水！
+    <<set $Hydration to true>>
+<<endif>>
+===
+title: LowerHikerStart
+tags: 
+colorID: 0
+position: 4323,96
+---
+<<if visited() is false>>
+	我听到了些流言。
+	你喜欢听流言吗？
+    <<SetSpeaker Player>>
+	偶尔会听。
+    <<SetSpeaker Original>>
+	好嘞，那听我说。
+	吉姆刚买了金属探测器。
+	他昨天到处跑，
+	在岛屿周围找东西。
+	几近疯狂！
+	像是岛上到处都埋有东西似的？！
+    <<SetSpeaker Player>>
+	什么东西？
+    <<SetSpeaker Original>>
+	不清楚。
+	也许是金属制品？
+<<elseif visitCount() is 1>>
+	其实吉姆没有<color=red>铲子</color>。
+	所以……
+	他无法挖出任何东西来。
+<<elseif visitCount() is 2>>
+	好吧，你想听别的流言吗？
+    <<SetSpeaker Player>>
+	想。
+    <<SetSpeaker Original>>
+	黛博拉前几天去了瞭望台那。
+	她说，她在用望远镜时，
+	看到了……
+	神秘的岛屿。
+    <<SetSpeaker Player>>
+	好神秘啊！！
+<<else>>
+	还想听别的流言？
+    <<SetSpeaker Player>>
+	是的。
+    <<SetSpeaker Original>>
+    但我都说完了。
+    <<SetSpeaker Player>>
+	好吧。
+<<endif>>
+===
+title: FrogMiniStart
+tags: 
+colorID: 0
+position: 5086,-397
+---
+<<if $_GotShovel is true>>
+    <<if $_BuiltMoreSandcastles is true>>
+        [[FrogElections]]
+    <<else>>
+		哦，天啊。
+		有了这把铲，我的生产率将大幅提升。
+		晚点我再联系你，
+		现在还有好多事要做。
+    <<endif>>
+<<else>>
+    <<if HasItem("ToyShovel", 1) is true and $AskedForShovel is true>>
+        <<SetSpeaker Player>>
+		嗨，瞧我找到的这把铲。
+		大小可能更适合你。
+        [[FrogTrade]]
+    <<else>>
+        <<SetSpeaker Player>>
+		嗨，伙计。
+        <<if visited() is false>>
+			在干嘛？
+            <<SetSpeaker Original>>
+			哦，你知道的！
+			像是在沙滩上散散心，
+			造造沙堡之类的。
+            <<SetSpeaker Player>>
+			听上去你过得不错嘛。
+            <<SetSpeaker Original>>
+            你还挺懂的。
+        <<endif>>
+        <<SetSpeaker Player>>
+        -> 我能借你铲子吗？
+            <<if $AskedForShovel is false>>
+                <<SetSpeaker Original>>
+                抱歉，伙计。
+				我还要用它来造沙堡。
+                <<SetSpeaker Player>>
+				你不觉得铲子大了点吗？
+                <<SetSpeaker Original>>
+				是有点，不过，
+				铲子都这样。
+                <<SetSpeaker Player>>
+				你可以拿小号点的。
+				有那种给沙堡用的铲子。
+                <<SetSpeaker Original>>
+				什么？
+				听上去不像真的。
+                <<if HasItem("ToyShovel", 1) is true>>
+                    <<SetSpeaker Player>>
+					我有一把！
+					来，瞧一下。
+                    <<Hide>>
+                    <<Wait 1>>
+                    [[FrogTrade]]
+                <<else>>
+					你要是有的话，
+					我愿意跟你换。
+                    <<set $AskedForShovel to true>>
+                <<endif>>
+            <<else>>
+                <<SetSpeaker Original>>
+				你要是能找到更合适的铲子，
+				我愿意跟你换。
+            <<endif>>
+        -> 再见。
+            <<SetSpeaker Original>>
+			常联络！
+    <<endif>>
+<<endif>>
+===
+title: RunnerStart
+tags: 
+colorID: 0
+position: 3559,2558
+---
+你想知道苏的的秘密吗？
+<<SetSpeaker Player>>
+-> 想。
+    <<SetSpeaker Original>>    
+	我就知道！
+	好吧，首先你要给我买件……
+	酷酷的玩具。
+    <<SetSpeaker Player>>
+	天啊，人们今天肯定想我\n给他们弄很多垃圾。
+-> 不想。
+    <<SetSpeaker Original>>
+	哦，好吧。
+===
+title: FrogElections
+tags: 
+colorID: 0
+position: 5336,-399
+---
+<<if $_BuiltSandProvince is true>>
+    [[FrogProvincialElections]]
+<<endif>>
+<<if visited() is false>>
+	我的沙堡变成沙城的一部分了！
+	还有，
+	我正参与一场激烈的市长选举！
+	哦，等等……
+	选举结果要出来了！
+    <<SetSpeaker Player>>
+	！！
+    <<SetSpeaker Original>>
+	好了，好了。
+	我在统计。
+	……
+	第三名！？
+	什么么！？
+	这城市可是我造的！
+    <<set $_CityElection to true>>
+<<else>>
+    <<SetSpeaker Player>>
+	选举失利，甚是遗憾。
+    <<SetSpeaker Original>>
+	那是场艰难的竞选。
+	不过没事的，
+	我已经在市议会中拿到了席位。
+<<endif>>
+===
+title: DebugFoxStart
+tags: 
+colorID: 0
+position: 4408,2786
+---
+<<if visited() is false>>
+    Hey Hand Eye Society!
+    this is a note from the developer
+    im still working out the\ngame progression and dialog
+    until i have stuff better sorted out
+    take this free stuff
+    <<Hide>>
+    <<GiveItem GoldenFeather 1>>
+    <<GiveItem RunningShoes 1>>
+    you can hold <color=red>{{RunButton}}</color> to\nrun with the running shoes
+<<else>>
+    thanks for playing!
+<<endif>>
+===
+title: MeetToughStart
+tags: 
+colorID: 0
+position: 3914,2882
+---
+hey
+
+uh..
+hi?
+what do you want
+
+oh uh
+nothing
+i'm just hiking up to Hawk Peak
+
+-> nothing
+-> i dunno
+
+------------------
+hey, you
+
+huh, me?
+
+yeah
+where are you going?
+
+what does it matter to you
+
+well, if you're going to <color=red>Hawk Peak,</color>
+you're gonna have a hard time
+
+what
+
+just 
+are you going up to <color=red>Hawk Peak?</color>
+
+
+===
+title: Nice Kid Start
+tags: 
+colorID: 0
+position: 4160,2876
+---
+Empty Text
+===
+title: Plot
+tags: 
+colorID: 0
+position: 3758,3182
+---
+plot 1
+- the player is waiting for a call
+  > shown at the beginning of the game
+- her mother has surgery, and she's anxious about it
+  > talking to the friend will reveal this
+- she's going on a walk to distract herself
+  > talking to the friend reveals this
+- as she continues, she appreciates the world around her and gets out of her mind
+  > when she gets to the top of the mountain
+- when she gets near the top, she's worried she won't make it
+  > her friend is waiting for her when she gets to the ledge, 
+
+plot 2
+- the player is avoiding doing something she's afraid of
+  > talking to the tough bird she'll admit that
+- she's pressured to climb the mountain, but she's scared she won't be able to do it
+  > talking to the tough bird will reveal this
+- it seems scary, but it turns out it's possible, and even fun
+  > she talks to the tough bird 
+- she makes it to the top, and is proud of herself
+  > the tough bird makes it to the top
+===
+title: RaceRabbitStart
+tags: 
+colorID: 0
+position: 6297,-843
+---
+<<if "Headband" is $_WornHat and $BunnyQuestDone is false>>
+	嗯……
+	啊。
+    <<SetSpeaker Player>>
+	怎么了？
+    <<SetSpeaker Original>>
+	你戴着那条头带。
+    <<SetSpeaker Player>>
+	哦，啊！
+	没错。
+    <<Hide>>
+    <<Wait 1>>
+    <<set $_WornHat to "">>
+	我找到了这个，给你。
+    [[GiveRabbitHeadband]]
+<<elseif $RabbitQuest is true and HasItem("Headband", 1) is true and $BunnyQuestDone is false>>
+	有没有找到我头带？
+    <<SetSpeaker Player>>
+	那个……
+	我找到了这个……
+    <<Hide>>
+    <<Wait 1>>
+    [[GiveRabbitHeadband]]
+<<elseif $BunnyQuestDone is true>>
+    [[RabbitWithHeadband]]
+<<elseif visited() is false>>
+	呃……
+	嗯！
+    <<SetSpeaker Player>>
+	嗨！
+    <<SetSpeaker Original>>
+	嗨！！！
+    <<SetSpeaker Player>>
+	呃，你还好吗？
+    <<SetSpeaker Original>>
+	啊！
+	不怎么好……
+	我今天本来是要去跑马拉松的。
+    <<set $KnowsAboutRace to true>>
+	但我弄丢了我的幸运头带！！
+	每次比赛我都会戴着它跑！
+	没有它……
+	我不知道该怎么跑赢比赛。
+    <<SetSpeaker Player>>
+	你在哪弄丢的？
+    <<SetSpeaker Original>>
+	黑森林的某处。
+	……
+	大概……
+    <<SetSpeaker Player>>
+	我可以帮你找。
+    <<SetSpeaker Original>>
+	真的吗？
+	你会帮我？
+    <<SetSpeaker Player>>
+	当然！
+    <<SetSpeaker Original>>
+    ！！
+	是<color=red>红色的头带</color>。
+	……我会报答你的！
+	我可以送你双<color=red>跑鞋</color>。
+    <<SetSpeaker Player>>
+	你自己不需要吗？
+    <<SetSpeaker Original>>
+	那个……
+	我刚从鞋商那拿到赞助。
+	他们大概给了我10双鞋。
+    <<SetSpeaker Player>>
+	哇噢。
+	恭喜恭喜。
+    <<SetSpeaker Original>>
+	哦！！
+	哈哈……谢谢。
+	别忘了，呃……
+	看到<color=red>红色头带</color>就跟我说！
+    <<set $RabbitQuest to true>>
+<<else>>
+    [[RaceRabbitExtra]]
+<<endif>>
+===
+title: CellReceptionStart
+tags: 
+colorID: 0
+position: 2354,2788
+---
+<<SetSpeaker Player>>
+看来并不是哪里都有信号。
+<<SetSpeaker Original>>
+啊，是啊……外面信号挺差的。
+我听说<color=red>鹰峰</color>上面有信号。
+<<SetSpeaker Player>>
+是啊，我也听说了。
+只是去那不容易。
+<<SetSpeaker Original>>
+===
+title: RaceTurtleStart
+tags: 
+colorID: 0
+position: 6767,-851
+---
+<<if "Headband" is $_WornHat>>
+    [[WearingTurtleHat]]
+<<endif>>
+
+<<if $BunnyQuestDone is true>>
+    <<if $ToldTurtle is false>>
+        <<SetSpeaker Player>>
+		我已经给她了。
+        <<SetSpeaker Original>>
+		那她回去比赛了？
+        <<SetSpeaker Player>>
+		是的！
+        <<if $BunnyGiftHeadband is false>>
+            <<SetSpeaker Original>>
+			太棒了。
+            <<SetEmotion Happy>>
+			真高兴能帮上忙！
+            <<ClearEmotion>>
+        <<else>>
+            <<SetSpeaker Player>>
+			不过她把头带还回来了。
+			她好像受到了鼓舞。
+			我觉得她想凭自己的实力去赢。
+            <<SetSpeaker Original>>
+			我不觉得她还需要头带！
+			不过，你知道吗，
+			这头带你可以留着。
+			这样我们就平等了！
+            <<SetSpeaker Player>>
+			呃……
+			你真觉得会有影响？
+            <<SetSpeaker Original>>
+			其实吧……
+            <<SetEmotion Happy>>
+			也许没有。
+			不过，
+			万一有呢。
+            <<ClearEmotion>>
+            <<set $ExplainedHeadband to true>>
+        <<endif>>
+        <<set $ToldTurtle to true>>
+    <<else>>
+        [[RaceTurtleAfter]]
+    <<endif>>
+<<elseif HasItem("Headband", 1) is true>>
+	记得告诉我后续！
+<<elseif $RabbitQuest is true and $_BunnyGotHeadband is false>>
+    <<SetSpeaker Player>>
+	哦，呃……
+	问题是有点怪，不过，
+	你在哪拿到那条头带的？
+    <<SetSpeaker Original>>
+	呃……
+	不知道。
+	这头带已经跟我好多年了。
+	怎么了？
+    <<SetSpeaker Player>>
+	啊，那个，
+	我刚和兔子聊过天。
+	她说她头带丢在森林里了。
+    <<SetSpeaker Original>>
+	哦！你是说苏吗？
+    <<SetSpeaker Player>>
+	是吧？
+	我不知道她名字。
+	但她很焦虑。
+	她说她比赛需要运气。
+    <<SetSpeaker Original>>
+	今天晚点我要和她比赛！
+	她很有天赋，我一直很期待跟她比！
+	嗯……
+	要是我把我头带给你呢？
+	同种款式，
+	她或许不会注意到？
+    <<SetSpeaker Player>>
+	哦，嗯……
+	但，
+	你的好运不就没了？
+    <<SetSpeaker Original>>
+	啊，我也不知道。
+	你就拿去吧。
+	看她要不要。
+    <<Hide>>
+    <<set $_TurtleGivenHeadband to true>>
+    <<GiveItem Headband 1>>
+<<else>>
+    <<if $TurtleTalk1 is false>>
+        <<SetSpeaker Player>>
+		在干嘛？
+        <<SetSpeaker Original>>
+		只是在慢跑而已。
+		得为今晚的比赛热身。
+		我有些紧张。
+		那里一定有很多厉害的跑手！
+        <<set $KnowsAboutRace to true>>
+        <<set $TurtleTalk1 to true>>
+    <<else>>
+		我和我的<color=red>红头带</color>啊！
+		冲呀！
+    <<endif>>
+<<endif>>
+===
+title: ToMainIslandStart
+tags: 
+colorID: 0
+position: 1829,-122
+---
+<sprite name="LeftArrow" tint=1> 返回鹰峰岛
+===
+title: Node78
+tags: 
+colorID: 0
+position: 4387,2519
+---
+why doesn't the water level rise when the ice melts!?
+
+theories:
+aliens!
+===
+title: FrogProvincialElections
+tags: 
+colorID: 0
+position: 5592,-403
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	哇噢。
+	城市真的发展起来了，对吧？
+    <<SetSpeaker Original>>
+	哦，这再也不是沙城了。
+	这是沙省！
+	这次，
+	我要在省选举中竞选省长！
+	没错，我是没选上市长。
+	但这次，
+	我会在外展服务上投入\n双倍资源。
+	而且我会推行一些政策，\n我真认为这些政策能在关键\n地域里引起共鸣。
+	只要选上，
+	我就能动用省级影响力……
+	……来彻底控制那座舍弃\n我的城市。
+	啊哈哈哈哈哈！
+    <<SetSpeaker Player>>
+	……
+	哇噢。
+    <<SetSpeaker Original>>
+	还有，我要立的第一项法规是……
+	要我的同伴全都进议会。
+	第二项法规是……
+	所有糖果都免费！！
+	啊哈哈哈！！
+    <<set $ListenedToFrogSpeech to true>>
+<<else>>
+    <<SetSpeaker Player>>
+	那个……
+	竞选怎么样了？
+    <<SetSpeaker Original>>
+	形势超好！！
+<<endif>>
+===
+title: RabbitWithHeadband
+tags: 
+colorID: 0
+position: 6543,-599
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	那你真觉得是运气？
+    <<SetSpeaker Original>>
+	那个……
+	我也不太清楚。
+	我走到了今天这么远，
+	而且，
+	好像……
+	只有我……
+	……有这种运气。
+    <<SetSpeaker Player>>
+	那个，也许是有点。
+	不过，
+	你跑得很快！
+	而且你还做了那么多训练！
+	能走那么远是因为你很强！
+    <<SetSpeaker Original>>
+	哇。
+	……
+	……是啊。
+	我知道。
+	我想我一直都知道。
+	但，
+	我不敢肯定，
+	我很紧张。
+	有时候我会想这是不是\n碰巧的。
+	……
+	不过你说得对！
+	我不需要运气。
+	来，头带还你。
+	这件事我要靠自己！
+    <<Hide>>
+    <<GiveItem Headband 1>>
+    <<set $_BunnyGotHeadband to false>>
+    <<set $BunnyGiftHeadband to true>>
+    <<SetSpeaker Player>>
+	哇噢。
+	谢谢！
+	祝你比赛顺利。
+	你会成功的！！
+<<else>>
+	抱歉，现在不能聊天。
+	我得为比赛做好身心准备。
+	待会见！
+<<endif>>
+===
+title: HawkPeakAltSignStart
+tags: 
+colorID: 0
+position: 1127,-132
+---
+<sprite tint=1 name="UpArrow"> 鹰峰小径
+<sprite tint=1 name="Warning"> 注 意 <sprite tint=1 name="Warning">
+<color=yellow>鹰峰小径</color>非常难爬！
+你要有<color=yellow>金羽毛</color>才能爬完。
+<color=yellow>金羽毛</color>在<color=yellow>游客中心</color>有售。
+===
+title: RaceTurtleAfter
+tags: 
+colorID: 0
+position: 7018,-599
+---
+速度是我名，赛跑任我行！
+其实我叫泰勒。
+不过，没错，
+最重要的还是要记得，
+我跑得很快。
+===
+title: WearingTurtleHat
+tags: 
+colorID: 0
+position: 6773,-601
+---
+<<if $BunnyGiftHeadband is true>>
+    <<if $ExplainedHeadband is false>>
+		那个，呃……
+		你要自己留下那条头带吗？
+        <<SetSpeaker Player>>
+		不！
+		呃，那个，
+		其实苏已经把它还回来了。
+		她说她不想再靠运气。
+        <<SetSpeaker Original>>
+		那太好了！
+		无关运气，
+		她本身就很有天赋。
+        <<SetSpeaker Player>>
+		那你想要回头带吗？
+        <<SetSpeaker Original>>
+        呃……
+		看来你很喜欢。
+		你就留着吧。
+        <<set $ExplainedHeadband to true>>
+    <<else>>
+        [[RaceTurtleAfter]]
+    <<endif>>
+<<else>>
+    <<if visited() is false>>
+		嗯……
+		那头带看起来很眼熟。
+        <<SetSpeaker Player>>
+		哦，呃……
+		我只是……
+		想试试它合不合身，
+		它看起来很舒适。
+        <<SetSpeaker Original>>
+		是啊，是很不错。
+    <<else>>
+		那个……
+		你还在试用我的头巾吗？
+        <<SetSpeaker Player>>
+		呃……
+		这是……
+		因为我口袋满了，
+		所以戴着比较方便。
+        <<SetSpeaker Original>>
+		说得有理。
+    <<endif>>
+<<endif>>
+===
+title: GiveRabbitHeadband
+tags: 
+colorID: 0
+position: 6300,-592
+---
+<<SetSpeaker Original>>
+嗯……
+不是这条。
+上面汗渍的位置不对。
+<<SetSpeaker Player>>
+咦。
+<<SetSpeaker Original>>
+你这是在哪找的？
+<<SetSpeaker Player>>
+其实，是乌龟给我的。
+他说可以给你。
+他很期待比赛，不想你错过！
+<<SetSpeaker Original>>
+什么？！
+真的吗？？
+乌龟泰勒吗！？
+他可是，区冠军啊！？
+这条头带至少得有……
+两倍的幸运效果。
+……可能还不止……
+或许有四倍的效果。
+<<SetSpeaker Player>>
+！！！
+<<SetSpeaker Original>>
+好吧。
+这头带我要了。
+我好兴奋！
+这双跑鞋就送你了。
+<<GiveItem Headband -1>>
+<<set $_BunnyGotHeadband to true>>
+<<set $BunnyQuestDone to true>>
+<<set $_BunnyHappy to true>>
+<<Hide>>
+<<GiveItem RunningShoes 1>>
+你可以按住<color=red>{{RunButton}}</color>来奔跑！
+不过，
+别忘了奔跑是需要<color=red>金羽毛</color>的。
+===
+title: Node86
+tags: 
+colorID: 0
+position: 3637,2812
+---
+Empty Text
+===
+title: OutlookPointSignStart
+tags: 
+colorID: 0
+position: 1373,-128
+---
+<sprite tint=1 name="UpArrow"> 瞭望台
+===
+title: Strawberries
+tags: 
+colorID: 0
+position: 4196,-615
+---
+<<if visited() is true>>
+    <<SetSpeaker Player>>
+	还是没草莓吗？
+    <<SetSpeaker Original>>
+	是啊。
+<<else>>
+    <<SetSpeaker Player>>
+	那个，我听说这有草莓。
+	……而且已经到下午5点了。
+    <<SetSpeaker Original>>
+	哦，糟糕。
+	我们已经卖光了。
+    <<SetSpeaker Player>>
+	什么！？
+	那，
+	你就是打了假广告！
+    <<SetSpeaker Original>>
+	抱歉。
+	我们通常都会在本地采购。
+	今年产量出奇的低。
+	不过，
+	我们还有很多吐司。
+	你想要些吐司吗？
+    <<SetSpeaker Player>>
+	那给我些吧！
+    <<SetSpeaker Original>>
+	好嘞……
+    <<Hide>>
+    <<GiveItem Toast 1>>
+    <<SetSpeaker Original>>
+	那个，还需要别的吗？
+<<endif>>
+<<SetSpeaker Player>>
+<<ShowCollection Coin>>
+-> 有<color=red>金羽毛</color>卖吗？
+    <<HideCollection Coin>>
+    <<SetSpeaker Original>>
+    [[BuyFeatherStart]]
+-> 你卖什么商品？
+    <<HideCollection Coin>>
+    [[BuyMerchStart]]
+-> 我得走了。
+    <<HideCollection Coin>>
+    <<SetSpeaker Original>>
+    再见。
+===
+title: EatToastStart
+tags: 
+colorID: 0
+position: 4209,-138
+---
+<<SetSpeaker Player>>
+当然，我会吃掉这吐司。
+没有不吃的道理。
+<<Hide>>
+<<GiveItem Toast -1>>
+<<PlaySound EatToast>>
+<<Wait 1.5>>
+嗯……
+我觉得……
+一样。
+<<set $AteToast to true>>
+<<GiveAchievement AteToast>> 
+===
+title: FoxNearTopStart
+tags: 
+colorID: 0
+position: 4701,2694
+---
+FoxNearTopStart
+===
+title: TucanStart
+tags: 
+colorID: 0
+position: 4582,-162
+---
+<<if visited() is false>>
+	哟！
+	这上升气流刚刚好！
+	你可以乘上去做极速俯冲！
+<<else>>
+	嘿哟！
+    <sprite name="Music" tint=1> 耶，我在这里发抖。
+    <sprite name="Music" tint=1> 用日光把寒意晒走。
+    <sprite name="Music" tint=1> 只要身体再次抖擞。
+    <sprite name="Music" tint=1> 好日子我马上就有。
+<<endif>>
+<<SetSpeaker Player>>
+-> 要怎么俯冲？
+    <<SetSpeaker Original>>
+	哦，我去，那简单。
+	但需要些练习。
+	认真听我说。
+	首先，
+	你要滑翔……
+	你知道的，
+	<color=red>按住{{JumpButton}}</color>可以滑翔。
+	然后，你要是离地面够高的话。
+    <<if IsUsingJoystick() is true>>
+        此时<color=red>放开摇杆</color>就能俯冲了。
+    <<else>>
+        此时<color=red>放开十字键</color>就能俯冲了。
+    <<endif>>
+	不过你还得<color=red>按住{{JumpButton}}</color>才行。
+	这是难点！
+	你要是能做好俯冲，\n那你的<color=red>速度就会变得很快</color>。
+	你可以拿这的上升气流来练滑翔。
+	它能把你送到很高的地方！
+-> 听起来不错。
+    <<SetSpeaker Original>>
+	我去，你原来知道啊。
+	大风底下好滑翔。
+===
+title: Cellphone2
+tags: 
+colorID: 0
+position: 7343,-517
+---
+<<Wait 1>>
+<<SetSpeaker Player>>
+*哈呼*
+咻。
+<<Hide>>
+<<Wait 1>>
+我……
+<<Hide>>
+<<Wait 0.6>>
+……我做到了！
+<<Hide>>
+<<SendMessage MountainTopCutscene ShowSitCamera>>
+<<Wait 1.5>>
+<<SetPose Sit>>
+<<Wait 5>>
+<<PlaySound Whippoorwill>>
+<<Wait 10>>
+<<PlaySound LoonCall>>
+<<Wait 15>>
+<<PlaySound PhoneRing>>
+<<Wait 0.5>>
+<<SetPose RaiseArms>>
+！！！
+手机来电了！！
+[[Cellphone3]]
+===
+title: CellphoneStart
+tags: 
+colorID: 0
+position: 7336,-763
+---
+<<set $_ClimbedHawkPeak to true>>
+<<if $ReachedTopCutscene is false>>
+    <<set $ReachedTopCutscene to true>>
+    [[Cellphone2]]
+<<endif>>
+===
+title: Node93
+tags: 
+colorID: 0
+position: 4136,2543
+---
+all i want to do is climb up a hill to slide down it again
+===
+title: YellAtMayStart
+tags: 
+colorID: 0
+position: 4825,-160
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	我可以从这里看到我的房子！
+	……
+	嗯呵。
+    <<SetPose RaiseArms>>
+	嘿嘿嘿嘿嘿嘿~！！！
+	梅婶婶~！！！
+    <<SetSpeaker AuntMayNPC>>
+	唉，是克莱尔吗？
+    <<SetSpeaker Player>>
+	是啊啊啊~！
+	是我！！！！
+	你能听到我说话吗！！？？！？
+    <<SetSpeaker AuntMayNPC>>
+	能啊。
+    <<SetSpeaker Player>>
+	哦哦~
+	太好了。
+    <<SetSpeaker AuntMayNPC>>
+	在上面玩得开心点啊！
+    <<SetSpeaker Player>>
+	啊啊啊~
+	会的！！
+    <<ClearPose Player>>
+<<elseif visitCount() is 1>>
+    <<SetSpeaker Player>>
+    <<SetPose RaiseArms>>
+	那个，
+	你在干什么！？
+    <<ClearPose Player>>
+    <<SetSpeaker AuntMayNPC>>
+	哦，你知道的，
+	就平常那些事。
+    <<SetSpeaker Player>>
+	好的的~
+	那很酷。
+<<elseif visitCount() is 2 and $TalkedAboutDinner is false>>
+    <<SetSpeaker Player>>
+    <<SetPose RaiseArms>>
+	今晚吃什么！？
+    <<SetSpeaker AuntMayNPC>>
+	啊。
+	我今晚想做咖喱。
+    <<set $CurryDinner to true>>
+    <<SetSpeaker Player>>
+	听上去好好吃！！
+    <<ClearPose Player>>
+<<else>>
+    <<SetSpeaker Player>>
+    <<SetPose RaiseArms>>
+	嗨，梅婶。
+    <<SetSpeaker AuntMayNPC>>
+	嗯？
+    <<SetSpeaker Player>>
+	我也不知道有啥事！
+	我觉得好无聊！！！
+    <<SetSpeaker AuntMayNPC>>
+	看得出来！
+    <<ClearPose Player>>
+<<endif>>
+===
+title: TheStory
+tags: 
+colorID: 0
+position: 5092,2774
+---
+Claire is visiting her aunt for a few weeks in the summer.
+She is a university student who has moved away from home. She's in-between her first and second year.
+Aunt May is a ranger at Hawk Peak Provincial Park.
+May drove to pick up Claire from the bus stop, and took the ferry to the park.
+During the drive with May, Claire learns from May that her mom has a surgery coming up.
+She calls her Mom during this car ride and has a short argument with her.
+It's too far for her to travel home to Mom at this point, and the bus doesn't come for another few days anyway.
+It's for a surgery that will cut into her lungs to get a tissue sample.
+The sample will determine if the issue is malignant or benign.
+Claire is upset that her mother didn't tell her it was coming up, and is worried the surgery will go poorly, and that it could be a serious issue.
+Claire worries about things a lot, and might be struggling slightly with anxiety.
+The game starts on the morning that the surgery is taking place.
+She is waiting for a call or message from her mother, about the surgery results (there is no internet her Aunt's cabin).
+Upon learning about the lack of reception, she sets out to go to Hawk Peak.
+Hawk Peak is the highest point in the province. It's a common hiking / flying spot for birds.
+She's nervous about hiking up there, because it's sort of a family tradition to ride the updrafts.
+Claire can fly fine, but she never gets a lot of practice in the city and is nervous about it.
+The game will focus on Claire hiking to Hawk Peak.
+She will meet cute or funny characters dealing with their own problems.
+She might talk about her argument with her Mom, or about her worries about the surgery, or her worries about not living up to family expectations.
+Nearing the top, she talks to a stranger about the issues and feels worried about them again.
+Upon reaching the top, she gets a call from her mom.
+She learns that the surgery went fine.
+She wants to learn to cope with stress better, and her mom will try and stay in touch better.
+The end!
+===
+title: ExplainDayToMom
+tags: 
+colorID: 0
+position: 6979,372
+---
+[[Cellphone4]]
+===
+title: Cellphone3
+tags: 
+colorID: 0
+position: 7369,-253
+---
+<<Hide>>
+<<SendMessage MountainTopCutscene TakeOutCellphone>>
+<<SendMessage MountainTopCutscene ShowCellCamera>>
+<<PlaySound PhonePickUp>>
+<<SetPose OnPhone>>
+<<Wait 0.5>>
+你好？
+<<SetSpeaker CutsceneCellphone>>
+嗨，克莱尔。
+<<SetSpeaker Player>>
+<<PlayMusic MomMusicSet>>
+妈！
+能听到你声音真是太好了。
+我一整天都在等你来电。
+我好担心你。
+<<SetSpeaker CutsceneCellphone>>
+哦，宝贝。
+我和你说过我会没事的！
+<<SetSpeaker Player>>
+是有说过。
+但你总是这么说。
+<<SetSpeaker CutsceneCellphone>>
+而且我也是说到做到！
+<<SetSpeaker Player>>
+……
+<<SetSpeaker CutsceneCellphone>>
+对了，
+你在哪？
+<<SetSpeaker Player>>
+那个，
+我现在正在鹰峰的峰顶！
+<<SetSpeaker CutsceneCellphone>>
+哦！
+哇。
+我喜欢那地方。
+以前我和你梅婶每个夏天\n都会去那。
+现在轮到你去那上面了！
+<<SetSpeaker Player>>
+啊……我知道。
+<<SetSpeaker CutsceneCellphone>>
+你现在大个女了。
+我的小女孩要离开鸟窝了。
+你已经不再需要小老妈。
+<<SetSpeaker Player>>
+我需要你。
+我从来都需要你！
+你要做手术的事……
+……怎么不跟我说呢！？
+<<SetSpeaker CutsceneCellphone>>
+我不想你担心。
+<<SetSpeaker Player>>
+但是……
+<<SetSpeaker CutsceneCellphone>>
+我知道这事让你很生气。
+<<SetSpeaker Player>>
+我可以过去陪你的。
+这样你就不用自己一个人了。
+<<SetSpeaker CutsceneCellphone>>
+真的，没关系！
+一切都安好。
+<<SetSpeaker Player>>
+<<Hide>>
+<<Wait 1>>
+知道你没事我很高兴。
+我爱你，
+妈。
+<<SetSpeaker CutsceneCellphone>>
+我也爱你。
+<<Hide>>
+<<Wait 1>>
+[[ExplainDayToMom]]
+===
+title: Cellphone4
+tags: 
+colorID: 0
+position: 6978,620
+---
+<<Hide>>
+<<Wait 1>>
+<<SendMessage MountainTopCutscene StartRumble>>
+<<Wait 1>>
+<<SetSpeaker Player>>
+等等。
+发生什么？！
+<<Hide>>
+<<Wait 1>>
+<<SendMessage MountainTopCutscene ShowLakeCamera>>
+<<Wait 1>>
+<<SendMessage MountainTopCutscene StartBubbles>>
+<<Wait 2>>
+<<SendMessage MountainTopCutscene ActivateHotSpring>>
+<<SendMessage MountainTopCutscene FinishRumble>>
+<<Wait 2>>
+<<SendMessage MountainTopCutscene HideLakeCamera>>
+<<Wait 1>>
+<<SetSpeaker CutsceneCellphone>>
+莫非那就是有名的鹰峰气流！？
+<<SetSpeaker Player>>
+啊。
+看起来是啊。
+<<SetSpeaker CutsceneCellphone>>
+它现在还没停下来，
+你应该乘上去！
+<<SetSpeaker Player>>
+我也想的。
+但我有点紧张。
+<<SetSpeaker CutsceneCellphone>>
+克莱尔，
+你能行的！
+很快我就会来看你的，好吗？
+还有，
+别忘了替我向<color=red>梅婶</color>问好！
+她很可能回小屋等你了。
+拜，爱你！
+<<SetSpeaker Player>>
+我也爱你，妈。
+<<SendMessage MountainTopCutscene PutAwayCellphone>>
+<<SendMessage MountainTopCutscene HideCellCamera>>
+<<ClearPose>>
+===
+title: AuntFinished
+tags: 
+colorID: 0
+position: 4445,-2399
+---
+<<if $HadFinalAuntDialogue is false>>
+    <<SetSpeaker Original>>
+    嘿。
+    [[AuntFinishedBody]]
+<<else>>
+    [[AuntFinalDialogue]]
+<<endif>>
+===
+title: EndGameStart
+tags: 
+colorID: 0
+position: 4943,-2122
+---
+我觉得休息会挺好的。
+-> 睡觉
+	好吧。
+	到点睡觉了！
+    <<set $_CanEndGame to true>>
+-> 先不睡
+===
+title: Node101
+tags: 
+colorID: 0
+position: 7212,379
+---
+so what has it been like there?
+<<SetSpeaker Player>>
+well
+===
+title: Node102
+tags: 
+colorID: 0
+position: 7215,618
+---
+i need to talk about how to dive, if u havent been given the tutorial yet
+===
+title: TitleScreenIntroStart
+tags: 
+colorID: 0
+position: 2728,-960
+---
+<<Wait 1.2>>
+<<SetSpeaker AuntSpeaker>>
+这里的景色我是怎么看都不腻。
+克莱尔，
+你会度过一个愉快的夏天。
+我觉得，
+离开城市放松下，
+也是个不错的选择。
+<<Hide>>
+<<Wait 1.5>>
+你还没睡着吧？
+<<SetSpeaker Original>>
+嗯嗯嗯……
+大概。
+<<SetSpeaker AuntSpeaker>>
+再坚持会！
+就快到渡口了。
+<<Hide>>
+<<Wait 1>>
+===
+title: ConsiderKidQuest
+tags: 
+colorID: 0
+position: 3588,-303
+---
+<<SetSpeaker Player>>
+-> 我接受你的“兼职”。
+    <<SetSpeaker Original>>    
+	很好。
+	带上这个……
+    <<set $AcceptedKidQuest2 to true>>
+    <<Hide>>
+    <<GiveItem ShellNecklace 1>>
+	……把它送到管理员梅那。
+	这就是全部的工作。
+-> 不要。
+    <<SetSpeaker Original>>   
+	随你便。
+===
+title: AuntNecklace
+tags: 
+colorID: 0
+position: 4162,-2374
+---
+<<set $DeliveredNecklace to true>>
+<<SetSpeaker Player>>
+我有份快递！
+是珍寄来的。
+<<GiveItem ShellNecklace -1>>
+<<Hide>>
+<<Wait 1>>
+<<SetSpeaker Original>>
+哦，哇！
+好漂亮。
+她可真是个好女孩。
+要收集这些贝壳得花不少功夫。
+<<SetSpeaker Player>>
+那个，其实……
+<<SetSpeaker Original>>
+嗯？
+<<SetSpeaker Player>>
+呃，没事了。
+<<SetSpeaker Original>>
+哦！
+我想起些事。
+我在屋里找到了这根金羽毛。
+我想给你用。
+<<Hide>>
+<<GiveItem GoldenFeather 1>>
+<<SetSpeaker Player>>
+哇哦，谢谢。
+你想起的时间点……
+……可真够凑巧的。
+这是不是，送项链的奖励？
+<<SetSpeaker Original>>
+啊，不是？
+<<SetSpeaker Player>>
+哈。
+<<if $_ClimbedHawkPeak is true and $HadFinalAuntDialogue is false>>
+    <<Hide>>
+    <<Wait 1>>
+    <<SetSpeaker Original>>
+	哦，顺便一提。
+    [[AuntFinishedBody]]
+<<endif>>
+===
+title: FrogTrade
+tags: 
+colorID: 0
+position: 5083,-166
+---
+<<SetSpeaker Original>>
+哦~太棒了。
+我们来换吧！
+<<GiveItem ToyShovel -1>>
+<<Hide>>
+<<Wait 1>>
+<<set $_GotShovel to true>>
+<<GiveItem Shovel 1>>
+想用我铲子的话……
+就<color=red>按{{MenuButton}}</color>打开背包并<color=red>装备它</color>。
+别忘了哦！
+===
+title: Node105
+tags: 
+colorID: 0
+position: 3184,2505
+---
+<<SetSpeaker Player>>
+hey
+whatcha painting?
+<<SetSpeaker Original>>
+oh uhh
+this coastline i think
+i'm working on a series of paintings 
+i'm supposed to exhibit them at a\nshow in the city next month
+<<SetSpeaker Player>>
+wow!
+that's really cool
+<<SetSpeaker Original>>
+yeah, it should be
+i pitched it as...
+"Hawk Peak: Emotions in Color! A new perspective of famous island!
+<<SetSpeaker Player>>
+what's the new perspective?
+<<SetSpeaker Original>>
+it's uhhh
+i'm trying to find it right now
+<<SetSpeaker Player>>
+oh
+<<SetSpeaker Original>>
+but i have some ideas
+i'm gonna finish up this piece and then head over to meteor lake
+
+noone is going to care about a bunch of landscape paintings at this
+it seems like the exhibit is going to be mostly contemporary art
+
+but it's beautiful!
+you're capturing the EMOTIONS in COLOR!
+
+well, i certainly hope so
+i can't tell these days
+does it sound dumb?
+i really want people to like them
+
+
+i've been working at a company for a while
+doing graphic design
+it's fine but
+i really want to.. make art
+i love painting
+usually...
+but i'm all stressed out
+this is my first entry into the city's artist scene
+
+
+
+but if i'm being completely honest
+
+
+
+
+i can't compete with contemporary artist Ian Artworth
+
+i think i'm going to paint this coastline
+
+i'm not sure yet
+i guess i'm trying to get inspired
+
+
+
+
+
+<<SetSpeaker Player>>
+===
+title: PolarBearStart
+tags: 
+colorID: 0
+position: 5861,935
+---
+<<if visited() is false>>
+	等会，年轻人，
+	希望你别介意我多嘴，
+	不过你看起来准备得\n不是很充分。
+	这里对不习惯的人来说\n还是挺冷的。
+    <<SetSpeaker Player>>
+	我没想到会这么冷！
+	我羽毛都冻僵了。
+    <<SetSpeaker Original>>
+	由于地理活动的关系，\n鹰峰在省内属于特殊的地方。
+	你要是觉得太冷了，\n就待在温泉里吧。
+	这样你就能恢复力量了！
+    <<if $ReadHawkPeakSign is false and GetItemCount("GoldenFeather") < 7>>
+        <<SetSpeaker Player>>
+		谢谢提醒！
+		那个，
+		我是不是快到山顶了？
+        <<SetSpeaker Original>>
+		嗯，没错……
+		不过路很难走。
+		你需要更多的<color=red>金羽毛</color>才行。
+    <<endif>>
+    <<set $_TalkedToPolarBear to true>> 
+<<else>>
+    <<if $PunMade is false and $_ClimbedHawkPeak is true>>
+		嗨，你好啊。
+		你是不是顺利到达山顶了？
+        <<SetSpeaker Player>>
+		是啊！
+		那个，
+        <<SetEmotion Happy>>
+		你可以说我是……
+		……约等于到山顶了！
+		哈哈。
+        <<SetSpeaker Original>>
+		……
+        <<SetSpeaker Player>>
+        <<ClearEmotion>>
+		你没听明白吗？
+        <<SetSpeaker Original>>
+		哦，
+		我听明白了。
+        <<set $PunMade to true>>
+    <<elseif $_CampfireFriendsBegin is true>> 
+        [[PolarBearSitStart]] 
+    <<else>>
+		注意安全！
+		你要是遇到了麻烦\n我就得去联络你梅婶！    
+    <<endif>>
+<<endif>>
+===
+title: FlowerSignStart
+tags: 
+colorID: 0
+position: 4663,3012
+---
+The 
+
+Hawk Peak Provincial Park is home to this rare species of flower.
+Your a bucket of water on it to make it sprout!
+Then, you'll get high :)
+===
+title: Runner2Start
+tags: 
+colorID: 0
+position: 3266,435
+---
+<<if visited() is false>>
+	跑步是我的人生。
+	我在世界各地跑马拉松。
+<<else>>
+	倘若，
+	跑步并非是我的人生，
+	而是我用来……
+	……逃避人生的借口呢！？
+	……
+	真是令人不安的想法。
+<<endif>>
+===
+title: Runner3Start
+tags: 
+colorID: 0
+position: 3487,443
+---
+<<if $AskedRunnerAboutRace is true>>
+	速度快点！！
+	聊天迟点！！
+<<else>>
+    <<if visited() is false>>
+        <<if $KnowsAboutRace is true>>
+            <<SetSpeaker Player>>
+			嗨！
+			你今天要去赛跑吗？
+            <<SetSpeaker Original>>
+			是啊。
+			我现在挺忙的？
+			有什么事吗？
+        <<else>>
+            <<SetSpeaker Player>>
+			你为什么要慢跑？
+            <<SetSpeaker Original>>
+			对不起，你说什么？
+			我正在为赛跑做训练！
+			有什么事吗？
+        <<endif>>
+    <<else>>
+		又是你？
+		有什么事吗？
+    <<endif>>
+    <<set $KnowsAboutRace to true>>
+    <<SetSpeaker Player>>
+    -> 我能参加赛跑吗？
+        <<SetSpeaker Original>>
+        <<set $AskedRunnerAboutRace to true>>
+        *叹气*
+		报名上个月就结束了。
+		怎么都不去看规则！？
+		你是今天<color=red>第二个</color>喊我回头的了！
+		总之，
+		我要走了。
+    -> 没事。
+        <<SetSpeaker Original>>
+        好吧。
+		那我走了。
+<<endif>>
+===
+title: Runner4Start
+tags: 
+colorID: 0
+position: 3706,452
+---
+<<if $NephewHi is true>>
+    <<if $NephewHiDone is false>>
+		啊……
+		第二天的腿酸真让人讨厌。
+        <<SetSpeaker Player>>
+		哦，呃……
+		你叔叔让我提醒你，
+		别忘了休息。
+        <<if $Hydration is true>>
+			还有别忘了补水。
+        <<endif>>
+        <<SetSpeaker Original>>
+		好建议。
+		就让我跑多一圈……
+        <<set $NephewHiDone to true>>
+    <<else>>
+        <<SetSpeaker Player>>
+			祝你好运！
+        <<SetSpeaker Original>>
+			谢谢。
+    <<endif>>
+<<else>>
+	啊……
+	好讨厌第二天的腿酸。
+<<endif>>
+===
+title: BucketSignStart
+tags: 
+colorID: 0
+position: 1571,101
+---
+向日葵属植物“橡皮花”
+是鹰峰省立公园的园花。
+这种特别的花能在快速浇水的情况下\n<color=yellow>瞬间开花</color>，并膨胀得像水气球一样！
+用公园的共享<color=yellow>水桶</color>亲身体会下吧！
+<color=#D7876F>*所有水桶都是公园的财产。</color>
+<color=#D7876F>请不要把它拿出公园！！</color>
+<<SetSpeaker Player>>
+<<if visited() is false>>
+	嗯……
+	装满水的桶看起来好重……
+	我不觉得自己能带着它飞或攀爬……
+	不过滑翔还是可以的！
+<<else>>
+	我不觉得自己能带着它飞或攀爬。
+	不过滑翔还是可以的！
+<<endif>>
+===
+title: ToughBirdExit
+tags: 
+colorID: 0
+position: 5166,-1284
+---
+<<HideCollection Coin>>
+<<SetSpeaker Original>>
+随你便。
+===
+title: ToughBirdWhatDeal
+tags: 
+colorID: 0
+position: 5078,-1012
+---
+<<HideCollection Coin>>
+<<SetSpeaker Original>>
+我在干嘛？
+呵！
+你先说你在干嘛！？
+<<SetSpeaker Player>>
+那个……
+我正在爬鹰峰。
+<<SetSpeaker Original>>
+哇。
+听起来没啥新意。
+<<SetSpeaker Player>>
+嘿！
+<<SetSpeaker Original>>
+我就说说而已，
+无论哪里来的游客，
+他们都会说，
+“我是~来~爬鹰~峰~的。”
+然后到登山时，
+就会发现登山真的很辛苦，
+最后就放弃了。
+<<SetSpeaker Player>>
+天啊。
+你没必要非得……
+……这样说。
+<<SetSpeaker Original>>
+我就说说而已，
+是有点没新意。
+<<SetSpeaker Player>>
+那，
+你在干嘛？
+我的已经告诉你了。
+<<SetSpeaker Original>>
+我需要钱。
+<<SetSpeaker Player>>
+……
+<<SetSpeaker Original>>
+*叹气*
+我还差下学期的学费。
+但已经快凑够了。
+我只是想多赚点而已。
+<<SetSpeaker Player>>
+啊。
+你还差多少？
+<<SetSpeaker Original>>
+……
+那个，把我那些垃圾都卖掉后，
+还缺400枚硬币……
+<<SetSpeaker Player>>
+哦。
+<<SetSpeaker Original>>
+唉……
+但不管怎样，
+这就是生活。
+<<set $ToughBirdsProblem to true>>
+===
+title: ToughBirdTuition
+tags: 
+colorID: 0
+position: 4843,-1007
+---
+<<HideCollection Coin>>
+<<SetSpeaker Original>>
+等等，什么？
+真的吗？
+<<SetSpeaker Player>>
+当然是真的。
+<<SetSpeaker Original>>
+但你为什么要帮我？
+<<SetSpeaker Player>>
+我也不知道。
+我大部分硬币都是在岛上找到的。
+我对找东西还是挺有一手的。
+<<SetSpeaker Original>>
+哇。
+呃……
+我快说不出话来了。
+<<SetSpeaker Player>>
+400枚硬币，对吧？
+给你！
+<<PlaySound CoinGet>>
+<<GiveItem Coin -400>>
+<<Hide>>
+<<Wait 1>>
+<<SetSpeaker Original>>
+……
+谢谢。
+呃……
+这东西归你了。
+<<Hide>>
+<<GiveItem Watch 1>>
+<<set $ToughBirdFriend to true>>
+这东西，呃……
+是我找到的。
+原本我是打算拿去网上卖的，
+但现在不需要这么做了。
+<<SetSpeaker Player>>
+哈。
+没事的。
+===
+title: ToughBirdExitNeutral
+tags: 
+colorID: 0
+position: 5156,-1495
+---
+<<HideCollection Coin>>
+<<SetSpeaker Original>>
+回头见。
+===
+title: ToughBirdBuyFeatherNice
+tags: 
+colorID: 0
+position: 4979,-1716
+---
+<<HideCollection Coin>>
+<<if $ToughBirdSales < 4>>
+    <<SetSpeaker Original>>
+    <<if visited() is false>>
+		哦，行啊。
+		没问题。
+		你能用40枚硬币的正常价购买。
+    <<else>>
+		当然！
+		你能用40枚硬币购买。
+    <<endif>>
+    <<if HasItem("Coin", 40) is true>>
+        <<set $ToughBirdSales to $ToughBirdSales + 1>>
+        <<GiveItem Coin -40>>
+        <<PlaySound BuySound>>
+        <<Hide>>
+        <<Wait 1>>
+        <<GiveItem GoldenFeather 1>>
+		待会见。
+    <<else>>
+        <<SetSpeaker Player>>
+		哦，等等。
+		我钱不够。
+    <<endif>>
+<<else>>
+    <<SetSpeaker Original>>
+	其实……
+	我的羽毛都被你买光了。
+	抱歉。
+    <<SetSpeaker Player>>
+    没关系。
+<<endif>>
+===
+title: GoatDone
+tags: 
+colorID: 0
+position: 5737,-1397
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	这手表真好看。
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	谢谢。
+    <<ClearEmotion>>
+	这是我爷爷的。
+	它曾到过世界各地。
+<<else>>
+	我之前确实把手表弄丢过。
+	幸运的是，
+	它总能找到回家的路。
+<<endif>>
+
+
+
+===
+title: GoatGive
+tags: 
+colorID: 0
+position: 5743,-1170
+---
+<<SetSpeaker Player>>
+嗨，我找到你手表了。
+<<Hide>>
+<<GiveItem Watch -1>>
+<<Wait 1>>
+<<SetSpeaker Original>>
+没错！
+是我的！！
+谢谢你！谢谢你！！
+<<SetSpeaker Player>>
+不客气！
+<<SetSpeaker Original>>
+我要报答你。
+请，
+带走这个吧。
+<<Hide>>
+<<GiveItem SilverFeather>>
+这银羽毛可珍贵了。
+有了它，
+你不仅能爬得更快，
+还能飞得更高！
+<<set $GoatWatchFound to true>>
+===
+title: Node119
+tags: 
+colorID: 0
+position: 4942,2533
+---
+ILL NEVER BE A GOOD CLIMBER LIKE DEBRA
+===
+title: RhinoStart
+tags: 
+colorID: 0
+position: 5619,-57
+---
+<<if $JoinedClimbClub is true>>
+    [[RhinoInClub]]
+<<endif>>
+<<if visited() is true>>
+    又见面了，你好啊！
+    [[RhinoAsk]]
+<<endif>>
+你好啊！
+在忙啥啊？
+<<SetSpeaker Player>>
+呃……
+我在爬鹰峰。
+<<SetSpeaker Original>>
+那可不容易！
+你知道吗，
+要登上山顶，你得学会<color=red>攀岩</color>才行！
+要不要加入我们攀岩协会？
+<<SetSpeaker Player>>
+哦，呃……
+只有你们两位吗？
+<<SendMessage SquirrelCutsceneCamera Enable>>
+<<SetSpeaker ClimbSquirrel>>
+<<Face ClimbSquirrel Player>>
+嘿！
+<<LookAt ClimbSquirrel Player>>
+攀岩协会在世界各地超过35个国家里\n有着数以百计的成员！
+他们发展并精进着攀岩艺术！
+打破并超越了技能的极限！
+<<SetSpeaker Player>>
+啊。
+我的意思是，
+这里的协会……
+那个，
+只有你们两位吗？
+<<SetSpeaker ClimbSquirrel>>
+……
+不行吗！？
+听好了，孩子。
+攀岩可不适合心灵脆弱者。
+大多数人，
+都还不够格。
+<<SetSpeaker Original>>
+<<SendMessage SquirrelCutsceneCamera Disable>>
+<<Face Original Player>>
+<<ClearLookAt Player>>
+嗯。
+总之，
+攀岩并不是真的那么苛刻！
+[[RhinoAsk]]
+===
+title: RhinoAsk
+tags: 
+colorID: 0
+position: 5868,-64
+---
+你想加入攀岩协会吗？
+<<SetSpeaker Player>>
+-> 当然。
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	很好！！
+	这样我们就有第三位成员了！
+    <<SetSpeaker ClimbSquirrel>>
+	不是第三位！
+	是世界各地！
+	数以百计成员中的！
+	一位！
+    <<SetSpeaker Original>>
+	好啦，好啦。
+	就这样吧。
+    <<ClearEmotion>>
+    <<set $JoinedClimbClub to true>>
+    [[RhinoInClub]]
+-> 不想。
+    <<SetSpeaker Original>>
+	哦，好吧。
+	你要是改变心意了就跟我说。
+===
+title: RhinoInClub
+tags: 
+colorID: 0
+position: 5765,195
+---
+<<if $RhinoTut is true>>
+    [[RhinoTut]]
+<<endif>>
+<<if HasItem("GoldenFeather", 1) is false and $RhinoSaidGetFeather is true and $TalkedToVisitorCenter is true and HasItem("Coin", 40) is false>>
+    <<SetSpeaker Original>>
+	你拿到那根羽毛了？
+    <<SetSpeaker Player>>
+	还没……
+	要花40枚硬币。
+	但我只有{{Item_Coin}}枚。
+    <<SetSpeaker Original>>
+	哦！
+	嗯……
+	不够的我可以让步！
+    <<Hide>>
+    <<PlaySound CoinGet>>
+    <<FillItem Coin 40>> 
+    <<Wait 1>>
+    <<SetSpeaker Player>>
+	哇噢，谢谢！
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	不客气！
+    <<ClearEmotion>>
+<<else>>
+    <<SetSpeaker Original>>
+    <<if visited() is false>>
+		那，先说重要的事。
+    <<endif>>
+	你拿到<color=red>金羽毛</color>没？
+    <<if HasItem("GoldenFeather", 1) is true>>
+        <<SetSpeaker Player>>
+		拿到了！
+        <<SetSpeaker Original>>
+		很好！
+        [[RhinoTut]]
+    <<else>>
+        <<SetSpeaker Player>>
+		哦，还没。
+        <<SetSpeaker Original>>
+		啊。
+		没的话你是爬不了的。
+		不过你可以去<color=red>游客中心</color>买。
+		应该挺便宜的。
+        <<set $GoldenFeatherAdvice to true>>
+        <<set $RhinoSaidGetFeather to true>>
+		买后再来吧！
+    <<endif>>
+<<endif>>
+===
+title: RhinoTut
+tags: 
+colorID: 0
+position: 6014,194
+---
+<<SetSpeaker Original>>
+<<if visited() is false>>
+	那，作为开始，
+	你可以试试看爬那面<color=red>矮墙</color>。
+	只要<color=red>对着墙按住{{JumpButton}}</color>就行了。
+    <<set $RhinoTut to true>>
+<<elseif $Climbed2 is true>>
+    [[RhinoTalk]]
+<<elseif $Climbed1 is true>>
+	接下来试着爬那面高的吧！
+    <<if HasItem("GoldenFeather", 3) is false>>
+		你也许需要从别的平台跳上去。
+    <<endif>>
+<<else>>
+	试试看爬那面<color=red>矮墙</color>吧！
+	只要<color=red>对着墙按住{{JumpButton}}</color>就行了。
+<<endif>>
+===
+title: ClimbWall1Start
+tags: 
+colorID: 0
+position: 5777,423
+---
+<<if $RhinoTut is true and $Climbed1 is false and $Climbed2 is false>>
+    <<Face Original Player>>
+	干得漂亮！
+    <<SetSpeaker ClimbSquirrel>>
+    一般。
+    <<SetSpeaker Original>>
+    ……
+    <<SetSpeaker ClimbSquirrel>>
+	那面墙太简单了。
+	真正的高手要爬这面高的。
+    <<set $Climbed1 to true>>
+<<endif>>
+===
+title: ClimbWall2Start
+tags: 
+colorID: 0
+position: 5781,648
+---
+<<if $RhinoTut is true and $Climbed2 is false>>
+    <<Face Original Player>>
+	哇噢，真厉害！
+    <<SetSpeaker ClimbSquirrel>>
+	嗯，还不错。
+    <<SetSpeaker Original>>
+	对了，
+	我知道你会飞，
+	不过用爬的话，\n会<color=red>更持久些</color>。
+	别忘了这一点。
+    <<SetSpeaker Player>>
+	酷。
+	那接下来要爬哪？
+    <<SetSpeaker ClimbSquirrel>>
+	爬鹰峰！
+    <<SetSpeaker Player>>
+	哦，好吧。
+    <<SetSpeaker Original>>
+	我还需要热身。
+	我们上面见？
+    <<SetSpeaker Player>>
+	好啊！
+    <<set $Climbed2 to true>>
+    <<set $_ClimbersBefriended to true>>
+<<endif>>
+===
+title: FlyWall1Start
+tags: 
+colorID: 0
+position: 6008,421
+---
+<<if $RhinoTut is true and $BadFly1 is false and $Climbed1 is false and $Climbed2 is false>>
+    <<Face Original Player>> 
+	呃……
+	我知道你会飞，
+	但这里是攀岩协会。
+    <<SetSpeaker ClimbSquirrel>>
+	没错！
+	是攀岩协会！
+    <<SetSpeaker Original>>
+	……
+	总之，
+	你可以试着爬上去吗？
+    <<set $BadFly1 to true>>
+<<endif>>
+===
+title: FlyWall2Start
+tags: 
+colorID: 0
+position: 6013,652
+---
+<<if $RhinoTut is true and $BadFly2 is false and $Climbed2 is false>>
+    <<Face Original Player>> 
+	能飞上去的确很酷。
+	但，
+	这里是攀岩协会……
+    <<SetSpeaker ClimbSquirrel>>
+	是啊！
+	你这样子简直就像是在炫耀。
+    <<SetSpeaker Player>>
+	不，我没有！
+	我只是……
+	喜欢飞到目的地而已。
+    <<SetSpeaker Original>>
+	试着爬上去吧！
+	也是很有趣的。
+    <<set $BadFly2 to true>>
+<<endif>>
+===
+title: RhinoTalk
+tags: 
+colorID: 0
+position: 6274,191
+---
+<<if visited() is false>>
+	呃……
+	我代提姆说声抱歉。
+	他不是故意针对你的。
+	只是他今天有点怪。
+    <<SetSpeaker ClimbSquirrel>>
+	我好着呢！
+    <<SetSpeaker Original>>
+	我们真的很高兴你能加入！
+    <<SetSpeaker Player>>
+	啊。
+	谢谢！
+<<else>>
+    <<SetSpeaker Player>>
+	那他为什么会怪怪的？
+    <<SetSpeaker Original>>
+	啊。
+	其实，
+	他一直都有点怪怪的。
+    <<SetSpeaker ClimbSquirrel>>
+	你知道我听得到吗！？
+<<endif>>
+===
+title: SquirrelStart
+tags: 
+colorID: 0
+position: 6236,-73
+---
+<<if $JoinedClimbClub is false>>
+    我很忙。
+<<elseif $RhinoTut to false>>
+	想知道攀岩的秘诀吗？
+    <<SetSpeaker Player>>
+	想啊。
+    <<SetSpeaker Original>>
+    就是要不断高攀。
+    <<set $HeardClimbingSecret to true>>
+    <<SetSpeaker Player>>
+    不错。
+<<elseif $Climbed1 is false and $Climbed2 is false>>
+	等矮墙熟练后，
+	你可以试试看这面高墙。
+<<elseif $Climbed2 is false>>
+	你要是觉得高墙有困难，
+	可以观摩下我的技巧。
+	这可是常年攀岩经验提炼\n出来的技巧。
+<<else>>
+	我觉得在鹰峰上能见到你。
+    <<SetSpeaker Player>>
+	我也是这么觉得！
+    <<if $HeardClimbingSecret is true and $SquirrelJoke1 is false>>
+        <<SetSpeaker Original>>
+		老实说，
+		这次攀登并不容易。
+        <<SetSpeaker Player>>
+		那个，你知道他们口号的。
+        <<SetSpeaker Original>>
+		什么？
+        <<SetSpeaker Player>>
+		不断高攀。
+        <<SetSpeaker Original>>
+		呵。
+		我想也是。
+        <<set $SquirrelJoke1 to true>>
+    <<endif>>
+<<endif>>
+===
+title: ToSecretIslandStart
+tags: 
+colorID: 0
+position: 1835,102
+---
+<sprite name="LeftArrow" tint=1> 返回鹰峰岛
+===
+title: Node131
+tags: 
+colorID: 0
+position: 5199,2518
+---
+sometimes i wake up and im like "i'm GREAT"
+and other days i look into the mirror like "you're a mistake"
+usually life is somewhere in between that tho
+
+im dramatic 
+===
+title: RhinoClimbStart
+tags: 
+colorID: 0
+position: 6241,645
+---
+<<if visited() is false>>
+	哦，嗨！
+	呃……
+	看来你真掌握攀岩的窍门了！
+    <<SetSpeaker Player>>
+	是啊！
+    <<SetSpeaker TimScared>>
+    <<LookAt TimScared Player>>
+    <<LookAt TimScared Original>>
+	嘿，呃……
+	呃……
+	我好像……
+	卡住了。
+    <<SetSpeaker Original>>
+	提姆！
+    <<SetSpeaker TimScared>>
+	太高了！
+	我要怎么做！
+	我不行了！
+    <<SetSpeaker Original>>
+    <<ClearLookAt Player>>
+	提姆！
+	深呼吸。
+	先冷静下来。
+	你做得很好，
+	这件事你也同样能处理好的。
+    <<SetSpeaker TimScared>>
+	我能吗？
+	那我要怎么做！？
+    <<SetSpeaker Original>>
+	集中精力做好接下来的事就行了！
+	你能处理好的！
+    <<SetSpeaker TimScared>>
+	我能处理好吗？
+	我能处理好的！
+    <<ClearLookAt Original>>
+    <<set $_DiscussedSquirrelStruggle to true>>
+<<else>>
+	呃……
+	这或许需要点时间。
+	我们后面会赶上你的。
+	我会看着他的！
+<<endif>>
+===
+title: AuntFinishedBody
+tags: 
+colorID: 0
+position: 4108,-2116
+---
+<<SetSpeaker Original>>
+你去过山顶了吗？
+<<SetSpeaker Player>>
+去过了！
+真的很美。
+总算知道你为什么会如此喜欢了。
+不过，
+那可不是什么“爬座矮山”。
+可把我累坏了。
+<<SetSpeaker Original>>
+<<SetEmotion Happy>>
+哈哈，
+好吧，
+也许是有点轻描淡写了！
+<<ClearEmotion>>
+<<SetSpeaker Player>>
+<<SetEmotion Happy>>
+有点而已！！
+<<ClearEmotion>>
+<<SetSpeaker Original>>
+[[AuntDynamic]]
+
+===
+title: Node132
+tags: 
+colorID: 6
+position: 2956,2505
+---
+raccon is trying to paint a series for the exhibit in the city
+they are painting some landscape paintings but trying to put a contemporary spin on them
+trying to impress local artist scene to get that sweet sweet external validation we all need
+maybe discovers that the landscape paintings done need to be more
+
+encounter 1 
+Hey, what are you painting?
+
+Oh... you can't tell?
+it's supposed to be the coastline
+
+Ah, sorry!
+Guess it's... abstract art?
+
+Sigh
+Yeah, I don't think I really like it... I think I'm going to head over to meteor lake and try again there.
+
+encounter 2
+Hey, sorry about earlier, your painting is looking really good so far!
+
+Oh, hi again
+Thanks, I guess
+This park is special to me, but...
+I don't think that critics will like my paintings
+Landscapes are kind of passe these days
+
+Really?
+I like them! They're pretty!
+
+Haha, thanks... 
+But pretty isn't good enough
+I have to show people that I'm achieving something worthwhile, academically
+
+*hint for next location
+
+encounter 3
+Hey, this one's my favourite so far! 
+You're so talented!
+
+Thanks, I appreciate it!
+Although, I don't think my work is that special...
+But I have worked really hard to get better!
+
+It shows!
+
+I'm suppossed to be showing these at an event in the city
+But all the other artists there are really prominent in contemporary galleries!
+I think my work will look really out of place...
+
+Whaaat? Nah.
+You'll blow 'em out of the water!
+This one reminds me of the group of seventeen!
+
+...ah.
+
+...is that bad?
+
+Well, the group of seventeen have kinda got a bad rap in the contemporary scene.
+People think they are really overrated.
+
+Oh, huh.
+That doesn't mean they'll think your paintings are bad, though!
+
+They will if I don't submit a passable 5-page artist statement alongside my submission
+
+*hint at final location
+
+encounter 4
+WOW!
+
+Oh hey!
+I think I got it this time.
+
+IT'S AMAZING!!!
+
+Thanks!
+I think I just needed to paint what I wanted to paint
+
+...Instead of what you felt like you were suppossed to paint?
+
+Yeah.
+I'm not even sure I'm going to go to that showing.
+
+SCREW 'EM! I'd buy this!!
+
+Haha, thanks for being so nice!
+
+I'M NOT BEING NICE IT'S ACTUALLY REALLY GOOD
+
+...Yeah, it is.
+===
+title: Node133
+tags: 
+colorID: 0
+position: 2719,2508
+---
+encounter 1 
+Hey, what are you painting?
+
+Oh... you can't tell?
+it's supposed to be the coastline
+
+Ah, sorry!
+Guess it's... abstract art?
+
+Sigh
+Yeah, I don't think I really like it... I think I'm going to head over to meteor lake and try again there.
+
+encounter 2
+Hey, sorry about earlier, your painting is looking really good so far!
+
+Oh, hi again
+Thanks, I guess
+This park is special to me, but...
+I don't think that critics will like my paintings
+Landscapes are kind of passe these days
+
+Really?
+I like them! They're pretty!
+
+Haha, thanks... 
+But pretty isn't good enough
+I have to show people that I'm achieving something worthwhile, academically
+
+*hint for next location
+
+encounter 2-2
+So do you have a lot of critics?
+
+Well, no... not yet!
+
+encounter 3
+Hey, this one's my favourite so far! 
+You're so talented!
+
+Thanks, I appreciate it!
+Although, I don't think my work is that special...
+But I have worked really hard to get better!
+
+It shows!
+
+I'm suppossed to be showing these at an event in the city
+But all the other artists there are really prominent in contemporary galleries!
+I like contemporary art, but it's not really my style
+I think my work will look really out of place...
+
+Whaaat? Nah.
+You'll blow 'em out of the water!
+This one reminds me of the group of seventeen!
+
+...ah.
+
+...is that bad?
+
+Well, the group of seventeen have kinda got a bad rap in the contemporary scene.
+People think they are really overrated.
+
+Oh, huh.
+That doesn't mean they'll think your paintings are bad, though!
+
+They will if I don't submit a passable 5-page artist statement alongside my submission
+
+*hint at final location
+
+encounter 4
+WOW!
+
+Oh hey!
+I think I got it this time.
+
+IT'S AMAZING!!!
+
+Thanks!
+I think I just needed to paint what I wanted to paint
+
+...Instead of what you felt like you were suppossed to paint?
+
+Yeah.
+I think I'm not as worried about the show anymore.
+Haha, thanks for being so nice!
+
+I'M NOT BEING NICE IT'S ACTUALLY REALLY GOOD
+
+...Yeah, it is.
+===
+title: AuntFinalDialogue
+tags: 
+colorID: 0
+position: 4700,-2122
+---
+<<if visitCount() is 0>>
+    <<SetSpeaker Player>>
+	哦，
+	差点忘了，
+	老妈要我向你问好，
+	还说……
+	一切都平安。
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	太好了。
+	你妈妈是只坚强的鸟。
+	我就知道她会没事的。
+    <<ClearEmotion>>
+<<else>>
+    <<SetSpeaker Player>>
+	我真的很高兴能来这。
+	过得很愉快。
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	我也很高兴你能来。
+	啥时候想再来都行！
+    <<ClearEmotion>>
+<<endif>>
+===
+title: Node135
+tags: 
+colorID: 0
+position: 2456,2510
+---
+
+
+
+---
+is ranger jon gonna be in the painting?
+
+yup!
+he agreed to be in this one
+cuz he's the best
+
+- ranger jon
+aw
+you're gonna make me blush
+
+it's ok
+i can paint the not-blushing version
+if you want
+
+woah
+this is looking really good!
+
+i think i'm just gonna paint\nthe things i want to paint
+instead of
+painting the things i think\nother people want me to paint
+at the very least
+it's making things easier
+
+- ranger jon
+and
+you want to paint me!?
+
+uhh! well!
+you're a part of the park too
+i just want to capture all aspects the park
+
+that sounds cool!
+
+oh also
+on my way down from the mountain, i found this
+<<Hide>>
+<<GiveItem GoldenFeather 1>>
+jon told me you were collecting them
+so i thought you should have it
+
+---
+ALT
+
+i'm still not so sure\nwhat i'll put in the exhibit
+but
+i don't feel as worried about it
+
+i think you should put it all in!
+
+yeah?
+even the watered-down rainy painting?
+
+yeah, it's all part of the experience!
+plus it looked pretty cool
+
+hmm
+yeah, that might work...
+
+---
+ALT2
+
+i wanna spend some time on this one
+really capture the moment, you know?
+i'll talk to you later!
+===
+title: Artist1Start
+tags: 
+colorID: 0
+position: 2632,740
+---
+<<if visitCount() is 0>>
+    <<SetSpeaker Player>>
+	嗨！
+	在画啥？
+    <<SetSpeaker Original>>
+	哦……
+	你看不出来吗？
+	呃……
+	本来画的是那边的海岸线。
+	不过，
+	我想让它看起来更加……
+	……抽象。
+    <<SetSpeaker Player>>
+	啊。
+	我现在看出来了。
+    <<SetSpeaker Original>>
+    <<Face Player>>
+	这幅画还没画完！
+	但我不知道自己是否会喜\n欢它最后的成型。
+	我想我很快就会去黑森林\n那边的灯塔。
+	我还在……
+	……寻找合适的灵感。
+    <<FaceDefault>>
+    <<set $_Artist1Talk to true>>
+<<elseif visitCount() is 1>>
+    <<SetSpeaker Player>>
+	对了，
+	那片黄色是沙滩吗？
+    <<SetSpeaker Original>>
+	我……
+	想是吧？
+	其实比起沙滩本身，
+	更多的是沙滩的心情。
+    <<SetSpeaker Player>>
+	哦。
+	好吧。
+<<else>>
+	我想这幅画得搁一边了。
+	但愿灯塔那里会有更好的运气……
+<<endif>>
+===
+title: Artist2Start
+tags: 
+colorID: 0
+position: 2864,737
+---
+<<if visited() is false>>
+	嗨，又是你啊！
+    <<SetSpeaker Player>>
+	没错！
+	又是那个我！！
+    <<SetSpeaker Original>>
+	对了，
+	你觉得这幅画怎样？
+    <<SetSpeaker Player>>
+	……
+	哇噢。
+	真的好好！
+	简直……
+	比现实还要好！
+    <<SetSpeaker Original>>
+	哈哈，好吧。
+	我不觉得可以和现实比。
+	但目前为止我还挺满意的。
+	……
+	只是我不知道这幅画适不适合\n拿到画展上去，
+	我要尝试更有趣的东西……
+	我打算沿着河流到它源头上去。
+	我想从那个视角上画。
+    <<set $_Artist2Talk to true>>
+<<else>>
+    <<SetSpeaker Player>>
+	你想顺着哪条河？
+    <<SetSpeaker Original>>
+	大概是山西边那条吧。
+	那里要更高些。
+<<endif>>
+===
+title: Artist3Start
+tags: 
+colorID: 0
+position: 3085,725
+---
+<<if visited() is false>>
+	嗯……
+	这幅画不行。
+    <<SetSpeaker Player>>
+	为什么？
+	我就挺喜欢这画的！
+    <<SetSpeaker Original>>
+	谢谢。
+	这公园对我来说很特别。
+	但，
+	我不觉得这些画能给人留下\n深刻的印象。
+    <<SetSpeaker Player>>
+	嘿！
+	这些画给我的印象可深了！
+    <<SetSpeaker Original>>
+	准确点说，
+	是给任何人都留下深刻的印象。
+	……
+	我得向人们证明我……
+	到达了某种高度，
+	像是，
+	学术上高度。
+    <<SetSpeaker Player>>
+	嗯……
+    <<SetSpeaker Original>>
+	我听说，
+	山的背光处有座墓园。
+	接下来我要到那边去试试。
+    <<set $_Artist3Talk to true>>
+<<else>>
+    <<SetSpeaker Player>>
+	为什么要选墓园？
+    <<SetSpeaker Original>>
+	不知道。
+	我只是想尝试些不同的东西。
+<<endif>>
+===
+title: Artist4Start
+tags: 
+colorID: 0
+position: 2636,970
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	你是在……
+	雨中画画吗？
+    <<SetSpeaker Original>>
+	是啊。
+    <<SetSpeaker Player>>
+	能画吗？
+    <<SetSpeaker Original>>
+	在试！
+	时间不多了，
+	我画展就在下周！
+    <<SetSpeaker Player>>
+	哦。
+	好吧。
+    <<SetSpeaker Original>>
+	现在的画都不行……
+	我千辛万苦终于获得城市\n画展的邀请，
+	但那里的人都有着让人惊\n艳的现代画作。
+	我不知道自己配不配得上。
+    <<SetSpeaker Player>>
+	可是，
+	你的作品很美啊。
+    <<SetSpeaker Original>>
+	你知道这次画展的策划是谁吗？
+	是伊恩·阿斯沃斯！
+	著名的现代艺术家，\n伊恩·阿斯沃斯！！
+	他是以私人名义邀请我参加的，
+	然后，
+	然后，
+	我拿无聊的风景画去参展。
+	然后他看了一眼，
+	然后小声说，
+	“我感觉不到共鸣。”
+	然后用空手道把画劈成两半！！
+    <<SetSpeaker Player>>
+	说啥呢！？
+	他不会这么做的！
+    <<SetSpeaker Original>>
+	会的。
+	他是黑带。
+	所以完全有这种可能。
+    *叹气*
+	不过你说的对。
+	在这画也没什么用。
+	也许去瞭望台那能碰上好运。
+    <<set $_Artist4Talk to true>>
+<<else>>
+    <<SetSpeaker Player>>
+	你怎么不休息会？
+	今天你已经做得够多了。
+    <<SetSpeaker Original>>
+	我不能。
+	我要向人们证明我是有价值的。
+	我是说，
+	我的画是有价值的。
+<<endif>>
+===
+title: Artist5Start
+tags: 
+colorID: 0
+position: 2859,959
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	哇噢！
+	这真棒！！
+	我喜欢！！！
+    <<SetSpeaker Original>>
+	哦，嗨。
+	我也喜欢，但，
+	我不能用这幅画……
+	瞭望台已经被画死了。
+    <<SetSpeaker Player>>
+	是吗？
+	你画得很酷啊。
+    <<SetSpeaker Original>>
+	谢谢，不过，
+	这就是幅风景画而已。
+	并没给画面带来什么新内容。
+	我希望……
+	我希望人们在看我作品时能\n感觉到某种东西。
+    <<SetSpeaker Player>>
+	但，
+	我能感觉到某种东西！
+	当我看着它时，
+	它……
+	让我感到开心。
+	要是我墙上有这幅画，
+	我会每天去观赏的，
+	而且，
+	它会让日子变得更好。
+    <<SetSpeaker Original>>
+	真的吗？
+    <<SetSpeaker Player>>
+	真的！
+	我是住在城里的。
+	我喜欢那座城，不过……
+	那里没有这种景象。
+    <<SetSpeaker Original>>
+	嗯……
+    <<SetSpeaker Player>>
+	你是被邀请参加这次画展的，对吧？
+	他们会请你是因为他们知道你作品好！
+	我刚肯定他们也想看这幅画！
+    <<SetSpeaker Original>>
+	不知道啊。
+	我得好好想想。
+	我想找点新东西来画。
+	也许，
+	我该回归初心……
+    <<set $_Artist5Talk to true>>
+<<else>>
+    <<SetSpeaker Player>>
+	你还好吗？
+    <<SetSpeaker Original>>
+	好，
+	我很好。
+    回头见。
+<<endif>>
+===
+title: Artist6Start
+tags: 
+colorID: 0
+position: 3082,972
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	管理员乔恩在这幅画里吗？
+    <<SetSpeaker Original>>
+	在啊！
+	他同意我画他。
+	因为他是最棒的。
+    <<LookAt CampRangerNPC>>
+    <<LookAt CampRangerNPC Player>>
+    <<SetSpeaker CampRangerNPC>>
+	哇。
+    <<SetEmotion Happy>>
+	你让我脸红了。
+    <<ClearEmotion>>
+    <<SetSpeaker Original>>
+	没事的！
+	你想的话，
+	我可以给你画脸不红的。
+    <<ClearLookAt>>
+    <<ClearLookAt Player>>
+    <<SetSpeaker Player>>
+	哇噢。
+	这看起来好棒！
+    <<SetSpeaker Original>>
+	我只是画了自己想画的，
+	而非，
+	别人想我画的。
+	至少这样，
+	事情会简单点。
+    <<LookAt CampRangerNPC>>
+    <<SetSpeaker CampRangerNPC>>
+    <<ClearEmotion>>
+	还有，
+	你想画我吗！？
+    <<SetSpeaker Original>>
+	啊！好嘞！
+    <<SetEmotion Happy>>
+	你也是公园的一部分。
+	我想抓住公园的方方面面。
+    <<ClearEmotion>>
+    <<ClearLookAt>>
+    <<SetSpeaker Player>>
+	听起来太酷了！
+    <<SetSpeaker Original>>
+	哦，还有。
+	我下山时找到了这个。
+    <<Hide>>
+    <<GiveItem GoldenFeather 1>>
+	乔恩跟我说你在收集这些。
+	所以我觉得应该给你。
+    <<set $_Artist6Talk to true>>
+<<elseif visitCount() is 1>>
+	我还是不确定要展出什么。
+	但，
+	我不感到忧虑。
+    <<SetSpeaker Player>>
+	我觉得全都该放上去！
+    <<SetSpeaker Original>>
+	是吗？
+	包括那些被雨水冲淡了的画？
+    <<SetSpeaker Player>>
+	是的！
+	这都是经历中一部分！
+	而且看上去真的很酷。
+    <<SetSpeaker Original>>
+	嗯，
+	是啊，
+	你的建议说得真不错！
+<<else>>
+	我想花点时间在这幅画上。
+	我要抓住那个瞬间，懂吗？
+	迟点再跟你聊！
+<<endif>>
+===
+title: GoatExtra
+tags: 
+colorID: 0
+position: 5458,-1072
+---
+<<if visited() is false>>
+	哦，对了，现在几点了？
+    <<SetSpeaker Player>>
+	{{Time}}了。
+<<elseif visitCount() is 1>>
+    <<SetSpeaker Player>>
+	那个，
+	你觉得会不会被其他人捡走了？
+    <<SetSpeaker Original>>
+	不可能。
+	我电话号码就在后面。
+	有人找到的话会打给我的！
+	除非……
+	他们真的很缺钱！？！
+	……然后拿到网上去卖了！？
+    <<SetSpeaker Player>>
+	哦，呃……
+	别担心！
+	我肯定它还在。
+    <<SetSpeaker Original>>
+	我从不上网。
+	我不信它。
+	永远都不信。
+<<else>>
+	请在网络小偷发现前……
+	帮我找回手表！！
+<<endif>>
+===
+title: RaceRabbitExtra
+tags: 
+colorID: 0
+position: 6539,-835
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	你觉得会不会是被人给捡走了？
+    <<SetSpeaker Original>>
+	我不觉得……？
+	除非，
+	有人……
+	……当作是垃圾捡走了……
+<<else>>
+	有没有找到我的头带？
+    <<SetSpeaker Player>>
+	抱歉。
+	还没找到。
+    <<SetSpeaker Original>>
+    好吧……谢谢。
+<<endif>>
+===
+title: RelaxedFrogStart
+tags: 
+colorID: 0
+position: 5078,96
+---
+<<if visited() is false>>
+	我超喜欢吃早餐！
+    <<SetSpeaker Player>>
+	不过，
+	现在已经是下午了啊？
+    <<SetSpeaker Original>>
+	明天的早餐！
+	是一天中最美好的一餐。
+	有时我在床上……
+	……会因为想得过于兴奋而难以入眠！
+<<elseif visitCount() is 1>>
+    <<SetSpeaker Player>>
+	你为什么这么喜欢早餐？
+    <<SetSpeaker Original>>
+	真是的。
+	你吃过松饼吗？
+    <<SetSpeaker Player>>
+	吃过。
+    <<SetSpeaker Original>>
+	培根呢？华夫饼呢？
+	蛋呢？法式吐司呢？
+	还有果盘呢！？！
+    <<SetSpeaker Player>>
+    <<SetEmotion Happy>>
+	全都吃过！
+    <<ClearEmotion>>
+    <<SetSpeaker Original>>
+	那你就该懂我说的意思了！
+<<else>>
+	不用在意我。
+	我只是在做白日梦而已……
+	……关于桂皮华夫饼的梦。
+<<endif>>
+===
+title: Node146
+tags: 
+colorID: 0
+position: 4522,1838
+---
+hey, could you do me a favor?
+===
+title: ToughBirdWhatsUp
+tags: 
+colorID: 0
+position: 4605,-1008
+---
+<<HideCollection Coin>>
+<<SetSpeaker Original>>
+<<if visited() is false>>
+	还得为下学期凑钱呢。
+    <<SetSpeaker Player>>
+	你还需要400枚硬币？
+    <<SetSpeaker Original>>
+	是啊……
+<<else>>
+	我助学贷款的余额。
+    <<SetSpeaker Player>>
+	哦。
+    <<SetSpeaker Original>>
+	不过，没错。
+	除了这些，
+	也没什么大事了。
+    <<SetSpeaker Player>>    
+<<endif>>
+
+
+===
+title: VolleyKidStart
+tags: 
+colorID: 0
+position: 1329,655
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	嗨！
+	看来是你们俩拉的网！
+	是要玩排球吗？
+    <<SetSpeaker Original>>
+	排球？
+	非也。
+	我们发明了自己的游戏。
+	我觉得它会成为下一个爆款运动！
+    <<SetSpeaker Player>>
+	挺好的！
+    <<SetSpeaker Original>>
+    <<SetPose RaiseArms>>
+	克莱尔！
+    <<ClearPose>>
+    <<SetSpeaker Player>>
+    ？？
+    <<SetSpeaker Original>>
+	我正式向你发起……
+    <<SetPose RaiseArms>>
+    沙滩枝球的挑战！！！
+    <<ClearPose Original>>
+    <<SetSpeaker RefereeKid>>
+    <<LookAt Player>>
+    <<LookAt RefereeKid Player>>
+	哦哦哦噢噢噢哦哦哦！
+    <<SetSpeaker Original>>
+    <<ClearLookAt Player>>
+	也就是说你必须得玩。
+    <<SetSpeaker RefereeKid>>
+    <<LookAt RefereeKid Player>>
+	没错！！
+	你必须玩！！
+	这是法律规定的！！
+    <<ClearLookAt Player>>
+    <<SetSpeaker Original>>
+	你不能违法！
+    <<SetSpeaker Player>>
+	好啦好啦。
+	我会玩的。
+    <<SetSpeaker RefereeKid>>
+    <<SetEmotion Happy>>
+    <<SetEmotion Happy Original>>
+    <<SetPose RaiseArms Original>>
+    耶！！
+    <<ClearEmotion>>
+    <<ClearEmotion Original>>
+    <<SetSpeaker Player>>
+	那……
+	要怎么玩？
+    <<SetSpeaker Original>>
+    <<ClearPose Original>>
+	到对面场地去。
+	我会把知道的都教给你。
+    <<ClearLookAt RefereeKid>>
+    <<set $_VolleyGameActive to true>>
+<<elseif $_BallHitsBest is 0>>
+	你得到对面去才能玩！
+<<else>>
+    [[VolleyKidChat]]
+<<endif>>
+===
+title: RefereeKidStart
+tags: 
+colorID: 0
+position: 1076,1137
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	嗨，朱莉！
+    <<SetSpeaker Original>>
+	嗨！！
+    <<SetSpeaker Player>>
+	今天怎么过？
+    <<SetSpeaker Original>>
+	我们打算玩游戏！！
+	要玩一整天！！
+    <<SetSpeaker Player>>
+	听上去很有趣！
+<<elseif visitCount() == 1>>
+    <<SetSpeaker Player>>
+	你喜欢这大椅子吗？
+    <<SetSpeaker Original>>
+	很棒！！
+<<elseif visitCount() == 2>>
+    <<SetSpeaker Player>>
+	嗯……
+	不过你们是从哪弄来这椅子的？
+    <<SetSpeaker Original>>
+	我们偷的！！
+    <<SetSpeaker Player>>
+	哦。
+<<elseif visitCount() == 3>>
+    <<SetSpeaker Player>>
+	你们玩完后会还回去吗？
+    <<SetSpeaker Original>>
+	不会！！
+<<else>>
+    <<SetSpeaker Player>>
+	你们俩应该把椅子还回去的。
+    <<SetSpeaker Original>>
+	嗯！！
+	大概会还吧！！
+<<endif>>
+===
+title: VolleyballGameStart
+tags: 
+colorID: 0
+position: 1323,910
+---
+<<Face Player Original>>
+<<Face Original Player>>
+<<if visited() is false>>
+    <<LookAt Player RefereeKid>>
+    <<LookAt Original Player>>
+	那个，
+	沙滩枝球只有三条简单规则。
+	规则一！
+	用树枝击球。
+    <<SetSpeaker RefereeKid>>
+    <<LookAt RefereeKid Player>>
+	没错，奋力击球吧！！
+    <<SetSpeaker Original>>
+    <<LookAt Original Player>>
+    规则二！
+	别让球碰到地面。
+	大多数情况都不行……
+	不过裁判是朱莉，\n所以行不行由她来判！
+    <<SetSpeaker RefereeKid>>
+    <<LookAt RefereeKid Player>>
+	全都由我来判！！
+    <<SetSpeaker Original>>
+    <<LookAt Original Player>>
+	规则三！
+	相信自己。
+	这是最重要的规则。
+    <<SetSpeaker RefereeKid>>
+    <<LookAt RefereeKid Player>>
+	永远都别忘！！
+    <<SetSpeaker Original>>
+    <<LookAt Original Player>>
+	就这么多了。
+	你准备好了吗？
+    <<SetSpeaker Player>>
+	我想好了吧？
+    <<SetSpeaker Original>>
+    <<if IsEquipped("Stick") is false>>
+		答案是还没好！
+		你得先装备树枝才行！
+        <<set $_AllowGameStart to false>>
+    <<else>>
+		好了，预备，开始！！！
+        <<set $_AllowGameStart to true>>
+    <<endif>>
+    <<ClearLookAt Player>>
+    <<ClearLookAt RefereeKid>>
+<<else>>
+    [[VolleyballGameMain]]
+<<endif>>
+===
+title: VolleyballGameMain
+tags: 
+colorID: 0
+position: 1325,1150
+---
+<<if $_AllowGameStart is false and IsEquipped("Stick") is false>>
+	你需要装备树枝！！
+<<else>>
+    <<if IsEquipped("Pickaxe") and $PoppedBall is true>>
+		……
+		再用稿子的话我就不跟你玩了……
+        <<set $_AllowGameStart to false>>
+    <<else>>
+        <<set $PlayedBeachStickBall to true>>
+        <<if $VolleyStartTalk is 0>>
+			好了，预备，开始！！！
+        <<elseif $VolleyStartTalk is 1>>
+			好了，我们来吧！！！
+        <<elseif $VolleyStartTalk is 2>>
+			好了，来吧！！！
+        <<elseif $VolleyStartTalk is 3>>
+			好了，好了，开始始始！！！
+        <<else>>
+			决斗时间！！！
+        <<endif>>
+
+        <<set $VolleyStartTalk to $VolleyStartTalk + 1>>
+        <<if $VolleyStartTalk >= 5>>
+            <<set $VolleyStartTalk to 0>>
+        <<endif>>
+        <<set $_AllowGameStart to true>>
+    <<endif>>
+<<endif>>
+===
+title: VolleyballGameEnd
+tags: 
+colorID: 0
+position: 1760,718
+---
+<<set $_BallHits to $_BallHits * 2>>
+<<if $FirstBallCounts is true>>
+    <<set $_BallHits to $_BallHits + 1>>
+<<endif>>
+
+
+<<if $_BallHits >= $_BallHitsBest>>
+    <<set $_BallHitsBest to $_BallHits>>
+    <<set $NewRecord to true>>
+<<else>>
+    <<set $NewRecord to false>>
+<<endif>>
+
+
+<<Wait 1>>
+<<Face Player Original>>
+<<Face Original Player>>
+<<if visited() is false>>
+    [[FirstVolleyLost]]
+<<else>>
+    [[RegularVolleyLost]]
+<<endif>>
+===
+title: FirstVolleyLost
+tags: 
+colorID: 0
+position: 1578,978
+---
+<<SetSpeaker Player>>
+哎呀。
+我输了吗？
+<<SetSpeaker RefereeKid>>
+<<LookAt RefereeKid Player>>
+不！！
+你永远都不会输！！
+<<ClearLookAt Player>>
+<<SetSpeaker Original>>
+<<SetEmotion Happy>>
+玩沙滩枝球的人……
+<<SetPose RaiseArms>>
+都是赢家！
+<<ClearEmotion>>
+……
+<<ClearPose>>
+除非你把球给弄爆。
+那就是你输了。
+不然，
+<<SetSpeaker Original>>
+沙滩枝球就是纯粹的合作游戏！
+<<SetSpeaker Player>>
+你说这是合作游戏？
+<<SetSpeaker Original>>
+没错，是合作游戏！
+我们可以一起拿高分！
+<<SetSpeaker Player>>
+听上去不错。
+<<SetSpeaker Original>>
+每次传球我们都能拿到1分。
+到10分我就会给你奖励！
+<<if $_BallHits >= 10>>
+    <<SetSpeaker RefereeKid>>
+	拿到10分了！！
+	你的分数是{{BallHits}}分。
+    <<SetSpeaker Original>>
+    <<if $_BallHits < 20>>
+		哦！
+		对了……
+		我想我还欠你奖品！
+        [[GiveVolleyPrize]]
+    <<else>>
+        <<if $_BallHits >= 30>>
+			我们拿到30分了？！？！
+        <<else>>
+			我们拿到20分了？！
+        <<endif>>
+		我们比上次做得更好！！
+		克莱尔……
+		你是天才！
+		这根金羽毛给你了。
+        <<Hide>>
+        <<GiveItem GoldenFeather 1>>
+        <<set $GotVolleyPrize to true>>
+        还有，
+        [[GiveVolleyPrize2]]
+    <<endif>>
+<<endif>>
+===
+title: GiveVolleyPrize
+tags: 
+colorID: 0
+position: 1573,1254
+---
+<<set $GotVolleyPrize to true>>
+给你这个。
+<<Hide>>
+<<GiveItem GoldenFeather 1>>
+你真的很厉害！
+<<if $_BallHits >= 20>> 
+	嗯……
+	因为到20分了，\n我还有第二件奖品要给你！
+	……
+    [[GiveVolleyPrize2]] 
+<<else>> 
+	有你那样的技巧，\n我们也许能拿下20分！
+	不过那还是挺难的……
+<<endif>>
+===
+title: PoppedBallEnd
+tags: 
+colorID: 0
+position: 2004,719
+---
+<<if visited() is false>>
+    <<Wait 1>>
+	不不不不不不不不！
+	……怎么会？
+	……为什么？？
+    <<SetSpeaker Player>>
+	啊！
+	抱歉。
+	这也许不是好的做法。
+    <<SetSpeaker Original>>
+	别再这样做了，好吗？
+    <<set $PoppedBall to true>>
+<<elseif visitCount() is 1>>
+    <<Wait 1>>
+	嘿！
+	我告诉过你别再那样做了！
+    <<SetSpeaker RefereeKid>>
+	再来一次！！
+    <<SetSpeaker Original>>
+    <<LookAt RefereeKid>>
+    朱莉！
+    <<SetSpeaker RefereeKid>>
+	虽然我也喜欢它爆掉！！
+    <<SetSpeaker Original>>
+    <<ClearLookAt>>
+	但我更想玩游戏！
+<<else>>
+    <<SetSpeaker RefereeKid>>
+	哈哈哈！！
+	太有趣了！！
+    <<SetSpeaker Original>>
+    唉。
+<<endif>>
+===
+title: GiveVolleyPrize2
+tags: 
+colorID: 0
+position: 1855,1250
+---
+<<set $GotVolleyPrize2 to true>>
+我要把口袋里的钱都给你！
+<<Hide>>
+<<PlaySound BuySound>>
+<<GiveItem Coin 50>>
+<<Wait 1>>
+<<SetSpeaker Player>>
+<<Face Original Player>>
+哇噢，真多。
+但我不想拿光你的钱。
+<<SetSpeaker Original>>
+没事的！
+我家有的是钱。
+<<SetSpeaker Player>>
+哦，
+这样啊，
+那好吧。
+<<if $_BallHits >= 30>>
+    <<SetSpeaker Original>>
+	老实说，
+	我从没想过能拿30分……
+	我想再给你件东西。
+    [[GiveVolleyPrize3_2]]
+<<endif>>
+===
+title: RaceOpponentStart
+tags: 
+colorID: 0
+position: 1262,-2217
+---
+<<set $_BeginRace to false>>
+<<set $_ResetRace to false>>
+<<set $JustMetAvery to false>>
+    
+<<if $_FinishedRace is false>>
+    [[BeforeRaceIntro]]
+<<else>>
+    [[AfterRaceIntro]]
+<<endif>>
+===
+title: RaceSelectMenu
+tags: 
+colorID: 0
+position: 2418,-2403
+---
+<<SetSpeaker Original>>
+当然可以！
+你想进行哪个比赛？
+<<SetSpeaker Player>>
+<<if $LighthouseRaceFound is true>>
+    [[灯塔赛跑|LighthouseRaceRetry]]
+<<endif>>
+<<if $BuildingRaceFound is true>>
+    [[废楼赛跑|BuildingRaceRetry]]
+<<endif>>
+<<if $MountainTopRaceFound is true>>
+    [[山顶赛跑|MountainTopRaceRetry]]
+<<endif>>
+[[没事了|NothingRace]]
+===
+title: BeforeRaceMenu
+tags: 
+colorID: 0
+position: 2073,-2750
+---
+<<SetSpeaker Player>>
+[[来吧！|BeginRace]]
+[[还没好。|RefuseRace]]
+<<if $RacesFound > 1>>
+    [[我们重来吧！|RaceSelectMenu]]
+<<endif>>
+===
+title: DiscussRaceResult
+tags: 
+colorID: 0
+position: 1906,-1357
+---
+<<if $_WonRace is true>>
+    <<if $_RaceVictories < $_HardcodedReplays>>
+        [[WinRegular]]
+    <<elseif $_RaceVictories == $_HardcodedReplays>>
+        [[WinMedal]] 
+    <<else>>
+        [[WinGhost]]
+    <<endif>>
+<<else>>
+    <<if $_RaceVictories < $_HardcodedReplays>>
+        [[LoseRegular]]
+    <<else>>
+        [[LoseGhost]]
+    <<endif>>
+<<endif>>
+===
+title: LighthouseRaceRetry
+tags: 
+colorID: 0
+position: 2703,-2409
+---
+<<SetSpeaker Original>>
+好啊！
+那我们到那去吧。
+<<set $_RaceId to "LighthouseRace">>
+<<set $_ResetRace to true>>
+===
+title: MountainTopRaceRetry
+tags: 
+colorID: 0
+position: 2705,-2192
+---
+<<SetSpeaker Original>>
+好啦好啦！
+我们到起跑线那吧！
+<<set $_RaceId to "MountainTopRace">>
+<<set $_ResetRace to true>>
+===
+title: BeforeRaceIntro
+tags: 
+colorID: 0
+position: 1520,-2760
+---
+<<if $AgreedToAvery is false>>
+    [[AveryIntroduction]]
+<<endif>>
+
+<<if $_RaceId is "LighthouseRace">>
+    [[LighthouseRaceIntro]]
+<<elseif $_RaceId is "MountainTopRace">>
+    [[MountainTopRaceIntro]]
+<<elseif $_RaceId is "OldBuildingRace">>
+    [[BuildingRaceIntro]]
+<<else>>
+    [[BeforeRaceMenu]]
+<<endif>>
+===
+title: AfterRaceIntro
+tags: 
+colorID: 0
+position: 1244,-1697
+---
+<<if $_RaceResultDiscussed is false>>
+    <<set $_RaceResultDiscussed to true>>
+    [[DiscussRaceResult]]
+<<else>>
+    <<if $_IsSwimming is true>>
+		你好啊~~~~~~
+		我只是在戏水啦。
+        <<SetEmotion Happy>>
+		泡水的感觉真好！
+        <<ClearEmotion>>
+    <<else>>
+		嗨！
+		过得怎样？
+    <<endif>>
+    [[AfterRaceMenu]]
+<<endif>>
+===
+title: MountainTopRaceIntro
+tags: 
+colorID: 0
+position: 1804,-2633
+---
+<<set $MountainTopRaceFound to true>>
+
+<<if visited() is false>>
+    <<set $RacesFound to $RacesFound + 1>>
+    <<if $JustMetAvery is false>>
+		又见面啦！
+		呃……
+		我有个疯狂的想法！
+		不过，这想法是……
+		疯狂的好想法！
+		要听吗？
+        <<SetSpeaker Player>>
+        当然！
+        <<SetSpeaker Original>>
+        <<set $_CrazyIdea to true>> 
+    <<endif>>
+	好吧，那，
+	我们……
+	来比赛吧……
+	比跑到山顶如何！？
+    <<SetSpeaker Player>>
+    哇噢。
+    <<if $_CrazyIdea is true>> 
+		确实是疯狂的想法！
+        <<SetSpeaker Original>>
+		但挺好的！
+		规则也简单。
+    <<endif>> 
+    <<SetSpeaker Original>>
+	先到山顶的人算赢！
+    我只有<color=red>9根羽毛</color>，所以，
+	用的时候别超过这个数，好吗？
+    <<if HasItem("WalkieTalkie", 1) is false>>
+		哦，
+		还有件事。
+		带上这个！
+        <<Hide>>
+        <<GiveItem WalkieTalkie 1>>
+        <<Face Original Player>>
+		比赛的路线挺长的，
+		想重来的话就打给我。
+		都懂了吗？
+    <<endif>>
+<<elseif $_LighthouseRace_Attempted is false>>
+	想进行山顶赛跑吗？
+<<else>>
+	又见面啦！
+	想重来山顶赛跑吗？
+<<endif>>
+
+[[BeforeRaceMenu]]
+===
+title: LighthouseRaceIntro
+tags: 
+colorID: 0
+position: 1804,-2882
+---
+<<set $LighthouseRaceFound to true>>
+
+<<if visited() is false>>
+    <<set $RacesFound to $RacesFound + 1>>
+    <<if $JustMetAvery is false>>
+		又见面啦！
+		我有其它线路了，我想比赛！
+        <<SetSpeaker Player>>
+		好啊！
+		我挺感兴趣的。
+        <<SetSpeaker Original>>
+    <<endif>>
+	好吧，那么，
+	我们的规则就是，
+	先到灯塔门的人算赢。
+	还有，
+	比赛时我们只能用<color=red>3根金羽毛</color>！
+	……因为我现在只有这么多。
+	可以吧？
+<<elseif $_LighthouseRace_Attempted is false>>
+	灯塔赛跑怎样啊？
+<<else>>
+	好啊！
+	想重来灯塔赛跑吗？
+<<endif>>
+
+[[BeforeRaceMenu]]
+===
+title: BeginRace
+tags: 
+colorID: 0
+position: 2341,-2883
+---
+<<SetSpeaker Original>>
+
+<<if HasItem("RunningShoes", 1) is false>>
+	哦，老实说，
+	你也许会想要双<color=red>跑鞋</color>。
+	对于跑步来说这相当重要！
+    <<SetSpeaker Player>>
+    -> 总之是要比！
+        <<SetSpeaker Original>>
+		哈哈，好啊。
+		那来吧！
+    -> 等会，还是算了。
+        <<SetSpeaker Original>>
+        [[CancelRaceShoes]]
+<<elseif $_RaceId is "LighthouseRace" and HasItem("GoldenFeather", 3) is false>>
+    [[ConsiderFeathersRace]]
+<<elseif $_RaceId is "OldBuildingRace" and HasItem("GoldenFeather", 4) is false>>
+    [[ConsiderFeathersRace]]
+<<elseif $_RaceId is "MountainTopRace" and HasItem("GoldenFeather", 7) is false>>
+    [[ConsiderFeathersRace]]
+<<else>>
+	很好。
+	那我们来吧！
+<<endif>>
+
+<<set $_BeginRace to true>>
+===
+title: RefuseRace
+tags: 
+colorID: 0
+position: 2067,-3384
+---
+<<SetSpeaker Original>>
+好的。
+那待会见？
+===
+title: AfterRaceMenu
+tags: 
+colorID: 0
+position: 2109,-1958
+---
+<<SetSpeaker Player>>
+[[拜！|NothingRace]]
+[[想重来吗？|RestartRace]]
+<<if $AskedAboutAvery is false and $KnowsAboutRace is true>>
+    [[为什么不去参加马拉松？|AveryStory]]
+<<endif>>
+<<if $RacesFound > 1>>
+    [[我们来别的比赛吧！|RaceSelectMenu]]
+<<endif>>
+===
+title: RestartRace
+tags: 
+colorID: 0
+position: 2407,-2053
+---
+<<SetSpeaker Original>>
+<<if $_WonRace is false>> 
+	乐意至极！！
+	我们再来吧！
+<<else>> 
+	当然可以！！
+	这次我会做得更好！
+<<endif>> 
+<<set $_ResetRace to true>>
+===
+title: NothingRace
+tags: 
+colorID: 0
+position: 2104,-2236
+---
+<<SetSpeaker Original>>
+再见！
+===
+title: RegularVolleyLost
+tags: 
+colorID: 0
+position: 1841,976
+---
+<<if $_BallHits >= 4>>
+    <<Wait 0.5>>
+    <<SetSpeaker RefereeKid>>
+    <<if $FirstCountResult is false>>
+		我数到有{{BallHits}}次！！
+    <<else>>
+		我数到有{{BallHits}}次！！
+        <<set $FirstCountResult to true>>
+    <<endif>>
+    <<SetSpeaker Original>>
+
+    <<if $GotVolleyPrize is false and $_BallHits >= 10>>
+        <<SetEmotion Happy>>
+		好耶！
+		我们成功了！
+		依照承诺，我要给你奖励！
+        <<ClearEmotion>>
+        [[GiveVolleyPrize]]
+    <<elseif $GotVolleyPrize2 is false and $_BallHits >= 20>>
+        <<SetEmotion Happy>>
+        <<if $_BallHits >= 30>>
+			天啊，我们打到30分了！！
+        <<else>>
+			我们打到20分了！！
+        <<endif>>
+		这是我的新纪录！！
+        <<ClearEmotion>>
+		啊，啊。
+		我得拿出点奖励来才行！！
+        [[GiveVolleyPrize2]]
+    <<elseif $GotVolleyPrize3 is false and $_BallHits >= 30>>
+        [[GiveVolleyPrize3]]
+    <<else>>
+        [[NoVolleyPrize]]
+    <<endif>>
+<<endif>>
+===
+title: NoVolleyPrize
+tags: 
+colorID: 0
+position: 2331,1250
+---
+<<if visited() is false>>
+    <<set $_BallHitsMore to $_BallHits + 1>>
+	但我数的是{{BallHitsMore}}分！
+    <<SetSpeaker RefereeKid>>
+	发球不算！！
+    <<SetSpeaker Original>>
+	什么？
+	当然算啊！
+	你怎么想，克莱尔？
+    <<SetSpeaker Player>>
+    -> 算！
+        <<SetSpeaker Original>>
+		你看对吧！
+        <<SetSpeaker RefereeKid>>
+		好吧！！
+        <<set $FirstBallCounts to true>>
+        <<set $_BallHits to $_BallHits + 1>>
+		那就算你获得{{BallHits}}分。
+    -> 不算吧……
+        <<SetSpeaker Original>>
+        诶，拜托。
+        <<SetSpeaker Player>>
+		抱歉……
+		这次我挺朱莉。
+        <<SetSpeaker RefereeKid>>
+		耶！！
+        <<SetSpeaker Original>>
+        好吧，好吧。
+<<else>>
+    <<if $_BallHits >= 20>>
+        <<if $NewRecord is true>>
+			是新的记录！！
+        <<else>>
+            <<SetEmotion Happy>>
+			我们真是个好队伍！
+            <<ClearEmotion>>
+        <<endif>>
+    <<elseif $_BallHits >= 10>>
+        <<if $BallBrag is false>>
+			你做得好好！
+            <<SetSpeaker Player>>
+			那个，
+			你比我厉害多了。
+			你从来都不掉球！
+            <<SetSpeaker Original>>
+			没错~~~。
+            <<set $BallBrag to true>>
+        <<else>>
+            不错！
+        <<endif>>
+    <<elseif $_BallHits >= 8>>
+        <<if $GotVolleyPrize is false>>
+			哦，就差点！
+        <<else>>
+			哦，差点又到10了！
+        <<endif>>
+    <<elseif $_BallHits >= 6>>
+        还行！
+    <<elseif $_BallHits >= 4>>
+		不错的开始！
+    <<endif>>
+<<endif>>
+===
+title: GiveVolleyPrize3
+tags: 
+colorID: 0
+position: 2098,1252
+---
+等等，你说啥？
+<<SetSpeaker RefereeKid>>
+我说你拿到{{BallHits}}分了！
+<<SetSpeaker Original>>
+我们超过30分了！？
+不敢相信我们居然做到了！
+嗯……
+应该要给你最特别的奖励的，
+但我所有钱都给你了……
+<<SetSpeaker Player>>
+没事的！
+我不需要什么。
+<<SetSpeaker Original>>
+要的要的！！
+这东西也许该给你。
+[[GiveVolleyPrize3_2]]
+===
+title: CampCatStart
+tags: 
+colorID: 0
+position: 4136,483
+---
+<<if $ReturnedPermit>> 
+    <<if $CampCatSorry is false>> 
+        [[CampCatFreakout]] 
+    <<else>> 
+        <<SetEmotion Happy>> 
+		再次变成100%合法的感觉真棒！
+        <<ClearEmotion>> 
+    <<endif>> 
+<<elseif HasItem("CampingPermit", 1)>> 
+    <<SetSpeaker Player>>
+	你肯定想不到我找到了啥！
+    <<Hide>> 
+    <<GiveItem CampingPermit -1>> 
+    <<Wait 1>> 
+    <<SetSpeaker Original>>
+    <<SetPose RaiseArms>> 
+	你找到了我的许可证！？
+	我还以为永远都找不到了呢！
+    <<ClearPose>>
+    <<SetSpeaker Player>>
+	你那不是玩笑话！
+	真的是被鱼给带走了。
+    <<SetSpeaker Original>> 
+    <<SetEmotion Happy>> 
+	太感谢了！
+    <<ClearEmotion>> 
+	剩下的鱼饵都给你。
+	我对钓鱼已经有点烦了。
+    <<Hide>> 
+    <<PlaySound PickUp>>
+    <<GiveItem Bait 5>>
+    <<Wait 1>> 
+	再次感谢！
+	你是我的救星！
+    <<set $ReturnedPermit to true>>
+<<elseif visited() is false>>
+    <<SetSpeaker Player>>
+	嗨。
+    <<SetSpeaker Original>>
+    <<SetPose RaiseArms>> 
+    啊啊啊！
+    <<Face Player>> 
+    没错，这次露营是100%合法的！！！
+    <<SetSpeaker Player>>
+    呃——
+    <<SetSpeaker Original>>
+	没错，我有合法的露营许可证！！！
+    <<SetSpeaker Player>>
+    等等——
+    <<SetSpeaker Original>>
+    <<ClearPose>> 
+    <<SetPose Shaking>> 
+	好吧，好吧！你逮到我了。
+    <<SetSpeaker Player>>
+    慢着——
+    <<SetSpeaker Original>>
+	我把它弄丢了，
+	我是可恨的撒谎者。
+	我是坏蛋。
+    <<SetSpeaker Player>>
+    啊啊啊啊啊啊——
+    <<SetSpeaker Original>>
+	请别给我开罚单。
+	我能给你点好处。
+    <<Hide>>
+    <<PlaySound PickUp>>
+    <<GiveItem Bait 5>>
+    <<Wait 1>> 
+    <<SetSpeaker Player>>
+    <<Face Original>>
+    ……
+	你刚才给我的真是一把虫子吗？
+    <<SetSpeaker Original>>
+	是鱼饵！！
+	我好绝望！！
+	你要怎么处理？！
+    <<SetSpeaker Player>>
+	那个，呃……
+	没事的。
+	我不会跟别人说！
+    <<SetSpeaker Original>>
+    <<ClearPose>> 
+	等等，真的吗？
+	你不是少年管理员吗？
+    <<SetSpeaker Player>>
+	不是。
+	我婶婶是管理员，
+	但我没为她工作。
+    <<SetSpeaker Original>>
+	哦，好吧。
+	你不会说出去的，对吧？
+    <<SetSpeaker Player>>
+	不会。
+    <<SetSpeaker Original>>
+	太好了！
+	我想，
+	你可以留下那些鱼饵。
+    <<SetSpeaker Player>>
+    ……谢谢
+<<elseif visitCount() is 1>>
+    <<SetSpeaker Player>> 
+	你在哪丢的许可证？
+    <<SetSpeaker Original>>
+	那个……
+	你大概不会信。
+    <<SetSpeaker Player>> 
+	说吧。
+    <<SetSpeaker Original>>
+	被鱼吞了。
+    <<SetSpeaker Player>> 
+	什么？
+	假的吧。
+    <<SetSpeaker Original>>
+	是真的！
+    <<SetSpeaker Player>>
+	这听起来有点……
+	“鱼”蠢。
+	呵。
+    <<SetSpeaker Original>>
+    ……
+    <<SetPose Shaking>> 
+	这事很严肃的！
+    <<ClearPose>> 
+    <<set $_MissingPermit to true>> 
+<<else>> 
+    [[CampCatFreakout]] 
+<<endif>>
+===
+title: VolleyKidChat
+tags: 
+colorID: 0
+position: 1076,897
+---
+<<if visited() is false>>
+	那，
+	你喜欢吗？
+    <<SetSpeaker Player>>
+	沙滩枝球吗？
+    <<SetSpeaker Original>>
+	是啊！！
+    <<SetSpeaker Player>>
+    -> 喜欢！
+		谢谢你告诉我这种游戏！
+        <<SetSpeaker Original>>
+        <<SetEmotion Happy>>
+		感谢你来玩！
+		你是最棒的，克莱尔！
+        <<ClearEmotion>>
+    -> 不喜欢
+        我还是更喜欢排球。
+        <<SetSpeaker Original>>
+		什么！
+		但沙滩枝球就是加强版的排球！
+		是用树枝击球的强力运动！！
+<<else>>
+	截止到目前我们的最高分是{{BallHitsBest}}分！
+    <<if $_BallHitsBest >= 20 and $BallChat1 is false>>
+        <<SetSpeaker Player>>
+		打得不错！
+        <<SetSpeaker Original>>
+        是啊！
+        <<SetEmotion Happy>>
+        我们真是好搭档！
+        <<ClearEmotion>>
+        <<set $BallChat1 to true>>
+    <<elseif $_BallHitsBest >= 30 and $BallChat2 is false>>
+        <<SetSpeaker Original>>
+		我想这就是成长的历史。
+        <<SetSpeaker Player>>
+		没错。
+        <<set $BallChat2 to true>>
+    <<endif>>
+<<endif>>
+===
+title: GiveVolleyPrize3_2
+tags: 
+colorID: 0
+position: 1994,1506
+---
+<<Hide>>
+<<set $_GotKidHat to true>>
+<<set $GotVolleyPrize3 to true>>
+<<GiveItem KidHat 1>>
+<<Wait 1>>
+<<SetSpeaker Player>>
+<<Face Original Player>>
+哇噢。
+<<SetSpeaker Original>>
+请保管好它！
+这样你就能永远铭记这一刻了！！
+<<SetSpeaker Player>>
+我会的。
+<<GiveAchievement BeachstickballChamp>> 
+===
+title: Node178
+tags: 
+colorID: 0
+position: 4430,2164
+---
+ugh
+i'm such an idiot
+i forgot to sign up for the race!
+nah, i can't join day of..
+i feel crappy and stupid
+===
+title: Node179
+tags: 
+colorID: 0
+position: 4692,2097
+---
+i'm racing in the marathon today
+it's gonna be my first race!
+i'm so pumped!
+===
+title: Node180
+tags: 
+colorID: 0
+position: 4752,1838
+---
+this is boring
+i'm bored and scared 
+===
+title: Node181
+tags: 
+colorID: 0
+position: 4972,1838
+---
+hey
+hi
+...
+uh i'll talk to you
+===
+title: WalkieTalkieStart
+tags: 
+colorID: 0
+position: 3233,-2407
+---
+<<PlaySound RadioOn>>
+<<SetPose OnPhone>>
+<<Wait 0.5>>
+
+<<if GetSceneName() == "GameScene">>
+    <<if $_StartedRace is true and $_RaceResultDiscussed is false>>
+        <<if IsVisible("RaceOpponent") is true and $_FinishedRace is true>>
+            [[WalkieOnScreen]]
+        <<else>>
+            [[WalkieMidRace]]
+        <<endif>>
+    <<else>>
+        <<if IsVisible("RaceOpponent") is true>>
+            [[WalkieOnScreen]]
+        <<else>>
+            [[WalkieNotRacing]]
+        <<endif>>
+    <<endif>>
+<<else>>
+    [[WalkieNobody]]
+<<endif>>
+===
+title: WalkieMidRace
+tags: 
+colorID: 0
+position: 2975,-2152
+---
+<<SetStyle AveryRadioTextBoxProfile>>
+
+<<if $_FinishedRace is false>>
+	呃……
+	我正在跑步和说话。
+	不过，有什么事？
+<<else>>
+	嘿！
+	我正在等你。
+	有什么事？
+<<endif>>
+
+<<SetSpeaker Player>>
+-> 我们重来吧！
+    <<SetStyle AveryRadioTextBoxProfile>>        
+    哦，呃……
+	当然，我们可以重来。
+    <<set $_RaceResultDiscussed to true>>
+    <<SendMessage RaceCoordinator CallRestartRace>>
+-> 我放弃。
+    <<SetStyle AveryRadioTextBoxProfile>>
+	哦，好吧。
+	我想是可以。
+    <<set $_RaceResultDiscussed to true>>
+    <<SendMessage RaceCoordinator CallAbandonRace>>
+-> 没事。
+    <<if $_FinishedRace is false>>
+		没空闲聊了。
+		比赛正进行着呢！
+    <<else>>
+		哦，行吧。
+		那待会见？
+    <<endif>>
+
+<<PlaySound RadioOff>>
+<<ClearPose Player>>
+===
+title: WalkieNotRacing
+tags: 
+colorID: 0
+position: 3215,-2148
+---
+嘿，你在哪？
+<<SetStyle AveryRadioTextBoxProfile>>
+<<if $_RaceResultDiscussed is true>>
+    <<if $RaceAbandoned is true>>
+		呃……
+		在周围逛逛而已……
+    <<elseif $_RaceId is "LighthouseRace">>
+		我还在灯塔那！
+    <<elseif $_RaceId is "OldBuildingRace">>
+		我还在旧楼那！
+    <<elseif $_RaceId is "MountainTopRace">>
+		我还在山顶上！
+    <<else>>
+		呃……
+		不知道！
+    <<endif>>
+<<elseif $_RaceId is "LighthouseRace">>
+	我正在皇室山脉闲逛！
+<<elseif $_RaceId is "OldBuildingRace">>
+	我在墓地附近！
+<<elseif $_RaceId is "MountainTopRace">>
+	我离游客中心很近！
+<<else>>
+	呃……
+	不知道！
+<<endif>>
+
+<<PlaySound RadioOff>>
+<<ClearPose Player>>
+===
+title: WalkieNobody
+tags: 
+colorID: 0
+position: 3443,-2148
+---
+你好？
+有谁在吗？
+……
+
+<<PlaySound RadioOff>>
+<<ClearPose Player>>
+===
+title: WalkieOnScreen
+tags: 
+colorID: 0
+position: 2971,-2404
+---
+<<SetSpeaker RaceOpponent>>
+<<Face Player>>
+<<SetPose RaiseArms>>
+嘿，我在这！
+<<ClearPose>>
+
+<<PlaySound RadioOff>>
+<<ClearPose Player>>
+===
+title: FishingTutorialStart
+tags: 
+colorID: 0
+position: 704,-1384
+---
+<<if $DidFishTutorial is true>>
+    [[FisherTalk]]
+<<endif>>
+
+<<if visited() is true>>
+    <<SetSpeaker Player>>
+	嗨。
+    <<SetSpeaker Original>>
+    又见面啦。
+    <<SetSpeaker Player>>  
+    -> 能教我怎么钓鱼吗？
+        <<SetSpeaker Original>>
+        当然能。
+        [[FishingTutorialBegin]]
+    -> 啊，得走了。
+        <<SetSpeaker Original>>
+		好吧。
+		那你去吧。
+<<else>> 
+    <<SetSpeaker Player>>
+	钓得怎么样？
+    <<SetSpeaker Original>>
+	还不赖。
+	今天的鱼容易上钩。
+    <<SetSpeaker Player>>
+	酷，酷。
+	那个，
+	呃……
+	钓鱼难吗？
+    <<SetSpeaker Original>>
+	不难，
+	很简单。
+	想学的话我能教你。
+    <<SetSpeaker Player>>
+    -> 好啊！
+        [[FishingTutorialBegin]]
+    -> 现在不行……
+		……我得去个地方。
+		迟点吧！
+<<endif>> 
+===
+title: FishTutCastStart
+tags: 
+colorID: 0
+position: 707,-1157
+---
+抛鱼线很简单的。
+只要按<color=red>{{UseItemButton}}</color>就行。
+===
+title: FishTutChatStart
+tags: 
+colorID: 0
+position: 699,-923
+---
+<<Wait 4>>
+<<SetSpeaker Player>>
+那个，
+呃……
+我现在要做什么？
+<<SetSpeaker Original>>
+等待。
+<<SetSpeaker Player>>
+哦。
+好吧。
+<<Hide>>
+<<Wait 4>>
+<<SetSpeaker Player>>
+呃……
+我这样做没错吧？
+<<SetSpeaker Original>>
+没错。
+<<Hide>>
+<<Wait 5>>
+<<SetSpeaker Player>>
+也许，
+我该再抛一次？
+你能理解吧，
+可以找个更好的地方？
+<<SetSpeaker Original>>
+这地方挺好的。
+我之前在这见到过鱼。
+这是好迹象。
+有时候，
+你就是需要等待。
+耐心是关键。
+<<SetSpeaker Player>>
+嗯……
+可这不是我的强项。
+===
+title: FishTutNibbleStart
+tags: 
+colorID: 0
+position: 699,-694
+---
+注意了！
+有条鱼在触咬。
+<<SetSpeaker Player>>
+我该往回拉吗？
+<<SetSpeaker Original>>
+还不行……
+得等它咬住。
+
+===
+title: FishTutBiteStart
+tags: 
+colorID: 0
+position: 688,-473
+---
+就是现在！
+按<color=red>{{UseItemButton}}</color>把它拉上来！
+===
+title: FishTutPullStart
+tags: 
+colorID: 0
+position: 690,-239
+---
+<<SetSpeaker Player>>
+啊啊啊！
+我现在该怎么办！？
+<<SetSpeaker Original>>
+<color=red>往回拉</color>，<color=red>按{{UseItemButton}}</color>收线！
+===
+title: FishTutDoneStart
+tags: 
+colorID: 0
+position: 692,-9
+---
+看到没？
+易如反掌。
+<<SetSpeaker Player>>
+<<LookAt Original>> 
+不知道该不该说，
+我没有掌。
+<<SetSpeaker Original>>
+那我是该说，
+易如……
+……反翅？
+<<SetSpeaker Player>>
+这成语不错。
+<<ClearLookAt>>
+===
+title: FisherTalk
+tags: 
+colorID: 0
+position: 466,-1378
+---
+<<if visited() is false>>
+    <<SetSpeaker Player>>
+	那这鱼我该怎么办？
+    <<SetSpeaker Original>>
+	随你处理，孩子。
+<<else>>
+    <<SetSpeaker Player>>
+	那个，
+	谢谢你告诉我怎么钓鱼。
+    <<SetSpeaker Original>>
+	别客气。
+	你本身就很有天赋。
+    <<SetSpeaker Player>>
+    <<SetEmotion Happy>>
+	我自己都没想到！
+    <<ClearEmotion>> 
+<<endif>>
+===
+title: Node388
+tags: 
+colorID: 0
+position: 2711,2240
+---
+i don't know if i like fishing...
+it gives me too much time to think
+
+can you give me advice?
+you seem wise
+
+that's an odd thing to say
+honeslty i have no idea what im doing
+i dont talk much tho
+so i think people assume i'm very thoughtful
+truth is
+there's not much going on in here
+i don't mind tho
+you'd think i'd get a little smarter each year
+hard to say if it's actually happening
+
+that's not very helpful
+
+no i suppose not
+but that's how things are
+honestly it's hard to give advice
+when i still don't know what works for me
+
+
+
+just focus on right now
+
+
+i don't really love just sitting around
+if i'm not busy
+my mind finds ways to be busy
+sometimes it's hard to relax
+===
+title: RacerIntroStart
+tags: 
+colorID: 0
+position: 3822,2301
+---
+<<if visited() is true>>
+    <<if $AcceptedRaceChallenge is true>>
+		我在皇室山脉等你。
+    <<else>>
+		那，你要参加我的比赛吗？
+        -> 当然。
+            [[JoinRaceIntro]]
+        -> 还不想。
+            好吧。
+    <<endif>>
+<<else>>
+    <<if $KnowsAboutRace is true>>
+        <<SetSpeaker Player>>
+		嗨。
+		这里是比赛的起点吗？
+        <<SetSpeaker Original>>
+		是的！
+    <<else>>
+        <<SetSpeaker Player>>
+		嗨。
+		这是要干嘛？
+        <<SetSpeaker Original>>
+		今天这里会有场大比赛！
+    <<endif>>
+	我原本是要参赛的。
+	不过……
+	呃……
+	你得在网上注册才行。
+    <<SetPose RaiseArms>>
+	而且上个月就截止了！！
+    <<ClearPose>>
+    我想说，
+	拜托，
+	这种事谁知道？！
+    <<SetSpeaker Player>>
+	我也不知道！
+    <<SetSpeaker Original>>
+	*叹气*
+	真让人不爽。
+	你可知道，
+	我是为开心来的。
+	我不会让它败我的兴！
+	我要自己举办比赛。
+    <<SetSpeaker Player>>
+	哇噢！
+    <<SetSpeaker Original>>
+	只是我还需要些竞争者。
+	那……
+	你要参加吗！？
+    -> 我要参加！
+        [[JoinRaceIntro]]
+    -> 我不参加。
+		好吧。
+		不过你要是改变了心意。
+		你知道在哪能找到我的！
+<<endif>>
+===
+title: JoinRaceIntro
+tags: 
+colorID: 0
+position: 4081,2296
+---
+哇，耶！！
+好吧，好吧。
+我还要看看能不能招到\n其他人。
+那就岛西边的皇室山脉见。
+希望到那时，\n我已经想好终点线设哪了！
+<<set $AcceptedRaceChallenge to true>>
+===
+title: FishBuyerStart
+tags: 
+colorID: 0
+position: 129,-2068
+---
+<<if visited() is true>>
+    你好啊！
+    抓到鱼没？
+    <<if HasItem("Fish", 1) is true>>
+        [[FishBuyerMenu]]
+    <<else>>
+        <<SetSpeaker Player>>
+        还没！
+    <<endif>>
+<<else>>
+    <<SetSpeaker Original>>
+    你好。
+    <<SetSpeaker Player>>
+	嗨！
+	你在做什么？
+    <<SetSpeaker Original>>
+	休息！
+	嘿。
+	别说出去，好吗？
+    <<SetSpeaker Player>>
+	不会的。
+	我都不知道要跟谁说！
+    <<SetSpeaker Original>>
+	呵，很好。
+	我已经等不及今天下班了。
+	等我轮完班，
+	我要亲手为自己抓\n几条稀有鱼！
+	你知道吗，这是我的爱好。
+	你要是捕到了鱼……
+	……就把它带来，\n我会用硬币跟你换的！
+    <<SetSpeaker Player>>
+    <<if HasItem("Fish", 1) is true>>
+		我抓到鱼了！
+        <<SetSpeaker Original>>
+		哦？
+		能让我看看吗？
+        [[FishBuyerMenu]]
+    <<else>>
+        <<if HasItem("FishingRod", 1) is false>>
+			有鱼竿的话我就会去抓！
+            <<SetSpeaker Original>>
+			你知道吗，
+			我朋友比尔也许能借你。
+			他总在外面钓鱼。
+        <<else>>
+			听起来不错！
+        <<endif>>
+    <<endif>>
+<<endif>>
+===
+title: FishBuyerMenu
+tags: 
+colorID: 0
+position: 124,-1826
+---
+<<SetSpeaker Player>>
+-> 看看这条……
+    <<SendMessage FishBuyer SellFish>>
+-> 之后吧。
+    <<SetSpeaker Original>>
+	好吧。
+===
+title: BuyFish
+tags: 
+colorID: 0
+position: -163,-1765
+---
+<<if $_FishAlreadySold is true>>
+    [[BuyFishAgain]]
+<<endif>>
+
+<<if $_FishRare is false>>
+    [[BuyFishQuip]]
+<<else>>
+    [[BuyRareFishQuip]]
+<<endif>>
+
+
+===
+title: BuyFishEnd
+tags: 
+colorID: 0
+position: -156,-956
+---
+鱼就这些吗？
+<<SetSpeaker Player>>
+<<if HasItem("Fish", 1) is true>>
+    -> 看看这条……
+        <<SendMessage FishBuyer SellFish>>
+    -> 就这些了！
+        <<SetSpeaker Original>>
+		很高兴跟你做生意。
+<<else>>
+	就这些了！
+<<endif>>
+===
+title: BuyFishAgain
+tags: 
+colorID: 0
+position: -403,-1495
+---
+<<set $_BaitSold to true>>
+<<if visited() is false>>
+    抱歉，伙计。
+    那鱼我已经有了。
+    不过……
+    你给过的鱼我可以用<color=red>鱼饵</color>来换！
+	当然，不用鱼饵你也可以抓。
+	只是，有鱼饵的话会<color=red>快很多</color>！
+<<else>>
+    我会用鱼饵跟你换的。
+<<endif>>
+
+<<Hide>>
+<<GiveItem Bait 1>>
+<<Face Original Player>>
+<<Wait 1>>
+[[BuyFishEnd]]
+===
+title: BuyFishCancel
+tags: 
+colorID: 0
+position: 81,-959
+---
+后会有期！
+===
+title: BuyFishAction
+tags: 
+colorID: 0
+position: -25,-1227
+---
+<<SendMessage FishBuyer PayCoins>>
+<<PlaySound BuySound>>
+<<Hide>>
+<<Wait 1>>
+
+<<if visitCount() is 2>>
+	你挺擅长钓鱼的！
+	你应该带上我的日志！
+	它能帮你记录找到过的鱼。
+    <<Hide>>
+    <<GiveItem FishEncyclopedia 1>>
+    <<Wait 1>>
+    <<Face Original Player>>
+    那个，
+<<endif>>
+
+<<if HasSoldAllFish() is true and $SoldAllFishReward is false>> 
+	好吧！
+	我要是没弄错的话，
+	我日志上的鱼你都抓过了！
+	克莱尔！
+	你真有钓鱼的天赋！
+    <<SetSpeaker Player>>
+	谢谢！
+    <<SetSpeaker Original>> 
+	嗯……
+	我手上有些东西应该对你有用。
+	我想我可以把它托付给你。
+    <<Hide>>
+    <<GiveItem FishingRod -1>> 
+    <<GiveItem GoldenFishingRod 1>>
+    <<Wait 1>>
+    <<Face Original Player>>
+    <<SetSpeaker Player>>
+	哇！
+	真好看。
+    <<SetSpeaker Original>> 
+	它能吸引稀有的鱼。
+	你可以用它来找那些有趣的鱼！
+	不过别弄丢了，
+	这东西对我来说很重要。
+	是我家传了好几代的宝物。
+    <<SetSpeaker Player>>
+	哇噢。
+    <<SetSpeaker Original>> 
+	还有，
+	它是用金子做的。
+	所以，
+	对，
+	别弄丢了！
+    <<SetSpeaker Player>>
+	不会的！
+    <<set $SoldAllFishReward to true>> 
+    <<SetSpeaker Original>>
+    <<GiveAchievement AllFish>> 
+<<endif>> 
+
+[[BuyFishEnd]]
+===
+title: BuyFishQuip
+tags: 
+colorID: 0
+position: -165,-1495
+---
+<<if $QuipLine is 0>>
+	是{{FishName}}吗？
+	我会用{{FishPrice}}枚硬币买下它。
+<<elseif $QuipLine is 1>>
+	看啊！
+	是{{FishName}}！
+	我会用{{FishPrice}}枚硬币买下它。
+<<elseif $QuipLine is 2>>
+	钓得好。
+	{{FishName}}是我个人最喜欢的鱼。
+	我会用{{FishPrice}}枚硬币买下它。
+<<elseif $QuipLine is 3>>
+	这鱼不错！
+	{{FishName}}曾经从我手上溜走过，
+	但没过多久就被我抓到了！
+	我会用{{FishPrice}}枚硬币买下它。
+<<elseif $QuipLine is 4>>
+	是{{FishName}}啊……
+	我不怎么喜欢这鱼。
+	它曾咬过我！
+	但我还是想要！
+	我会用{{FishPrice}}枚硬币买下它。
+<<elseif $QuipLine is 5>>
+	啊，是{{FishName}}。
+	这鱼在鹰峰很受欢迎。
+	我会用……
+	……{{FishPrice}}枚硬币买下它。
+<<else>>
+	{{FishName}}啊。
+	嗯……
+	我想{{FishPrice}}枚硬币应该够了。
+<<endif>>
+
+<<set $QuipLine to $QuipLine + 1>>
+<<if $QuipLine > 6>>
+    <<set $QuipLine to 0>>
+<<endif>>
+
+[[BuyFishAction]]
+===
+title: BuyRareFishQuip
+tags: 
+colorID: 0
+position: 64,-1497
+---
+<<set $FoundAndSoldRareFish to true>>
+<<if $RareQuip is 0>>
+	等等……
+	这是什么？！
+	是稀有的{{FishName}}吗？！？
+	这鱼老难钓了！
+	我会用{{FishPrice}}枚硬币买下它！
+<<elseif $RareQuip is 1>>
+	……这是什么？
+	我认不出来。
+	……
+	是{{FishName}}吗？
+	这可真是罕见！
+	我会用{{FishPrice}}枚硬币来把它纳入我的收藏！
+<<elseif $RareQuip is 2>>
+	你在开我玩笑吧。
+	你抓到了{{FishName}}！？
+	我的天啊！
+	你可真有钓鱼的天赋！
+    <<SetSpeaker Player>>
+	我自己都不知道呢！
+    <<SetSpeaker Original>>
+	好吧。
+	我至少得用{{FishPrice}}枚硬币来买它！
+<<elseif $RareQuip is 3>>
+	我的天啊？！
+	克莱尔，
+	你简直就是钓鱼界的传奇！
+	{{FishName}}可是非常难钓的！
+	我会用{{FishPrice}}枚硬币买下它！
+<<elseif $RareQuip is 4>>
+    <<if $CrazyFishStory is false>>
+		这是！
+		{{FishName}}吗？
+		我们可谓是老相识了。
+		上次见它已经是五年前的事！
+		你知道吗，
+		我的鱼钩也曾钩住过它，
+		它的拉力真的很强。
+		我的意思是，
+		像这种鱼……
+		肌肉强到让你难以置信的！
+		差点把我拉下船！
+        <<SetSpeaker Player>>
+		不会吧！
+        <<SetSpeaker Original>>
+		是真的！
+		好了……
+		我会用{{FishPrice}}枚硬币买下它！
+        <<set $CrazyFishStory to true>>
+    <<else>>
+		{{FishName}}！？
+		真是惊人的发现！
+		我会用{{FishPrice}}枚硬币买下它！
+    <<endif>>
+<<else>>
+	什、什么！？
+	鹰峰里有{{FishName}}的传说我听得可多了，
+	没想到出现在这里……
+	……就在我眼前！！
+	克莱尔，
+	我要用{{FishPrice}}枚硬币买下它。
+<<endif>>
+
+<<set $RareQuip to $RareQuip + 1>>
+<<if $RareQuip > 5>>
+    <<set $RareQuip to 0>>
+<<endif>>
+
+[[BuyFishAction]]
+===
+title: FishingTutorialBegin
+tags: 
+colorID: 0
+position: 931,-1383
+---
+<<SetSpeaker Original>>
+<<set $DidFishTutorial to true>>
+给你。
+我闲置的鱼竿就借给你了。
+<<Hide>>
+<<GiveItem FishingRod 1>>
+<<SendMessage FishingTutorial StartTutorial>>
+===
+title: AveryBuildingSignStart
+tags: 
+colorID: 0
+position: 800,-2212
+---
+<<if visited() is false>> 
+	亲爱的告示牌读者：
+	你喜欢读告示牌吗？
+	我想你一定喜欢，\n不喜欢你就不会在这里了。
+	那个……
+	……我可以给你介绍比读告示牌\n更有趣的事！
+	两个词：
+	跑酷
+	比赛
+	跑酷比赛！！
+	我去<color=yellow>废楼</color>那设好终点线\n后就会回来。
+    —— 艾弗里
+    <<set $ReadAverySignBuilding to true>>
+<<else>>
+    <<SetSpeaker Player>> 
+    嗯……
+	也许我该去找下<color=red>废楼</color>在哪。
+<<endif>> 
+===
+title: AveryLighthouseSignStart
+tags: 
+colorID: 0
+position: 1030,-2214
+---
+<<if visited() is false>> 
+	亲爱的告示牌读者：
+	嗨！
+	虽然我不知道你是谁。
+	但我知道你很酷。
+	我也一样酷！
+	我们应该互相比比赛跑。
+	这会是件酷事。
+	马上回来！
+	我会在<color=yellow>灯塔</color>那设好勋带的。
+	—— 艾弗里
+    <<set $ReadAverySignLighthouse to true>>
+<<else>>
+    <<SetSpeaker Player>> 
+	嗯……
+	我想知道<color=red>灯塔</color>在哪……
+<<endif>> 
+===
+title: AveryIntroduction
+tags: 
+colorID: 0
+position: 1422,-3276
+---
+<<if $AgreedToAvery is true>> 
+    [[BeforeRaceIntro]]
+<<endif>> 
+
+<<if visited() is false>>
+    <<set $_A to $ReadAverySignLighthouse is true and $_RaceId is "LighthouseRace">>
+    <<set $_B to $ReadAverySignBuilding is true and $_RaceId is "OldBuildingRace">>
+    <<if $_A or $_B>> 
+        <<SetSpeaker Player>> 
+        嗨！
+        你是艾弗里吗？
+        <<SetSpeaker Original>> 
+        没错！
+        我是！！
+        你看了我的广告？
+        <<SetSpeaker Player>> 
+        那块告示牌吗？
+        看了。
+        <<SetSpeaker Original>> 
+        太好了！
+        那~~~
+        你要参加比赛吗？
+        [[AveryIntroQuestion]]
+    <<elseif $ReadAverySignBuilding or $ReadAverySignLighthouse>> 
+        嗨！！
+        我是艾弗里！！
+        很高兴见到你！！
+        <<SetSpeaker Player>>
+        嗨。
+        我是克莱尔。
+        我看过你的告示牌。
+        <<SetSpeaker Original>>
+        你看过！？
+        好极了！
+        那要不要跟我比一场？
+        [[AveryIntroQuestion]]
+    <<else>>
+        嗨！！
+        我是艾弗里！！
+        我正努力成为跑酷大师！！
+        <<SetSpeaker Player>>
+		真棒！
+        <<SetSpeaker Original>>
+        <<SetPose RaiseArms>> 
+		百分百酷毙！！
+        <<ClearPose>> 
+        不过，
+        我想找人陪练！
+        你……
+        ……想不想跟我比一场？
+        [[AveryIntroQuestion]]
+    <<endif>>
+<<else>>
+    <<SetEmotion Happy>>
+    你好啊！
+    想跟我比吗？
+    <<ClearEmotion>>
+    [[AveryIntroQuestion]]
+<<endif>>
+===
+title: Node211
+tags: 
+colorID: 0
+position: 2194,2528
+---
+i was going to run 
+
+HI!
+my name is avery
+do you wanna race?
+race?
+yeah
+
+
+
+you know
+like just run
+
+like
+i was going to run in the marathon
+but it turns out you need to sign up online!
+i was 
+
+
+so
+i was supposed to join the marathon race today
+turns out i missed registration
+i was like
+super bummed out
+like majorly no good feels all around
+if you know what i mean
+
+then i watched parkour videos on the internet for like 2 hours
+i think i found my new calling!
+
+HI!
+my name is AVERY!
+now
+i don't wanna alarm you but
+i'm about to challenge you to a race
+but i don't wanna startle you so
+i just wanan make sure you're 
+===
+title: AveryStory
+tags: 
+colorID: 0
+position: 1823,-2049
+---
+<<SetSpeaker Player>>
+今天有盛大的比赛！
+<<SetSpeaker Original>>
+那个……
+呃……
+说来有点尴尬，不过
+本来我今天是要跑马拉松的，
+但我错过了报名！！
+<<SetSpeaker Player>>
+哦，
+真遗憾，那很糟糕吧。
+<<SetSpeaker Original>>
+是啊。
+我得说，
+我真的很伤心，
+有种想要放弃赛跑的感觉。
+……
+但后来我花了2个小时\n观看跑酷视频。
+现在跑酷比赛给了我\n新的激情！！
+因此，
+<<SetEmotion Happy>> 
+我很高兴你愿意陪我练习！
+<<ClearEmotion>> 
+<<set $AskedAboutAvery to true>>
+===
+title: AveryIntroQuestion
+tags: 
+colorID: 0
+position: 1669,-3273
+---
+<<SetSpeaker Player>>
+-> 当然！
+    <<SetSpeaker Original>>
+    <<set $AgreedToAvery to true>>
+    <<SetEmotion Happy>>
+    <<SetPose RaiseArms>>
+    太~~~棒了！
+    <<ClearPose>>
+    <<ClearEmotion>>
+    <<set $JustMetAvery to true>>
+    [[BeforeRaceIntro]]
+-> 迟点。
+    <<SetSpeaker Original>>
+	哦，这样啊。
+	那好吧。
+    
+===
+title: BuildingRaceIntro
+tags: 
+colorID: 0
+position: 1802,-2400
+---
+<<set $BuildingRaceFound to true>>
+
+<<if visited() is false>>
+    <<set $RacesFound to $RacesFound + 1>>
+    <<if $JustMetAvery is false>>
+		你好！
+		好好好。
+		我已经设好另外一条比赛路线了！
+		想参加吗？
+        <<SetSpeaker Player>>
+		当然。
+		我们要往哪跑？
+        <<SetSpeaker Original>>
+    <<endif>>
+	这东边有座废楼。
+	至少，
+	我认为它是废弃的。
+	总之，
+	我想我们可以比去那上面！
+	先到上面终点的人算赢！
+	还有就是，
+	我们在比赛中只能用<color=red>5根金羽毛</color>！
+	这样比赛才更有趣！
+	准备好了吗？
+<<elseif $_LighthouseRace_Attempted is false>>
+	比赛怎样啊？
+<<else>>
+	又见面啦！
+	想再比一次谁先到废楼吗？
+<<endif>>
+
+[[BeforeRaceMenu]]
+===
+title: BuildingRaceRetry
+tags: 
+colorID: 0
+position: 2700,-2646
+---
+<<SetSpeaker Original>>
+好吧！
+那我们来吧！
+<<set $_RaceId to "OldBuildingRace">>
+<<set $_ResetRace to true>>
+===
+title: CancelRaceShoes
+tags: 
+colorID: 0
+position: 2339,-3130
+---
+好吧。
+我会等你找到的！
+===
+title: ConsiderFeathersRace
+tags: 
+colorID: 0
+position: 2588,-2890
+---
+嗯！
+你也许会想在赛前找到更多羽毛。
+没有它们要跟上会很难！
+<<SetSpeaker Player>>
+-> 总之是要比！
+    <<SetSpeaker Original>>
+	好吧。
+	那来吧！
+    <<set $_BeginRace to true>>
+-> 等会，还是算了。
+    <<SetSpeaker Original>>
+	我会等你找到更多的！
+===
+title: WinRegular
+tags: 
+colorID: 0
+position: 1866,-1671
+---
+<<set $BeatOneRace to true>>
+<<if visitCount() % 3 is 0>> 
+	好吧。
+	我必须承认。
+	你很厉害！
+	不过，
+	我感觉只是刚热了会身！
+<<elseif visitCount() % 3 is 1>> 
+	天啊，你又赢了！
+	你的跑得好流畅。
+	不过，
+	我准备得有点不充分。
+	我能做得更好才对。
+<<else>>
+	你击败我了！！
+	我还以为自己能赢……
+	那个，
+	如果你想再比的话，
+	我想我的实力还能够提升！
+<<endif>>
+[[AfterRaceMenu]]
+===
+title: WinGhost
+tags: 
+colorID: 0
+position: 2095,-1669
+---
+<<if visitCount() % 3 is 0>> 
+	克莱尔，你是机器做的吧。
+	到这你只用了{{WonRaceTime}}秒！
+	我可以从你身上学到不少。
+	对了，
+	我经常在这附近，\n想再比的话就来找我吧！
+	我想我可以借鉴你的策略……
+	……下次我会赢你的！
+<<elseif visitCount() % 3 is 1>> 
+	哇。
+	你又击败了我。
+	真不敢相信你只用了{{WonRaceTime}}秒！
+	你的确是个优秀的赛跑选手。
+	下次我要按照你的路线来跑！
+<<else>>
+	天啊！
+	你太棒了！
+	我要怎么做才能在{{WonRaceTime}}秒内跑完？
+	嗯……
+	下次，
+	我会尝试你的跑法！
+<<endif>>
+[[AfterRaceMenu]]
+===
+title: LoseRegular
+tags: 
+colorID: 0
+position: 2593,-1497
+---
+<<if visitCount() % 3 is 0>> 
+	我赢了！
+	你跑得很好。
+    <<SetEmotion Happy>>
+	真的很有趣！
+    <<ClearEmotion>>
+    [[GiveWalkieTalkie]]
+<<elseif visitCount() % 3 is 1>>
+	精彩的比赛！
+	你跑得很稳。
+	想再比的话随时奉陪！
+<<else>>
+	好耶！！
+	我喜欢精彩的比赛！
+	谢谢你能和我跑。
+    <<SetEmotion Happy>>
+	希望我没把你弄到厌倦！
+    <<ClearEmotion>>
+<<endif>>
+[[AfterRaceMenu]]
+===
+title: LoseGhost
+tags: 
+colorID: 0
+position: 2333,-1593
+---
+<<if visitCount() % 3 is 0>> 
+	成功了！
+	终于！
+	虽然，老实说的话，
+	我是……复制了你上次的跑法。
+    [[GiveWalkieTalkie]]
+<<elseif visitCount() % 3 is 1>>
+	我赢了！
+	哟！
+	真是势均力敌。
+	这次我用了些你的跑法，
+	但我希望你别介意！
+<<else>>
+	哇，我赢了！
+	克莱尔……
+	与你赛跑，真能学到不少！
+    <<SetEmotion Happy>>
+	真欠你个大人情！！
+	好高兴有你来做我的\n赛跑对手！
+    <<ClearEmotion>>
+<<endif>>
+[[AfterRaceMenu]]
+===
+title: GiveWalkieTalkie
+tags: 
+colorID: 0
+position: 2596,-1790
+---
+<<if HasItem("WalkieTalkie", 1) is false>>
+    <<Hide>>
+    <<Wait 1>>
+	哦！
+	差点忘了，
+	有样东西我要给你！
+    <<Hide>>
+    <<GiveItem WalkieTalkie 1>>
+    <<Face Original Player>>
+	你要是在赛跑中迷了路，
+	就用它打给我，\n这样我们就能重来了！
+<<endif>>
+[[AfterRaceMenu]]
+===
+title: AuntDynamic
+tags: 
+colorID: 0
+position: 4114,-1871
+---
+<<SetSpeaker Player>>
+今天真是忙。
+<<SetSpeaker Original>>
+哦，是吗？
+你在忙什么？
+<<SetSpeaker Player>>
+那个……
+
+<<set $TalkPoints to 0>>
+
+<<if HasItem("Toast", 1) and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+    我拿了片吐司。
+    <<SetSpeaker Original>>
+	……还拿了草莓？！
+    <<SetSpeaker Player>>
+	没，只拿了吐司。
+    <<SetSpeaker Original>>
+    哦。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<elseif $AteToast and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我吃了些吐司。
+    <<SetSpeaker Original>>
+	……还吃了草莓？！
+    <<SetSpeaker Player>>
+	没，只吃了吐司。
+    <<SetSpeaker Original>>
+    哦。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if HasItem("GoldenFishingRod", 1) and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我抓到了不少鱼！
+	应该说是，
+	好多好多的鱼。
+	整个本子都被我写满了！
+    <<SetSpeaker Original>>
+	哇！
+	你一定过得很充实。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<elseif $FoundAndSoldRareFish and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我抓到了稀有鱼！
+    <<SetSpeaker Original>>
+	你什么时候学会钓鱼的？
+    <<SetSpeaker Player>>
+	今天才学的！
+    <<SetSpeaker Original>>
+	哇！
+	你一定过得很充实。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<elseif $DidFishTutorial and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我学了怎么钓鱼！
+    <<SetSpeaker Original>>
+	那你学会了吗？
+    <<SetSpeaker Player>>
+	学会了！
+	比尔把鱼竿借给了我。
+    <<SetSpeaker Original>>
+	那是当然，他可是比尔！
+	我就没见过他不钓鱼的时候！
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $GotVolleyPrize2 and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	不是我吹，但，
+	我今天拿了世界沙滩枝球冠军。
+    <<SetSpeaker Original>>
+	沙滩枝球是什么？
+    <<SetSpeaker Player>>
+	它是未来的爆款运动。
+	有点像排球，\n不过你得用树枝玩。
+    <<SetSpeaker Original>>
+	我也想玩！
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<elseif $PlayedBeachStickBall and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我玩了一种名叫沙滩枝球的游戏。
+    <<SetSpeaker Original>>
+    沙滩枝球是什么？
+    <<SetSpeaker Player>>
+	就是孩子们玩的游戏。
+    <<SetSpeaker Original>>
+	他们总有新的东西可以玩。
+	我已经跟不上年轻人的潮流了。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $_ClimbedSecretIslandTop and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我游泳游到了一座神秘岛屿！
+    <<SetSpeaker Original>>
+	你是说黄油角吗？
+    <<SetSpeaker Player>>
+	那是它的名字吗？
+	这名字让它听起来，
+	神秘感顿失啊。
+    <<SetSpeaker Original>>
+    抱歉！
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $_HitMagicRock is true and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我用铲子狠狠地敲了石头……
+	……然后硬币就掉了出来！
+	那是撒币石！
+    <<SetSpeaker Original>>
+	我看啊，你是在瞎编！
+	我可不相你能在安大略……
+	……发现“撒币石”。
+	那应该是更加西海岸的东西。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $BeatOneRace and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我今天获得了跑酷比赛的胜利！
+    <<SetSpeaker Original>>
+	哇！
+	呃……
+	什么是跑酷？
+    <<SetSpeaker Player>>
+	呃，就是……
+	到处跳来跳去，爬来爬去？
+    <<SetSpeaker Original>>
+	听起来很有趣。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $_Artist6Talk and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我今天见到了画家！
+	他们正在画这里的风景！
+	他们的画棒极了。
+    <<SetSpeaker Original>>
+	鹰峰可是个美丽的地方。
+    <<SetEmotion Happy>>
+	所以我并不意外！
+    <<ClearEmotion>>
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $MetHikerAtTop and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我在瞭望台结识了位朋友！
+	那里的火警瞭望塔真的很酷。
+    <<SetSpeaker Original>>
+	是啊！
+	那里是看日落的好地方。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $_Broke_BIG_ROCK and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我找到了穿过高山的秘密捷径！
+    <<SetSpeaker Original>>
+	你是说……
+	你穿过了那条封住的隧道！？
+	那太危险了。
+	它们会被堵上是有原因的！
+    <<SetSpeaker Player>>
+    <<SetEmotion Happy Player>>
+	哈哈，哎呀呀！
+    <<SetSpeaker Original>>
+    克莱尔！
+    <<ClearEmotion Player>>
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $ListenedToFrogSpeech and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我想我今天见到了未来的首相……
+	亦或是未来的建筑大师！
+    <<SetSpeaker Original>>
+	你是说沙堡小孩？
+    <<SetSpeaker Player>>
+	是的，就是沙堡小孩。
+    <<SetSpeaker Original>>
+	我并不意外。
+	那可是最典型的沙堡小孩。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $JoinedClimbClub and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我加入了攀岩俱乐部。
+    <<SetSpeaker Original>>
+	很好！
+	那会是不错的经历。
+	是大俱乐部吗？
+    <<SetSpeaker Player>>
+	呃……
+	这……
+	……取决于你怎么看？
+    <<SetSpeaker Original>>
+	嗯，好吧。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $ToughBirdFriend and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我今天付了一学期的学费！
+    <<SetSpeaker Original>>
+	你，什么？！
+    <<SetSpeaker Player>>
+	是这样的，呃……
+	虽非我的学费，但，
+	我付了。
+    <<SetSpeaker Original>>
+	呃……
+	我想那挺好的。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<elseif $DeliveredNecklace and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我加入了零工经济圈。
+    <<SetSpeaker Original>>
+	你，什么？
+    <<SetSpeaker Player>>
+	呃，这说来就话长了。
+    <<SetSpeaker Original>>
+	好吧。
+	希望你有好的报酬！
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $SoldHat and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+    <<if "ParkHat" is $_WornHat>>
+		我买了这顶管理员帽！
+		你戴起来那么好看，
+		所以我也想戴！
+        <<SetPose RaiseArms>>
+        <<SetEmotion Happy>>
+		你觉得怎样？
+    <<else>>
+		我买了顶管理员帽！
+		你戴起来那么好看，
+		所以我也想戴！
+		来看看。
+        <<SetPose RaiseArms>>
+        <<Hide>>
+        <<Wait 0.25>>
+        <<set $_WornHat to "ParkHat">>
+        <<Wait 0.25>>
+    <<endif>>
+    <<SetSpeaker Original>>
+	买得有眼光！
+    <<SetEmotion Happy>>
+	你戴起来真好看！
+    <<ClearEmotion>>
+    <<ClearEmotion Player>>
+    <<ClearPose Player>>
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<elseif HasItem("Headband", 1) and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我拿到了这条酷头带！
+    <<if "Headband" is $_WornHat>>
+        <<SetEmotion Happy>>
+    <<else>>
+		来看一下。
+        <<SetPose RaiseArms>>
+        <<Hide>>
+        <<Wait 0.25>>
+        <<set $_WornHat to "Headband">>
+        <<Wait 0.25>>        
+        <<SetEmotion Happy>>
+		呃？
+    <<endif>>
+    挺酷吧？
+    <<ClearEmotion>>
+    <<SetSpeaker Original>>
+	是挺酷的。
+    <<ClearPose Player>>
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<set $AnyTreasureMapFound to $_Unearthed_LighthouseShadow or $_Unearthed_SidBeachTreasure or $_Unearthed_KingsThrone>>
+<<if $AnyTreasureMapFound and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我找到了埋藏的宝藏！
+	得先解开谜题才能打开。
+    <<SetSpeaker Original>>
+	谜题？
+	那挺酷的。
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if HasItem("Coin", 100) and $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+    {{Transition}}
+	我口袋装得好满！
+    <<SetEmotion Happy>>
+    <<SetPose RaiseArms>>
+	看我找到的这些硬币！
+    <<Hide>>
+    <<ShowCollection Coin>>
+    <<Wait 1.5>>
+    <<HideCollection Coin>>
+    <<SetSpeaker Original>>
+	你没开玩笑啊！
+	这钱还真不少！
+    <<ClearEmotion Player>>
+    <<ClearPose Player>>
+    <<set $TalkPoints to $TalkPoints + 1>>
+<<endif>>
+
+<<if $TalkPoints == 0>>
+    <<SetSpeaker Player>>
+	呃……
+	我想不起来了！
+    <<SetSpeaker Original>>
+	你一定是累坏了！
+<<elseif $TalkPoints < 3>>
+    <<SetSpeaker Player>>
+	还有，
+	我也许做过很多事！
+	但我记不起来了……
+	这是漫长的一天！
+    <<SetSpeaker Original>>
+	是啊！
+<<endif>>
+
+
+[[AuntHungry]]
+===
+title: AuntHungry
+tags: 
+colorID: 0
+position: 4367,-1866
+---
+<<SetSpeaker Original>>
+对了，
+你饿吗？
+<<set $TalkedAboutDinner to true>>
+我打算快点弄些热狗。
+<<if $CurryDinner is true>>
+    <<SetSpeaker Player>>
+	你会去煮咖喱吧？
+    <<SetSpeaker Original>>
+	呃……
+	我现在不是很想动。
+<<endif>>
+<<SetSpeaker Player>>
+那个……
+我有点累了。
+想休息会。
+<<SetSpeaker Original>>
+好吧！
+<<SetEmotion Happy>>
+晚安！
+<<ClearEmotion>>
+
+<<set $HadFinalAuntDialogue to true>>
+===
+title: FoundFishPermit
+tags: 
+colorID: 0
+position: 4140,715
+---
+哈？
+它嘴里好像有什么……
+这是……
+露营许可证！？
+<<Hide>> 
+<<GiveItem CampingPermit 1>>
+===
+title: CampCatFreakout
+tags: 
+colorID: 0
+position: 4390,484
+---
+之前吓你真是抱歉。
+自从许可证弄丢后，\n我就一直寝食难安。
+担心……
+……会被指控无证露营……
+就像是无尽的噩梦一般！
+<<set $CampCatSorry to true>> 
+===
+title: IceSquirrelStart
+tags: 
+colorID: 0
+position: 6362,933
+---
+<<if $ClimberRecapGroupTalk is false>>
+    <<SetSpeaker Player>>
+	嗨，提姆！
+	最近过得怎样？
+    [[ClimbersRestTalk]]
+<<elseif $DiscussedNovel is false>>
+	那~~~
+	你知道……
+    [[DiscussedNovel]]
+<<elseif $IceSquirrelTalkCount is 0>>
+    <<SetSpeaker Player>> 
+	那你是怎么爬上那峭壁的？
+    <<SetSpeaker Original>> 
+	其实……
+	我获得了很好的建言。
+    <<SetSpeaker SitRhino>> 
+    <<SetEmotion Happy>> 
+	哇，谢谢。
+	我会尽全力帮忙的。
+    <<ClearEmotion>> 
+    <<if $HeardClimbingSecret is true>>
+        <<SetSpeaker Original>> 
+		对了，其实，
+		我刚想起了攀岩的秘诀。
+        <<SetSpeaker Player>> 
+		是不断高攀吗？
+        <<SetSpeaker Original>> 
+		说对了！
+    <<endif>>
+    <<set $IceSquirrelTalkCount to 1>> 
+<<elseif $IceSquirrelTalkCount is 1>> 
+	记住，
+	攀岩协会可不只有攀岩。
+    <<SetSpeaker Player>> 
+	还有别的？
+    <<SetSpeaker Original>>
+	你还要成为网络社区的活跃用户！
+	这非常重要。
+    <<SetSpeaker Player>> 
+	我知道了。
+    <<set $IceSquirrelTalkCount to 2>> 
+<<else>> 
+	我是论坛的版主。
+	所以，
+	你没参加的话我可是知道的！
+<<endif>>
+===
+title: IceRhinoStart
+tags: 
+colorID: 0
+position: 6595,934
+---
+<<if $ClimberRecapGroupTalk is false>>
+    <<SetSpeaker Player>>
+	嘿，你们！
+	过得怎样？
+    [[ClimbersRestTalk]]
+<<elseif $DiscussedNovel is false>>
+    <<SetSpeaker Player>>
+	你们在干嘛？
+    <<SetSpeaker Original>>
+	只是在和查理聊天而已。
+	他有好多关于这里工作的好故事。
+    <<SetSpeaker SitSquirrel>>
+	说起故事……
+	我想读他的小说！！
+    <<SetSpeaker Original>>
+	提姆！
+    [[DiscussedNovel]]
+<<elseif $IceRhinoTalk is 0>>
+	克莱尔。
+	我必须得说，
+	你是个了不起的攀岩者。
+    <<SetSpeaker Player>>
+    <<SetEmotion Happy>> 
+	其实，也有我会飞的功劳啦。
+	它让这运动变得没那么危险。
+    <<ClearEmotion>>
+    <<SetSpeaker Original>>
+	别小瞧自己。
+    <<SetEmotion Happy>> 
+	你是最棒的！
+    <<ClearEmotion>>
+    <<set $IceRhinoTalk to 1>> 
+<<else>> 
+	我们明天去登山顶吧！
+    <<SetEmotion Happy>> 
+	你可以给我带路！
+    <<ClearEmotion>>
+<<endif>>
+===
+title: SquirrelClimbStart
+tags: 
+colorID: 0
+position: 6475,-69
+---
+这没用的，克莱尔！
+===
+title: ClimbersRestTalk
+tags: 
+colorID: 0
+position: 6593,1240
+---
+<<LookAt Player SitBear>>
+<<SetSpeaker SitSquirrel>>
+<<LookAt SitSquirrel Player>>
+<<LookAt Player SitSquirrel>>
+哦哦。
+你知道吧。
+我做得还挺不错的。
+<<SetEmotion EyesClosed>>
+我刚征服了鹰峰。
+说实在，
+也没什么大不了的。
+<<ClearEmotion>>
+<<SetSpeaker Player>>
+行啊！
+你也爬上山顶了？
+<<SetSpeaker SitSquirrel>>
+……
+<<LookAt SitBear SitSquirrel>>
+准确点说，
+应该是约等于征服它了。
+<<SetPose RaiseArms>>
+<<LookAt Player SitSquirrel>>
+我们几乎全员都到过那了吧？
+<<ClearPose>>
+<<LookAt SitBear SitSquirrel>>
+<<SetSpeaker SitBear>>
+<<LookAt SitBear Player>>
+<<LookAt SitSquirrel SitBear>>
+那个，从理论上讲，
+这片区域都能称作是鹰峰。
+<<SetSpeaker SitSquirrel>>
+<<LookAt Player SitSquirrel>>
+<<LookAt SitSquirrel Player>>
+看到没？
+搞定。
+<<SetSpeaker SitRhino>>
+<<LookAt SitRhino Player>>
+<<LookAt SitRhino SitBear>>
+我们打算改天再去爬鹰峰。
+我想我们已经到极限了。
+<<LookAt SitBear SitRhino>>
+最好还是别太勉强自己，对吧？
+<<SetSpeaker SitBear>>
+<<LookAt SitRhino SitBear>>
+<<LookAt SitBear Player>>
+当然。
+安全是最重要的。
+<<SetSpeaker SitRhino>>
+<<ClearLookAt SitRhino>>
+<<LookAt SitRhino Player>>
+可你还是成功了，对吧？
+那里如何？
+<<SetSpeaker Player>>
+<<LookAt Player SitBear>>
+<<SetEmotion Happy>>
+很美！
+那里的北极光把山顶都照亮了。
+<<ClearEmotion>>
+<<SetSpeaker SitRhino>>
+<<SetEmotion Happy>>
+我已经等不及要亲眼看看了！
+<<ClearEmotion>>
+
+<<ClearLookAt SitBear>>
+<<ClearLookAt Player>>
+<<ClearLookAt SitRhino>>
+<<ClearLookAt SitSquirrel>>
+<<set $ClimberRecapGroupTalk to true>>
+===
+title: PolarBearSitStart
+tags: 
+colorID: 0
+position: 6114,941
+---
+<<if $DiscussedNovel is false>>
+	有同伴陪着上来真好。
+	平常这里都是静悄悄的。
+    <<SetSpeaker Player>>
+	那岂不是很枯燥？
+    <<SetSpeaker Original>>
+	那个，
+	我会尽量让自己有事干。
+    <<SetSpeaker SitSquirrel>>
+	克莱尔，你在听吗？
+    [[DiscussedNovel]]
+<<elseif $BearSitTalkCount is 0>>
+    <<SetSpeaker Player>> 
+	你故事写完后能给我看吗？
+    <<SetSpeaker Original>> 
+	那个……
+	我想可以吧。
+    <<SetSpeaker Player>>
+    <<SetEmotion Happy>> 
+	太好了！
+	我猜故事一定会很精彩！
+    <<ClearEmotion>> 
+    <<set $BearSitTalkCount to 1>> 
+<<else>>
+	在外面记得保暖！
+<<endif>>
+===
+title: DiscussedNovel
+tags: 
+colorID: 0
+position: 6331,1243
+---
+<<set $DiscussedNovel to true>>
+
+<<SetSpeaker SitSquirrel>>
+<<Face SitSquirrel Player>>
+<<LookAt SitSquirrel Player>>
+据说查理正在写书。
+<<LookAt SitBear SitSquirrel>>
+<<LookAt SitBear SitRhino>>
+<<SetSpeaker SitBear>>
+<<LookAt SitSquirrel>>
+<<LookAt SitBear Player>>
+嘿！
+我……
+……快写完了。
+而且，
+<<LookAt Player>>
+只是个短篇故事而已！
+<<SetSpeaker SitSquirrel>>
+<<LookAt SitSquirrel Player>>
+那我为什么不能读！
+<<SetSpeaker SitBear>>
+<<LookAt SitSquirrel>>
+<<LookAt SitBear Player>>
+是快完成了，
+就是还没有完成……
+我在结局方面有些困难。
+<<SetSpeaker SitSquirrel>>
+<<LookAt SitSquirrel Player>>
+哦，那还不简单。
+让它变非常非常悲剧。
+所有人都在哭泣，所有人都死掉。
+这就是艺术的真谛。
+<<SetSpeaker SitRhino>>
+<<LookAt SitRhino Player>>
+<<LookAt SitRhino SitSquirrel>>
+我不知道。
+但我喜欢好结局。
+其实，
+我不太明白，
+你为什么会喜欢那种读完心情会\n更沉重的故事呢？
+<<SetSpeaker SitSquirrel>>
+<<LookAt SitRhino>>
+<<LookAt SitSquirrel Player>>
+才不会感到更沉重！
+它能……
+令人感到满足！
+有时候人就想要坏结局！
+<<SetSpeaker SitBear>>
+<<LookAt SitBear Player>>
+嗯哼。
+好了，伙计们。
+结局我会自己想的。
+<<ClearLookAt SitBear>>
+<<ClearLookAt Player>>
+<<ClearLookAt SitRhino>>
+<<ClearLookAt SitSquirrel>>
+
+
+
+===
+title: Node231
+tags: 
+colorID: 0
+position: 5205,2009
+---
+
+
+so how'd you get out of that pickle
+
+
+
+
+
+
+----
+
+hey!
+i made it up to the top!
+
+woah!
+that's awesome!
+
+
+YEAH
+I GUESS THAT IS PRETTY AWESOME
+
+how are you guys?
+
+---
+
+
+
+
+
+
+i really am writing a novel
+then let us read it!
+it's not ready yet!
+
+
+
+<<SetSpeaker Player>>
+tim!
+you made it up!
+<<SetSpeaker SitSquirrel>>
+yeah
+but
+<<SetPose RaiseArms>>
+AT WHAT COST!?
+<<ClearPose>>
+<<SetSpeaker SitRhino>>
+no cost at all!
+you made it up fine!
+<<SetSpeaker SitSquirrel>>
+<<SetPose RaiseArms>>
+i could have DIED
+MY CLIMBING CAREER...
+...OVER BEFORE IT EVEN BEGAN!
+<<ClearPose>>
+<<SetSpeaker SitRhino>>
+but you didn't die! 
+
+
+
+hey!
+you guys made it!
+
+yup
+i think we're gonna call it a day
+
+i think i'm at my limit for today
+i'm ready to try again tomorrow!
+i'm gonna take a break 
+you going to the top?
+
+
+yup
+
+
+
+
+SOO
+CLAIRE
+do you like happy or sad endings more
+SOME people think sad endings are better
+
+hey!
+i'm not talking about sad endings!
+
+what i just want to know!
+
+did you know Charlie is writing a novel!
+he won't let us read it
+
+
+<<SetSpeaker SitBear>> 
+hey!
+is writing a novel!
+
+i haven't decided if my novel\nshould have a happy ending\nor a tragic one...
+<<SetSpeaker Player>>
+-> do a happy ending!
+    like, who actually likes sad endings!
+    life is already sad enough
+    i wanna see everyone's dreams come true
+    and feel good about things at the end of the movie
+    ...i mean book
+    i don't read that much these days
+    ...um
+    no offense
+-> make it super sad
+    like, i mean REALLY sad
+    everyone cries and everyone dies
+<<SetSpeaker Original>>
+hmm ok
+===
+title: FireOutRangerStart
+tags: 
+colorID: 0
+position: 133,-219
+---
+<<Wait 1>> 
+<<Face Original Player>>
+<<if visited() is false>> 
+	呃……
+	我想，
+	关心消防安全是好事……
+	……不过这团火是受我控制的。
+<<elseif visitCount() is 1>>
+	那个，呃呃……
+	我刚刚把它重新点燃了。
+	你要是不介意的话，\n我想让它继续烧着。
+<<elseif visitCount() is 2>> 
+	嘿，呃……
+	你能别动它吗？
+    <<SetSpeaker Player>> 
+	但这里禁火！
+    <<SetSpeaker Original>> 
+	准确说那只是防火警示而已。
+    <<SetSpeaker Player>> 
+	哦。
+	好吧。
+<<elseif visitCount() is 3>> 
+	克莱尔！
+    <<SetSpeaker Player>> 
+	抱歉！
+	火看起来烧得太旺了。
+	还是小心为上好。
+    <<SetSpeaker Original>> 
+	那个……
+	你才刚说的抱歉。
+    <<SetSpeaker Player>>
+	哎呀！
+	没错，好像是说过。
+<<else>> 
+	克莱尔！！
+    <<SetSpeaker Player>> 
+	抱歉！！
+<<endif>> 
+===
+title: FireOutAuntStart
+tags: 
+colorID: 0
+position: 129,24
+---
+<<Wait 1>> 
+<<Face Original Player>>
+<<if visited() is false>> 
+	外面挺热的。
+	我想现在不是太需要火。
+<<elseif visitCount() is 1>>
+	你觉得太热了？
+    <<SetSpeaker Player>> 
+	我不知道。
+	我只是好奇你会怎么反应。
+    <<SetSpeaker Original>> 
+    哈？
+<<else>>
+	好吧。
+	我会点很多火给你练习的。
+<<endif>> 
+===
+title: FireOutBearStart
+tags: 
+colorID: 0
+position: 137,257
+---
+<<if $_CampfireFriendsBegin is true>> 
+    <<Wait 1>> 
+    <<Face Original Player>>
+    <<if visited() is false>>
+		克莱尔。
+		我喜欢你的积极主动！
+		消防安全无小事！
+    <<elseif visitCount() is 1>>
+		做得好，克莱尔！
+		火确实看起来很美。
+		但也比不过我们的安全。
+    <<elseif visitCount() is 2>> 
+		谁需要火呢。
+		有没有我都觉得行。
+        <<SetSpeaker SitRhino>> 
+		那个，
+		我喜欢火……
+    <<else>> 
+        <<SetSpeaker SitRhino>> 
+		或许只有我是这么想的。
+		不过我想让火继续烧着。
+        <<SetSpeaker SitSquirrel>> 
+		赞同。
+    <<endif>> 
+<<endif>> 
+===
+title: IceHikerPeak
+tags: 
+colorID: 0
+position: 5098,702
+---
+<<if visited() is false>>
+    <<SendMessage Original CameraShift1>>
+	哇噢。
+	克莱尔。
+    <<Face Player>>
+	这比我预想的还要好！
+    <<SetEmotion Happy>>
+	谢谢你帮我登上这里！
+    <<ClearEmotion>>
+    <<SetSpeaker Player>>
+    <<SetEmotion Happy>>
+	不用客气！
+	真的！
+    <<ClearEmotion>>
+
+    <<if $RequestFoxPhoto is true>>
+        <<SetSpeaker Original>>
+		那个，
+        <<SetEmotion Happy>>
+		你还想要那张照片吗？
+        <<ClearEmotion>>
+        <<SetSpeaker Player>>
+		哦，要！
+		给我吧！
+        <<SetSpeaker Original>>
+		好的！
+		拿着。
+    <<else>> 
+        <<SetSpeaker Original>>
+		这些光真是太棒了。
+		希望它们能呈现在胶片里！
+		我好不容易才把这台精致的\n相机带到这来……
+		最好别让我白费力气！
+        <<SetSpeaker Player>>
+		那个，
+		我手机的摄像头坏了。
+		所以你的情况至少比我好！
+        <<SetSpeaker Original>>
+		嗯……
+		要我给你拍张照吗？
+		我可以给你拍张靓照！
+        <<SetSpeaker Player>>
+		哇，好啊！
+		那太好了！
+        <<SetSpeaker Original>>
+		好嘞！
+		稍等。
+    <<endif>> 
+
+    <<Hide>>
+    <<SetPose TakePhoto>>
+    <<Wait 0.25>>
+    <<SendMessage Original ShowPropCamera>>
+    <<SendMessage Original CameraShift2>>
+    <<SendMessageCoroutine Original WalkPlayer>>
+    <<Wait 1>>
+    <<Face Player Original>>
+
+	摆个姿势！
+    <<SetSpeaker Player>>
+	哦。
+	啊啊啊。
+    <<Hide>>
+    <<SetPose CoolPose Player>>
+    <<Wait 1.5>>
+
+    <<SetSpeaker Original>>
+    很好。
+    
+    <<Hide>>
+    <<Wait 0.5>>
+    <<SetEmotion Happy Player>>
+    <<Wait 0.5>>
+    <<PlaySound Camera>>
+    <<Wait 1.5>>
+    <<ClearEmotion Player>>
+    <<Wait 0.5>>
+
+    <<ClearPose Player>>
+    <<Wait 0.5>>
+    <<ClearPose Original>>
+    <<Wait 0.1>>
+    <<SendMessage Original CameraShift1>>
+    <<Wait 0.1>>
+    <<SendMessage Original HidePropCamera>>
+
+    <<Wait 1.2>>
+    <<SetSpeaker Original>>
+	北极光真好看！
+    <<SetEmotion Happy>>
+	多美的照片！
+    <<ClearEmotion>>
+	哦，差点忘了，
+	这是你借给我的羽毛。
+    <<Hide>>
+    <<GiveItem GoldenFeather 6>>
+    <<Wait 1>>
+    <<SetSpeaker Player>>
+    <<Face Original>>
+	谢谢！
+    <<SetEmotion Happy>>
+	一定要用邮件发给我！
+    <<ClearEmotion>>
+    <<SetSpeaker Original>>
+    <<SendMessage Original CameraShift3>>
+	会的！
+<<else>>
+	我想在这“冷”静会。
+	不知道啥时候就要回去，所以……
+	我要趁现在看个够。
+<<endif>>
+===
+title: IceHikerAfterPeak
+tags: 
+colorID: 0
+position: 4850,953
+---
+<<if visited() is false>>
+	去到山顶没？
+    <<SetSpeaker Player>>
+	去到了！
+	我刚就在上面。
+    <<SetSpeaker Original>>
+	！！
+	能告诉我怎么走吗？
+    <<SetSpeaker Player>>
+	那个，
+	你大概需要……
+	……会飞。
+    <<SetSpeaker Original>>
+	哦。
+	好吧……
+    <<SetSpeaker Player>>
+	也许你能爬上去？
+    <<SetSpeaker Original>>
+	可我没有足够的金羽毛……
+    <<SetSpeaker Player>>
+	我可以借给你些！
+    <<SetSpeaker Original>>
+	你肯借给我？
+    <<SetSpeaker Player>>
+	当然！
+	你需要多少？
+    <<SetSpeaker Original>>
+	额。
+	有点不好意思开口。
+	不过我需要很多。
+	大概，6根。
+    <<SetSpeaker Player>>
+    <<if HasItem("GoldenFeather", 6) is true>>
+        -> 哦，抱歉。
+            <<SetSpeaker Original>>
+			不用介意！
+			我知道那数量不少。
+        -> 我能借给你6根！
+            [[IceHikerLend]]
+    <<else>>
+		哦。
+		抱歉……
+		我自己也不够。
+        <<SetSpeaker Original>>
+		真的，
+		不用介意！
+    <<endif>>
+<<else>>
+	真是近在咫尺又远在天涯！
+    <<if HasItem("GoldenFeather", 6) is true>>
+        <<SetSpeaker Player>>
+        -> 我能借给你6根！
+            [[IceHikerLend]]
+        -> 祝你好运！
+            <<SetSpeaker Original>>
+			谢谢！
+			我会想办法解决此事的。
+    <<endif>>
+<<endif>>
+
+
+
+===
+title: IceHikerLend
+tags: 
+colorID: 0
+position: 4853,1202
+---
+<<SetSpeaker Original>>
+<<if HasItem("GoldenFeather", 12) is true>>
+	真的吗！？
+    <<SetSpeaker Player>>
+    当然！
+    <<Hide>>
+    <<GiveItem GoldenFeather -6>>
+    <<Wait 1>>
+    <<SetSpeaker Original>>
+	你太好了，克莱尔！
+	我们上面见！
+    <<SendMessage Original StartClimbing>>
+<<else>>
+	不过，
+	你要给超过一半的羽毛！
+	我不想你那么做。
+<<endif>>
+
+===
+title: WinMedal
+tags: 
+colorID: 0
+position: 1628,-1670
+---
+<<set $BeatOneRace to true>>
+<<if visitCount() % 3 is 0>> 
+    <<SetPose LookingDown>> 
+    <<SetEmotion EyesClosed>> 
+	哎呀。
+	等等。
+	我得……
+	……缓缓气。
+    <<Hide>> 
+    <<Wait 2>>
+    好了！
+    <<ClearEmotion>> 
+    <<ClearPose>> 
+	*嗯哼*
+	克莱尔。
+	你击败了我！
+	我想这东西该给你。
+    <<Hide>> 
+    <<GiveItem Medal 1>> 
+    <<Face Original Player>> 
+    <<SetSpeaker Player>>
+	哇噢！
+	这东西你哪弄来的？
+    <<SetSpeaker Original>> 
+    <<SetEmotion EyesClosed>>
+	我有自己的门路啦！
+    <<ClearEmotion>> 
+	……总之，
+	下次比赛，
+	我定会好好利用从你身上\n学到的技巧！
+<<elseif visitCount() % 3 is 1>> 
+	克莱尔！
+	你真是个速度魔，
+	你知道速度魔能拿到什么吗？
+    <<SetSpeaker Player>>
+    呃呃呃呃呃？
+    <<SetSpeaker Original>>
+	能拿到奖励！！
+    <<Hide>> 
+    <<GiveItem Medal 1>> 
+    <<Face Original Player>>
+	别以为这样我就会认输！
+	我还会继续提高实力！
+	下次一定会赢你！
+<<else>>
+	真是激烈的比赛。
+	好吧。
+	这个我还是给你吧。
+    <<Hide>> 
+    <<GiveItem Medal 1>> 
+    <<Face Original Player>>
+	我全部奖牌都被你赢了。
+	不过，
+	你要是还想比的话，
+	下次我会做得更好！
+<<endif>>
+
+[[AfterRaceMenu]]
+===
+title: InspectMedalStart
+tags: 
+colorID: 0
+position: 927,-1991
+---
+<<if visited() is false>> 
+	上面写着，
+	“比艾弗里更厉害的证明”
+	哈？
+	这看起来……
+	……就只是把金币粘在勋带上？
+<<else>> 
+	有枚金币粘在勋带上。
+<<endif>>
+
+-> 取下金币
+    [[ExtractCoin]] 
+-> 不管它
+===
+title: ExtractCoin
+tags: 
+colorID: 0
+position: 926,-1741
+---
+<<if IsVisible("RaceOpponent") is true>>
+    [[NotExtractCoin]] 
+<<else>>
+    <<if $BrokenMedal is false>> 
+		我觉得这样做不太好……
+		不过，
+		呃……
+    <<endif>>
+    <<Hide>>
+    <<SetPose LookingDown>> 
+    <<PlaySound RipCoin>>
+    <<Wait 1.2>>
+    <<ClearPose>> 
+    <<GiveItem Coin 7>> 
+    <<GiveItem Medal -1>> 
+    <<set $BrokenMedal to true>> 
+<<endif>>
+===
+title: NotExtractCoin
+tags: 
+colorID: 0
+position: 680,-1741
+---
+<<if visited() is false>> 
+	呃……
+	……
+	或许我不该在他看得到\n的地方做这种事。
+<<else>> 
+	我离得太近了！
+	我不想伤害他的感情……
+<<endif>> 
+===
+title: JimStart
+tags: 
+colorID: 0
+position: 4259,1870
+---
+<<if visited() is false>> 
+    <<SetSpeaker Player>> 
+	哇！
+	那是金属探测器吗？
+    <<SetSpeaker Original>> 
+	是的，宝贝。
+	这小东西会带我走向致富之路。
+<<elseif visitCount() is 1>> 
+	我能试用下吗？
+    <<SetSpeaker Original>> 
+	说什么呢？
+	这是我的金属探测器。
+	这是种投资！
+	我要让回报最大化！
+<<elseif visitCount() is 2>>
+	有找到什么好东西吗？
+    <<SetSpeaker Original>> 
+	那个，有啊。
+	当然有啊。
+	我是不会白花钱的！
+	……
+	不过它有点灵敏过头。
+	显然这周围是有什么的。
+	但我……就是找不到准确位置……
+	好吧。
+	如果连我都找不到，\n还有谁能找到吗！
+<<elseif visitCount() is 3>>
+	到底在哪呢……
+<<endif>>
+===
+title: HatSellerStart
+tags: 
+colorID: 0
+position: 4289,3914
+---
+<<if $SunhatPrice != 0>>
+    [[HatSell]]
+<<elseif $BoughtSunhat is false>>
+    <<SetEmotion Happy>>
+    你好~~~~~~ <sprite name="Music" tint=1>
+    <<ClearEmotion>> 
+    要买遮阳帽吗？
+    纯手工的！
+    <<SetSpeaker Player>> 
+    看上去不错！
+    多少钱？
+    <<SetSpeaker Original>> 
+    <<SetEmotion EyesClosed>> 
+    嗯……
+    <<ClearEmotion>> 
+    不知道！
+    好难定价……
+    你觉得多少合适呢？
+    <<SetSpeaker Player>> 
+    哦，呃。
+    [[HatPriceMenu]]
+<<else>> 
+    <<SetSpeaker Player>> 
+    你为什么要把店开在大老远的地方？
+    <<SetSpeaker Original>> 
+    因为我喜欢这里！
+    <<SetSpeaker Player>> 
+    说得有理！
+<<endif>> 
+===
+title: HatPriceMenu
+tags: 
+colorID: 0
+position: 4537,3915
+---
+<<if $HatPrice1Tried and $HatPrice25Tried and $HatPrice50Tried and $HatPrice100Tried and $HatPrice200Tried>>
+    [[HatPriceUnknown]]
+<<endif>>
+
+<<SetSpeaker Player>> 
+<<ShowCollection Coin>>
+<<if $HatPrice1Tried is false>> 
+    [[1枚硬币|HatPrice1]]
+<<endif>> 
+<<if $HatPrice25Tried is false>> 
+    [[25枚硬币|HatPrice25]]
+<<endif>> 
+<<if $HatPrice50Tried is false>> 
+    [[50枚硬币|HatPrice50]]
+<<endif>> 
+<<if $HatPrice100Tried is false>> 
+    [[100枚硬币|HatPrice100]]  
+<<endif>> 
+<<if $HatPrice200Tried is false>> 
+    [[200枚硬币|HatPrice200]]  
+<<endif>> 
+<<if $HatPriceUnknownTried is false>> 
+    [[我也不知道！|HatPriceUnknown]] 
+<<endif>> 
+===
+title: HatSell
+tags: 
+colorID: 0
+position: 4625,3307
+---
+好的！成交。
+===
+title: HatPrice1
+tags: 
+colorID: 0
+position: 4052,3542
+---
+<<SetSpeaker Original>>
+<<HideCollection Coin>>
+……
+哦，呃……
+你不是认真的吧？
+<<SetSpeaker Player>> 
+呃……
+开玩笑的啦！
+抱歉。
+不是什么好玩笑……
+<<SetSpeaker Original>> 
+啊，好吧……
+<<set $HatPrice1Tried to true>>
+[[HatPriceMenu]] 
+===
+title: HatPrice25
+tags: 
+colorID: 0
+position: 4295,3539
+---
+<<SetSpeaker Original>>
+<<HideCollection Coin>>
+哦……呃……
+这太少了……
+每顶帽子我都花了不少时间去做。
+<<SetSpeaker Player>>
+哦！抱歉。
+我真不知道该给多少！
+<<SetSpeaker Original>>
+那个，
+如果你只有那么多钱……
+我想给你个新客优惠也不过分？
+<<SetSpeaker Player>>
+-> 25是好价！
+    <<set $SunhatPrice to 25>>
+    [[HatSell]]
+-> 其实这样不太好。
+    <<set $HatPrice25Tried to true>>
+    [[HatPriceMenu]] 
+===
+title: HatPrice50
+tags: 
+colorID: 0
+position: 4525,3542
+---
+<<SetSpeaker Original>>
+<<HideCollection Coin>>
+嗯……
+我想50枚硬币可以。
+<<SetSpeaker Player>>
+你觉得这价格如何？
+<<SetSpeaker Original>>
+呃……
+其实，
+我觉得这做工挺不错的。
+我还以为能卖多点。
+但其实我也不太清楚价钱！
+<<SetSpeaker Player>>
+-> 50枚硬币听起来可以！
+    <<set $SunhatPrice to 50>>
+    [[HatSell]]
+-> 等下，我出另外个价。
+    <<set $HatPrice50Tried to true>>
+    [[HatPriceMenu]] 
+===
+title: HatPrice100
+tags: 
+colorID: 0
+position: 4750,3542
+---
+<<SetSpeaker Original>>
+<<HideCollection Coin>>
+我想这价格不错！
+<<SetSpeaker Player>>
+是吗？
+<<SetSpeaker Original>>
+其实，
+我看有些帽子也卖那么多……
+而且，
+我不认为自己的帽子比它们差。
+<<SetSpeaker Player>>
+-> 100枚硬币听起来可以！
+    <<set $SunhatPrice to 100>>
+    [[HatSell]]
+-> 等下，不是100枚硬币……
+    <<set $HatPrice100Tried to true>>
+    [[HatPriceMenu]] 
+===
+title: HatPrice200
+tags: 
+colorID: 0
+position: 4977,3540
+---
+<<SetSpeaker Original>>
+<<HideCollection Coin>>
+哇！
+我是觉得多了点。
+但……真的很感谢你！
+<<SetSpeaker Player>>
+-> 我就用200枚硬币买下它！
+    <<set $SunhatPrice to 200>>
+    [[HatSell]]
+-> 等等，这价格有点高……
+    <<set $HatPrice200Tried to true>>
+    [[HatPriceMenu]] 
+===
+title: HatPriceUnknown
+tags: 
+colorID: 0
+position: 5200,3535
+---
+<<SetSpeaker Original>>
+<<HideCollection Coin>>
+没事的。
+<<SetSpeaker Player>>
+哦！抱歉。
+我真的不知道该给多少！
+<<SetSpeaker Original>>
+好吧。
+如果你只有那么多钱……
+我想给你个新客优惠也也不过分？
+<<SetSpeaker Player>>
+-> 这价格不错！
+    <<set $SunhatPrice to 90>>
+    [[HatSell]]
+-> 算了，不是好价……
+    <<set $HatPriceUnknownTried to true>>
+    [[HatPriceMenu]] 
+===
+title: SunhatSellerStart
+tags: 
+colorID: 0
+position: 5615,3000
+---
+<<if $BoughtSunhat is true>>
+    <<SetSpeaker Player>> 
+    那……
+    你为什么要大老远来这里？
+    <<SetSpeaker Original>> 
+    因为我喜欢这里！
+    <<SetSpeaker Player>> 
+    说得有理！
+<<elseif $SunhatPrice > 0>>
+    <<SetSpeaker Player>> 
+    你好！
+    再问下遮阳帽多少钱？
+    <<SetSpeaker Original>>
+    我决定卖……
+    {{$SunhatPrice}}枚硬币？
+    [[HatSellNew]]
+<<else>>
+    <<SetSpeaker Player>> 
+    我喜欢你的遮阳帽！
+    <<SetSpeaker Original>> 
+    <<SetEmotion Happy>>
+    谢谢！
+    这是我自己做的。
+    <<ClearEmotion>> 
+    <<SetSpeaker Player>> 
+    哇！
+    真厉害。
+    <<SetSpeaker Original>>
+    手工品集市就要开了，\n我做了一堆备货。
+    你要是感兴趣的话，
+    我现在就能卖给你一顶！
+    <<SetSpeaker Player>> 
+    哦！
+    多少钱？
+    <<SetSpeaker Original>> 
+    <<SetEmotion EyesClosed>> 
+    嗯……
+    <<ClearEmotion>> 
+    不知道！
+    好难定价……
+    呃……
+    你觉得100枚硬币合适吗？
+    <<ShowCollection Coin>>
+    <<SetSpeaker Player>> 
+    -> 听起来不错！
+        <<HideCollection Coin>>
+        <<SetSpeaker Original>>
+        太好了！
+        我觉得自己这手艺真的很好……
+        不过要那么多钱还是有点怕！
+        <<set $SunhatPrice to 100>>
+        [[HatSellNew]]
+    -> 有点贵。
+        <<HideCollection Coin>>
+        <<SetSpeaker Original>>
+        哦！
+        嗯……
+        ……
+        抱歉……
+        ……我只是有点尴尬！
+        <<SetSpeaker Player>> 
+        哦，不！
+        我才该说抱歉的！
+        我真的不知道多少钱合适……
+        <<SetSpeaker Original>>
+        呃……
+        75枚硬币如何？
+        <<SetSpeaker Player>> 
+        我觉得这价格挺不错的！
+        <<set $SunhatPrice to 75>>
+        [[HatSellNew]]
+    -> 我要出更高价！
+        <<HideCollection Coin>>
+        我真的很喜欢这帽子！
+        能看出你花了不少心思在上面！
+        我不想你贱卖。
+        <<SetSpeaker Original>>
+        哇。
+        <<SetEmotion Happy>> 
+        谢谢你！
+        <<ClearEmotion>>
+        你觉得我能卖125枚硬币吗？
+        <<SetSpeaker Player>> 
+        当然可以！
+        <<set $SunhatPrice to 125>>
+        [[HatSellNew]]
+<<endif>> 
+===
+title: HatSellNew
+tags: 
+colorID: 0
+position: 5866,2999
+---
+<<SetSpeaker Player>>
+<<ShowCollection Coin>>
+-> 我要买帽子！
+    <<HideCollection Coin>>
+    [[BuySunhat]]
+-> 回头见！
+    <<HideCollection Coin>>
+    <<SetSpeaker Original>>
+    <<if $SunhatPrice < 100>>
+        好吧……
+        回头见。
+    <<else>>
+        <<SetEmotion Happy>>
+        后会有期！
+        <<ClearEmotion>>
+    <<endif>>
+    
+===
+title: BuySunhat
+tags: 
+colorID: 0
+position: 5870,3253
+---
+<<if HasItem("Coin", $SunhatPrice) is true>>
+    <<SetSpeaker Original>>
+    <<if $SunhatPrice < 100>>
+        好吧！
+        嗯。
+        给你。
+    <<else>>
+        <<SetEmotion Happy>>
+        太好了！
+        给你！
+        <<ClearEmotion>>
+    <<endif>>
+
+    <<set $SunhatCost to $SunhatPrice * -1>>
+    <<Hide>>
+    <<GiveItem Coin $SunhatCost>>
+    <<PlaySound BuySound>>
+    <<Hide>>
+    <<Wait 1>>
+    <<GiveItem Sunhat 1>>
+    <<set $BoughtSunhat to true>>
+
+    <<if $SunhatPrice < 100>>
+        希望你喜欢。
+        <<SetSpeaker Player>>
+        当然喜欢！
+        这帽子真的不错。
+        <<SetSpeaker Original>>
+        哇。
+        谢谢！
+    <<elseif $SunhatPrice > 100>>
+        <<SetEmotion Happy>>
+        太感谢了！！
+        很高兴你喜欢！
+        <<ClearEmotion>>
+        <<SetSpeaker Player>>
+        <<SetEmotion Happy>>
+        谢谢。
+        帽子很好看！
+        我喜欢！
+        <<ClearEmotion>>
+    <<else>>
+        谢谢！
+        <<SetEmotion Happy>>
+        你是我的第一位顾客！
+        <<ClearEmotion>>
+        <<SetSpeaker Player>>
+        <<SetEmotion Happy>>
+        后面还会来更多客人的！
+        这帽子做工很好！
+        <<ClearEmotion>>
+    <<endif>>
+<<else>>
+    <<SetSpeaker Original>>
+    哦，呃……
+    我想你还缺点硬币……
+<<endif>>
+===
+title: GIFStart
+tags: 
+colorID: 0
+position: 5235,3171
+---
+<<SetSpeaker Original>>
+have you seen any bugs lately?
+<<SetSpeaker Player>>
+no...
+i don't think so?
+<<SetSpeaker Original>>
+phew!
+cuz the game comes out TOMORROW\n on PC, Mac, and Linux!
+it would be a bad time\nto find a new bug!!
+<<SetSpeaker Player>>
+wait
+what are you talking about?
+<<SetSpeaker Original>> 
+this game, A Short Hike!
+<<SetEmotion Happy>> 
+available July 30th on\nboth Itch.io and Steam!
+<<ClearEmotion>> 
+<<SetSpeaker Player>>
+uh...
+<<SetPose LookingDown>>
+<<SetEmotion EyesClosed>> 
+i'm so confused
+<<ClearEmotion>> 
+<<ClearPose>> 
+===
+title: DeerStart
+tags: 
+colorID: 0
+position: 3699,1290
+---
+<<if $PickedUpTrash is true>> 
+    [[Deer2]] 
+<<elseif visited() is false>>
+	*叹气*
+	我刚花了个把小时在捡垃圾……
+	看来是有人在搞派对，\n还留下了半数东西！
+    <<SetSpeaker Player>>
+	什么！？
+	那可真没品。
+    <<SetSpeaker Original>>
+	是啊！
+	唉。
+    <<SetSpeaker Player>>
+	剩下的我帮你处理！
+	看起来大部分你都搞定了！
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>> 
+	真的吗？
+	那太好了。
+	谢谢你！
+    <<ClearEmotion>> 
+<<elseif HasItem("Trash", 9)>> 
+    <<SetSpeaker Player>>
+	我想我已经弄完了！
+    <<Hide>>
+    <<GiveItem Trash -9>>
+    <<Wait 1>>
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>> 
+	看起来就这些！
+    <<ClearEmotion>> 
+	这样好多了！
+    <<SetEmotion Happy>> 
+	谢谢你来帮忙！
+    <<ClearEmotion>> 
+    <<SetSpeaker Player>>
+    <<SetEmotion Happy>> 
+	不客气！
+    <<set $PickedUpTrash to true>> 
+    <<ClearEmotion>> 
+<<elseif HasItem("Trash", 5)>> 
+    <<SetSpeaker Player>>
+	这是不是全部了？
+    <<SetSpeaker Original>>
+	我觉得还有些。
+<<else>>
+    <<SetSpeaker Player>>
+	他们真是留下了一堆麻烦，对吧？
+    <<SetSpeaker Original>>
+	是啊……
+	真不敢相信会有人这么厚脸皮。
+<<endif>> 
+
+
+===
+title: Node257
+tags: 
+colorID: 0
+position: 3976,1254
+---
+
+===
+title: Deer2
+tags: 
+colorID: 0
+position: 3708,1543
+---
+<<if $BoughtSunhat is true>>
+    [[Deer3]] 
+<<elseif visited() is false>> 
+    <<SetSpeaker Player>> 
+	我喜欢你的遮阳帽！
+    <<SetSpeaker Original>> 
+    <<SetEmotion Happy>>
+	谢谢！
+	这是我自己做的。
+    <<ClearEmotion>> 
+    <<SetSpeaker Player>> 
+	真的吗？！
+	那还，真是，稀奇！
+	我都不知道你会……做帽子！
+    <<SetSpeaker Original>>
+	没错，是真的。
+	不过花了些时间。
+	手工品集市就要开了，\n我做了一堆备货。
+	你要是感兴趣的话，
+	我现在就能卖给你一顶！
+    <<SetSpeaker Player>> 
+	哦，真的！？
+	多少钱？
+    <<SetSpeaker Original>> 
+    <<SetEmotion EyesClosed>> 
+    嗯……
+    <<ClearEmotion>> 
+	好难定价……
+	100枚硬币如何？
+    <<SetSpeaker Player>>
+    -> 听起来不错！
+        <<SetSpeaker Original>> 
+		太好了！
+		我觉得这价格挺合理的！
+        <<set $SunhatPrice to 100>>
+        [[DeerHatSell]]
+    -> 我要出更高价！
+		我真的很喜欢这顶帽子！
+		能看出你花了不少心思在上面！
+        <<if $KnowsAboutMerchHat is true>>
+			批量造的护林帽都能卖100枚硬币了……
+			……更何况你的还是手工的！
+        <<endif>> 
+		我不想你贱卖。
+        <<SetSpeaker Original>>
+        哇。
+        <<SetEmotion Happy>> 
+        谢谢你！
+        <<ClearEmotion>>
+		你觉得卖给你125枚硬币吗？
+        <<SetSpeaker Player>> 
+		当然可以！
+        <<set $SunhatPrice to 125>>
+        [[DeerHatSell]]
+<<else>>
+    <<SetSpeaker Player>> 
+	你好！
+	再问下遮阳帽多少钱？
+    <<SetSpeaker Original>>
+    {{$SunhatPrice}}枚硬币！
+    [[DeerHatSell]]
+<<endif>>
+===
+title: DeerHatSell
+tags: 
+colorID: 0
+position: 3982,1548
+---
+<<SetSpeaker Player>>
+<<ShowCollection Coin>>
+-> 我要买帽子！
+    <<HideCollection Coin>>
+    [[BuyDeerHat]]
+-> 回头见！
+    <<HideCollection Coin>>
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	后会有期！
+    <<ClearEmotion>>
+    
+===
+title: BuyDeerHat
+tags: 
+colorID: 0
+position: 4238,1545
+---
+<<if HasItem("Coin", $SunhatPrice) is true>>
+    <<SetSpeaker Original>>
+    <<SetEmotion Happy>>
+	太好了！
+    <<ClearEmotion>>
+    <<if $SunhatPrice > 100>>
+		你想给带子选个颜色吗？
+		我不介意给你换颜色！
+        <<SetSpeaker Player>>
+		哦！嗯……
+		有没有……
+        -> 粉色？
+            <<set $_SunhatRibbon to 0>>
+        -> 红色？
+            <<set $_SunhatRibbon to 1>>
+        -> 蓝色？
+            <<set $_SunhatRibbon to 2>>
+        -> 紫色？
+            <<set $_SunhatRibbon to 3>>
+        <<SetSpeaker Original>>
+		有！
+    <<endif>> 
+    给你！
+
+    <<Hide>>
+    <<set $SunhatCost to $SunhatPrice * -1>>
+    <<GiveItem Coin $SunhatCost>>
+    <<PlaySound BuySound>>
+    <<Wait 1>>
+    <<GiveItem Sunhat 1>>
+    <<set $BoughtSunhat to true>>
+    <<Face Original Player>> 
+
+    <<if $SunhatPrice > 100>>
+        <<SetEmotion Happy>>
+		太感谢了！！
+		真高兴你能喜欢！
+        <<ClearEmotion>>
+        <<SetSpeaker Player>>
+        <<SetEmotion Happy>>
+		谢谢你。
+		帽子很好看！
+		我喜欢！
+        <<ClearEmotion>>
+    <<else>>
+        谢谢！
+        <<SetEmotion Happy>>
+		你是我第一位顾客！
+        <<ClearEmotion>>
+        <<SetSpeaker Player>>
+        <<SetEmotion Happy>>
+        后面还会来更多客人的！
+        这帽子做工相当不错！
+        <<ClearEmotion>>
+    <<endif>>
+<<else>>
+    <<SetSpeaker Original>>
+	哦，呃……
+	我想你还差点硬币
+    <<SetSpeaker Player>>
+	哎呀。
+	我会再来的！
+<<endif>>
+===
+title: Deer3
+tags: 
+colorID: 0
+position: 3704,1789
+---
+<<if visited() is true and $SunhatPrice > 100 and "Sunhat" is $_WornHat>> 
+    <<SetEmotion Happy>>
+	你喜欢那颜色吗？
+    <<ClearEmotion>> 
+    <<SetSpeaker Player>>
+    -> 很好看！
+        <<SetSpeaker Original>>
+        酷。
+    -> 我能换个颜色吗？
+        <<SetSpeaker Original>> 
+		当然能！
+		想要什么颜色？
+        <<SetSpeaker Player>>
+        -> 粉色
+            <<SetSpeaker Original>>
+            经典。
+            <<set $_SunhatRibbon to 0>>
+        -> 红色
+            <<SetSpeaker Original>>
+            来了。
+            <<set $_SunhatRibbon to 1>>
+        -> 蓝色
+            <<SetSpeaker Original>>
+            当然行。
+            <<set $_SunhatRibbon to 2>>
+        -> 紫色
+            <<SetSpeaker Original>>
+            没问题！
+            <<set $_SunhatRibbon to 3>>
+<<else>> 															 
+这是我最喜欢的地方之一。
+坐在这里弄帽子让我觉得很畅快！
+<<endif>>  								 
+===

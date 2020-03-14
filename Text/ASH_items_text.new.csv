@@ -1,0 +1,93 @@
+Bait,Bait,"Attach bait to your rod
+to attract more fish.",,鱼饵,鱼饵,绑有鱼饵的钓竿能吸引更多鱼。,
+Bucket,Buckets,"A perfect bucket for holding liquids.
+Press <color=red>{{UseItemButton}}</color> to scoop or pour.",,水桶,水桶,"用来装液体的完美水桶。
+按<color=red>{{UseItemButton}}</color>来舀水或倒水。",
+Camping Permit,Camping Permits,"It allows you to camp overnight at the park.
+It says ""KEEP ON HAND AT ALL TIMES!""",,野营许可证,野营许可证,"你可以在公园里野营的凭证。
+上面写着“要随身携带！”",
+Cellphone,Cellphones,"It's useless without reception.
+Not even the games work offline.",,手机,手机,"没信号就用不了。
+甚至连游戏都无法离线游玩。",
+Coin,Coins,"It's money!
+Great for buying stuff and feeling secure.",,硬币,硬币,"这就是钱！
+越多越能买，越多越安心。",
+Compass,Compasses,"Tells you which way is north.
+Select to toggle on or off.",,指南针,指南针,"会告诉你哪边是北边。
+点选可开启或关闭该功能。",
+Fish,Fish,"I caught 'em myself!
+Now what do I do with them?
+",,鱼,鱼,"都是我亲手抓的！
+但抓来有什么用呢？
+",
+Fish Journal,Fish Journals,"A journal of the fish I have
+caught and have yet to catch.",,钓鱼笔记,钓鱼笔记,"不管抓过还是没抓过的鱼
+都记录在上面的笔记。",
+Fishing Rod,Fishing Rods,"Press <color=red>{{UseItemButton}}</color> to cast. When the bobber is pulled
+underwater, press <color=red>{{UseItemButton}}</color> to pull it out!",,鱼竿,鱼竿,"按<color=red>{{UseItemButton}}</color>来抛竿。
+当浮标被拉入水中时，按<color=red>{{UseItemButton}}</color>来收竿！",
+Golden Feather,Golden Feathers,"Press <color=red>{{JumpButton}}</color> when in midair to jump.
+Hold <color=red>{{JumpButton}}</color> when facing a wall to climb.",,金羽毛,金羽毛,"于半空中按<color=red>{{JumpButton}}</color>进行跳跃。
+对着墙时按住<color=red>{{JumpButton}}</color>来攀爬。",
+Golden Rod,Golden Rods,"A fishing rod that's apparently made of gold.
+Rare fish seem to be strangely drawn to it.",,金鱼竿,金鱼竿,"一眼就能看出是金子做的鱼竿。
+似乎很能吸引稀有鱼类。",
+Headband,Headbands,"It's the turtle's headband.
+Looks sporty.",,头带,头带,"乌龟的头带。
+看上去很有运动范。",
+Cellphone,Cellphones,"It's useless without reception.
+Not even the games work offline.",,手机,手机,"没有信号就没啥用了。
+就连游戏都无法离线游玩。",
+Baseball Cap,Baseball Caps,"To commemorate that time I
+got 30 points in Beachstickball.",,棒球帽,棒球帽,"于沙滩枝球中
+获得30分的纪念品。",
+Medal,Medals,"An extremely homemade looking medal.
+Awarded for winning an intense parkour race.
+",inspect,奖牌,奖牌,"一眼就能看出是自制的奖牌。
+奖励给在激烈跑酷运动中获得优胜的人。
+",查看
+Provincial Park Hat,Provincial Park Hats,"Stylish and practical!
+It says ""Support Our Provincial Parks!"" on it.",,省立公园帽,省立公园帽,"有型又实用！
+上面写着“请支援我们的省立公园！”。",
+Pickaxe,Pickaxes,"A sturdy pickaxe.
+It might be able to break things.",,镐子,镐子,"结实的稿子。
+或许能用来敲碎东西。",
+Running Shoes,Pairs of Running Shoes,"Unleash your inner speed!
+Hold <color=red>{{RunButton}}</color> to run.",,跑鞋,跑鞋,"释放你的速度潜能，
+按住<color=red>{{RunButton}}</color>奔跑。",
+Shell,Shells,"It sparkles in the sun,
+but is otherwise pretty boring.",,贝壳,贝壳,"在阳光下闪闪发亮，
+但从其它方面来讲也显得很平庸。",
+Shell Necklace,Shell Necklaces,"It's a pretty shell necklace. I'm
+supposed to deliver this to Aunt May.",,贝壳项链,贝壳项链,"很好看的贝壳项链。
+我应该把它送给梅婶。",
+Shovel,Shovels,"What's buried beneath?
+Press <color=red>{{UseItemButton}}</color> to dig!",,铲子,铲子,"下面埋着什么？
+按<color=red>{{UseItemButton}}</color>开挖！",
+Silver Feather,Silver Feathers,"It's soft and lighter than air.
+You can climb faster and fly higher!",,银羽毛,银羽毛,"不仅柔软，还轻过空气。
+能让你爬得更快，飞得更高！",
+Stick,Sticks,"A wooden stick.
+Not sure why I picked this up.",,树枝,树枝,"一根树枝。
+不知道我为啥要捡起来。",
+Sunhat,Sunhats,"A big floppy sunhat. It protects against the
+heat and is stylish like you wouldn't believe.",,遮阳帽,遮阳帽,"软塌塌的一顶大遮阳帽。
+不仅能抵挡光热，还有型得难以置信。",
+Toast,Toasts,"Yeah, toast!
+It's even lightly buttered.",eat,吐司,吐司,"好耶，是吐司！
+上面还涂有点黄油。",食用
+Toy Shovel,Toy Shovels,"A cute little toy shovel!
+It's too small to be useful to me.",,玩具铲,玩具铲,"可爱的玩具小铲！
+对我来说太小了，用不了。",
+Piece of Trash,Pieces of Trash,"A piece of garbage carelessly left behind...
+",,垃圾,垃圾,"不经意间留下来的垃圾……
+",
+Treasure Map,Treasure Maps,"It's less of a map and more of
+a bunch of riddles...",read,藏宝图,藏宝图,"与其说是地图，
+不如说是谜题合集……",阅读
+Walkie Talkie,Walkie Talkies,"An ancient incarnation of the cellphone.
+Use this to contact Avery!",radio avery,对讲机,对讲机,"旧时代的手机。
+能用它来联络艾弗里！",联络艾弗里
+Wristwatch,Wristwatches,"It's got a digital and analog display, and
+has a phone number written on the back.",check,手表,手表,"上面显示着模拟数字，
+后面写有电话号码。",检查

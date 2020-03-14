@@ -1,0 +1,111 @@
+a short hike,登山短记
+press {{ConfirmButton}} to start,按{{ConfirmButton}}开始
+new game,新游戏
+continue,继续
+quit,退出
+options,选项
+"use item <color=#999>(item equipped)</color>
+equip last used item</color>","使用道具<color=#999>（装备了道具）</color>
+装备最后用过的道具</color>"
+"jump <color=#999>(press)</color>
+glide <color=#999>(hold)</color>
+flap wings <color=#999>(midair+<color=#F82>feather</color>)</color>
+climb <color=#999>(hold+face wall+<color=#F82>feather</color>)</color>","跳跃<color=#999>（按）</color>
+滑翔<color=#999>（按住）</color>
+挥翅 <color=#999>（半空+<color=#F82>羽毛</color>）</color>
+攀爬<color=#999>（按住+对着墙+<color=#F82>羽毛</color>）</color>"
+"interact <color=#999>(near interactable)</color>
+run <color=#999>(hold+<color=#F82>feather</color>+<color=#C55>shoes</color>)</color>","交互<color=#999>（接近可交互物体）</color>
+奔跑 <color=#999>（按住+<color=#F82>羽毛</color>+<color=#C55>跑鞋</color>）</color>"
+"this is a PERSONAL MESSAGE
+just for YOU!
+that's right
+YOU
+here it comes...
+...
+...
+hope you have a nice day :)","这是条私人讯息！
+就只给你看。
+没错，
+就是你。
+要说了哈……
+ ……
+ ……
+祝你快乐每一天！*^ο^*"
+"use item <color=#999>(item equipped)</color>
+equip last used item</color>","使用道具<color=#999>（装备了道具）</color>
+装备最后用过的道具</color>"
+"created by
+<color=#C11>adam robinson-yu</color>
+<size=8>
+</size>with music by
+<color=#C11>mark sparling</color>
+<size=8>
+</size>art and writing contributions by
+<color=#C11>dawn blair</color>
+<size=8>
+</size>additional art by
+<color=#C11>andrew wong</color>","制作人
+<color=#C11>adam robinson-yu</color>
+<size=8>
+</size>音乐
+<color=#C11>mark sparling</color>
+<size=8>
+</size>美术和写作贡献
+<color=#C11>dawn blair</color>
+<size=8>
+</size>额外美术
+<color=#C11>andrew wong</color>"
+"jump <color=#999>(press)</color>
+glide <color=#999>(hold)</color>
+flap wings <color=#999>(midair+<color=#F82>feather</color>)</color>
+climb <color=#999>(hold+face wall+<color=#F82>feather</color>)</color>","跳跃<color=#999>（按）</color>
+滑翔<color=#999>（按住）</color>
+挥翅 <color=#999>（半空+<color=#F82>羽毛</color>）</color>
+攀爬<color=#999>（按住+对着墙+<color=#F82>羽毛</color>）</color>"
+"Special Thanks
+John polson
+
+Made with
+unity
+yarnspinner
+incontrol
+Xinputdotnet
+
+Pixellari
+by
+Zacchary
+Dempsey-Plante 
+
+","特别鸣谢
+John polson
+
+制作工具
+unity
+yarnspinner
+incontrol
+Xinputdotnet
+
+Pixellari字体
+by
+Zacchary
+Dempsey-Plante 
+
+"
+"interact <color=#999>(near interactable)</color>
+run <color=#999>(hold+<color=#F82>feather</color>+<color=#C55>shoes</color>)</color>","交互<color=#999>（接近可交互物体）</color>
+奔跑 <color=#999>（按住+<color=#F82>羽毛</color>+<color=#C55>跑鞋</color>）</color>"
+you caught a,你抓到了
+move,移动
+move,移动
+the way forward is blocked,前面的路被挡住了
+type the button initials and press ENTER,输入按键首字母并按下回车键
+open menu,打开菜单
+open menu,打开菜单
+fish!,鱼！
+"<color=#FC4>name</color>
+description","<color=#FC4>名称</color>
+描述"
+hello,你好
+press ESC (or SELECT+START) to exit,按ESC（或SELECT+START）退出
+press the button 3 times,按下按键3次
